@@ -50,7 +50,7 @@ html, body {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 48px 100px 60px;
+  padding: 48px 140px 60px;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
@@ -71,8 +71,8 @@ html, body {
 
 /* ─── Slide Themes ─── */
 .slide--dark {
-  background: linear-gradient(135deg, var(--green-deep) 0%, #0f2618 60%, #0a1e14 100%);
-  color: var(--text-light);
+  background: linear-gradient(135deg, #1e4430 0%, #1a3a2a 60%, #162e24 100%);
+  color: #f4f4f0;
 }
 
 .slide--light {
@@ -130,9 +130,9 @@ html, body {
 .slide-title {
   font-family: 'Cormorant Garamond', serif;
   font-weight: 700;
-  font-size: 3.4rem;
+  font-size: 3.8rem;
   line-height: 1.15;
-  margin-bottom: 24px;
+  margin-bottom: 28px;
   letter-spacing: -0.02em;
 }
 
@@ -161,7 +161,7 @@ html, body {
 }
 
 .slide-body {
-  font-size: 1.15rem;
+  font-size: 1.3rem;
   line-height: 1.7;
   font-weight: 300;
 }
@@ -194,8 +194,8 @@ html, body {
 }
 
 .slide--dark .card {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
   backdrop-filter: blur(10px);
 }
 
@@ -204,16 +204,16 @@ html, body {
 }
 
 .card-icon {
-  font-size: 2.2rem;
-  margin-bottom: 12px;
+  font-size: 2.6rem;
+  margin-bottom: 14px;
   display: block;
 }
 
 .card-title {
   font-family: 'Cormorant Garamond', serif;
   font-weight: 700;
-  font-size: 1.4rem;
-  margin-bottom: 8px;
+  font-size: 1.6rem;
+  margin-bottom: 10px;
 }
 
 .slide--cream .card-title,
@@ -222,7 +222,7 @@ html, body {
 }
 
 .card-text {
-  font-size: 1rem;
+  font-size: 1.15rem;
   line-height: 1.6;
   opacity: 0.8;
   font-weight: 300;
@@ -242,23 +242,23 @@ html, body {
 }
 
 .slide--dark .stat-card {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.14);
 }
 
 .stat-number {
   font-family: 'Cormorant Garamond', serif;
   font-weight: 700;
-  font-size: 3rem;
+  font-size: 3.2rem;
   line-height: 1.1;
   margin-bottom: 8px;
 }
 
 .slide--cream .stat-number { color: var(--green-dark); }
-.slide--dark .stat-number { color: var(--green-pale); }
+.slide--dark .stat-number { color: #c8ecd0; }
 
 .stat-label {
-  font-size: 0.95rem;
+  font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   opacity: 0.6;
@@ -276,7 +276,7 @@ html, body {
 table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
 .slide--cream table,
@@ -293,8 +293,8 @@ thead th {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  font-size: 0.85rem;
-  padding: 14px 20px;
+  font-size: 0.95rem;
+  padding: 16px 22px;
   text-align: left;
 }
 
@@ -305,17 +305,18 @@ thead th {
 }
 
 .slide--dark thead th {
-  background: rgba(255,255,255,0.08);
-  color: var(--green-pale);
+  background: rgba(255,255,255,0.1);
+  color: #c8ecd0;
 }
 
 td {
-  padding: 12px 20px;
+  padding: 14px 22px;
   border-bottom: 1px solid rgba(0,0,0,0.06);
 }
 
 .slide--dark td {
-  border-bottom: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  color: #e8e8e4;
 }
 
 tbody tr:nth-child(even) {
@@ -323,7 +324,7 @@ tbody tr:nth-child(even) {
 }
 
 .slide--dark tbody tr:nth-child(even) {
-  background: rgba(255,255,255,0.02);
+  background: rgba(255,255,255,0.04);
 }
 
 /* ─── Lists ─── */
@@ -331,14 +332,14 @@ tbody tr:nth-child(even) {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 16px;
 }
 
 .objective-list li {
   display: flex;
   align-items: flex-start;
-  gap: 16px;
-  font-size: 1.1rem;
+  gap: 18px;
+  font-size: 1.25rem;
   line-height: 1.5;
   font-weight: 300;
 }
@@ -347,10 +348,10 @@ tbody tr:nth-child(even) {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 34px;
-  height: 34px;
+  min-width: 38px;
+  height: 38px;
   border-radius: 50%;
-  font-size: 0.82rem;
+  font-size: 0.9rem;
   font-weight: 600;
   flex-shrink: 0;
 }
@@ -395,10 +396,10 @@ tbody tr:nth-child(even) {
 .flow-step {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 14px 22px;
+  gap: 12px;
+  padding: 14px 24px;
   border-radius: 10px;
-  font-size: 1.05rem;
+  font-size: 1.15rem;
   font-weight: 500;
 }
 
@@ -431,11 +432,11 @@ tbody tr:nth-child(even) {
 /* ─── Badges / Pills ─── */
 .pill {
   display: inline-block;
-  padding: 6px 18px;
+  padding: 8px 20px;
   border-radius: 20px;
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   font-weight: 500;
-  margin: 3px;
+  margin: 4px;
 }
 
 .pill--green {
@@ -562,7 +563,7 @@ tbody tr:nth-child(even) {
   border-radius: 12px;
   padding: 24px 28px;
   margin-top: 12px;
-  font-size: 1.05rem;
+  font-size: 1.15rem;
 }
 
 .slide--cream .highlight-box {
@@ -687,8 +688,8 @@ tbody tr:nth-child(even) {
 .mb-20 { margin-bottom: 20px; }
 .mt-8 { margin-top: 8px; }
 .mt-16 { margin-top: 16px; }
-.text-sm { font-size: 0.95rem; }
-.text-xs { font-size: 0.85rem; }
+.text-sm { font-size: 1.05rem; }
+.text-xs { font-size: 0.95rem; }
 .font-mono { font-family: 'JetBrains Mono', monospace; }
 .opacity-60 { opacity: 0.6; }
 .opacity-70 { opacity: 0.7; }
@@ -701,8 +702,8 @@ tbody tr:nth-child(even) {
 .col-header {
   font-family: 'Cormorant Garamond', serif;
   font-weight: 700;
-  font-size: 1.4rem;
-  margin-bottom: 14px;
+  font-size: 1.55rem;
+  margin-bottom: 16px;
 }
 
 .slide--cream .col-header { color: var(--green-dark); }
@@ -712,22 +713,22 @@ tbody tr:nth-child(even) {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
 }
 
 .item-list li {
-  font-size: 1.05rem;
+  font-size: 1.2rem;
   line-height: 1.55;
   font-weight: 300;
-  padding-left: 20px;
+  padding-left: 22px;
   position: relative;
 }
 
 .item-list li::before {
   content: '';
   position: absolute;
-  left: 0; top: 10px;
-  width: 7px; height: 7px;
+  left: 0; top: 11px;
+  width: 8px; height: 8px;
   border-radius: 50%;
 }
 
@@ -856,19 +857,42 @@ tbody tr:nth-child(even) {
 <!-- ═══════════════════════════════════════ SLIDE 2: OBJETIVOS ═══════════════════════════════════════ -->
 <div class="slide slide--cream" data-slide="2">
   <div class="accent-bar"></div>
+  <!-- Decorative circle -->
+  <svg viewBox="0 0 200 200" style="position:absolute;right:40px;top:40px;width:200px;opacity:0.04;pointer-events:none">
+    <circle cx="100" cy="100" r="90" stroke="#2C5F2D" stroke-width="3" fill="none"/>
+    <circle cx="100" cy="100" r="60" stroke="#2C5F2D" stroke-width="2" fill="none"/>
+  </svg>
   <div class="section-tag">Bloque 1 · Portada y Contexto</div>
   <div class="slide-title">Objetivos del Proyecto</div>
-  <ol class="objective-list">
-    <li><span class="obj-num">1</span> Describir la materia prima y el producto final</li>
-    <li><span class="obj-num">2</span> Identificar envases y rotulación</li>
-    <li><span class="obj-num">3</span> Definir localización de la planta</li>
-    <li><span class="obj-num">4</span> Detallar etapas del proceso productivo</li>
-    <li><span class="obj-num">5</span> Garantizar calidad mediante análisis</li>
-    <li><span class="obj-num">6</span> Establecer condiciones de seguridad e higiene</li>
-    <li><span class="obj-num">7</span> Evaluar impacto ambiental y social</li>
-    <li><span class="obj-num">8</span> Indicar leyes y normativas aplicables</li>
-    <li><span class="obj-num">9</span> Estimar costo unitario, precio de venta y factibilidad</li>
-  </ol>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px 32px;width:100%">
+    <div style="display:flex;align-items:center;gap:16px;padding:14px 20px;background:rgba(255,255,255,0.6);border-radius:10px;border:1px solid rgba(44,95,45,0.08)">
+      <span class="obj-num">1</span><span style="font-size:1.2rem">Describir la materia prima y el producto final</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;padding:14px 20px;background:rgba(255,255,255,0.6);border-radius:10px;border:1px solid rgba(44,95,45,0.08)">
+      <span class="obj-num">2</span><span style="font-size:1.2rem">Identificar envases y rotulación</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;padding:14px 20px;background:rgba(255,255,255,0.6);border-radius:10px;border:1px solid rgba(44,95,45,0.08)">
+      <span class="obj-num">3</span><span style="font-size:1.2rem">Definir localización de la planta</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;padding:14px 20px;background:rgba(255,255,255,0.6);border-radius:10px;border:1px solid rgba(44,95,45,0.08)">
+      <span class="obj-num">4</span><span style="font-size:1.2rem">Detallar etapas del proceso productivo</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;padding:14px 20px;background:rgba(255,255,255,0.6);border-radius:10px;border:1px solid rgba(44,95,45,0.08)">
+      <span class="obj-num">5</span><span style="font-size:1.2rem">Garantizar calidad mediante análisis</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;padding:14px 20px;background:rgba(255,255,255,0.6);border-radius:10px;border:1px solid rgba(44,95,45,0.08)">
+      <span class="obj-num">6</span><span style="font-size:1.2rem">Establecer condiciones de seguridad e higiene</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;padding:14px 20px;background:rgba(255,255,255,0.6);border-radius:10px;border:1px solid rgba(44,95,45,0.08)">
+      <span class="obj-num">7</span><span style="font-size:1.2rem">Evaluar impacto ambiental y social</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;padding:14px 20px;background:rgba(255,255,255,0.6);border-radius:10px;border:1px solid rgba(44,95,45,0.08)">
+      <span class="obj-num">8</span><span style="font-size:1.2rem">Indicar leyes y normativas aplicables</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;padding:14px 20px;background:rgba(255,255,255,0.6);border-radius:10px;border:1px solid rgba(44,95,45,0.08);grid-column:1/3;max-width:50%">
+      <span class="obj-num">9</span><span style="font-size:1.2rem">Estimar costo unitario, precio de venta y factibilidad</span>
+    </div>
+  </div>
 </div>
 
 <!-- ═══════════════════════════════════════ SLIDE 3: CONTEXTO ═══════════════════════════════════════ -->
@@ -927,15 +951,35 @@ tbody tr:nth-child(even) {
 <!-- ═══════════════════════════════════════ SLIDE 5: TENDENCIAS ═══════════════════════════════════════ -->
 <div class="slide slide--cream" data-slide="5">
   <div class="accent-bar"></div>
+  <!-- Decorative leaf SVG -->
+  <svg viewBox="0 0 200 200" style="position:absolute;right:60px;bottom:80px;width:280px;opacity:0.04;pointer-events:none">
+    <ellipse cx="100" cy="80" rx="55" ry="90" fill="#2C5F2D" transform="rotate(-20,100,80)"/>
+    <line x1="100" y1="10" x2="100" y2="180" stroke="#1a3a2a" stroke-width="2"/>
+  </svg>
   <div class="section-tag">Contexto</div>
   <div class="slide-title" style="font-style:italic">Tendencias Mundiales</div>
-  <ul class="item-list">
-    <li>Preocupación creciente por la salud y el bienestar</li>
-    <li>Crecimiento sostenido del mercado de cosméticos naturales</li>
-    <li>Mayor empleo de derivados de plantas medicinales y aromáticas</li>
-    <li>Regulaciones gubernamentales a favor de productos naturales</li>
-    <li>Demanda creciente de productos con bajo impacto toxicológico</li>
-  </ul>
+  <div class="cards-grid" style="grid-template-columns:1fr;gap:16px;max-width:900px">
+    <div class="card" style="display:flex;align-items:center;gap:20px;padding:22px 28px">
+      <span style="font-size:2rem;flex-shrink:0">❤️</span>
+      <div style="font-size:1.25rem;font-weight:400">Preocupación creciente por la <strong>salud y el bienestar</strong></div>
+    </div>
+    <div class="card" style="display:flex;align-items:center;gap:20px;padding:22px 28px">
+      <span style="font-size:2rem;flex-shrink:0">📈</span>
+      <div style="font-size:1.25rem;font-weight:400">Crecimiento sostenido del mercado de <strong>cosméticos naturales</strong></div>
+    </div>
+    <div class="card" style="display:flex;align-items:center;gap:20px;padding:22px 28px">
+      <span style="font-size:2rem;flex-shrink:0">🌿</span>
+      <div style="font-size:1.25rem;font-weight:400">Mayor empleo de derivados de <strong>plantas medicinales y aromáticas</strong></div>
+    </div>
+    <div class="card" style="display:flex;align-items:center;gap:20px;padding:22px 28px">
+      <span style="font-size:2rem;flex-shrink:0">📋</span>
+      <div style="font-size:1.25rem;font-weight:400"><strong>Regulaciones gubernamentales</strong> a favor de productos naturales</div>
+    </div>
+    <div class="card" style="display:flex;align-items:center;gap:20px;padding:22px 28px">
+      <span style="font-size:2rem;flex-shrink:0">🧪</span>
+      <div style="font-size:1.25rem;font-weight:400">Demanda creciente de productos con <strong>bajo impacto toxicológico</strong></div>
+    </div>
+  </div>
 </div>
 
 <!-- ═══════════════════════════════════════ SLIDE 6: SEP MERCADO ═══════════════════════════════════════ -->
@@ -1209,19 +1253,31 @@ tbody tr:nth-child(even) {
     </div>
     <div>
       <div class="col-header">Canales de Distribución</div>
-      <ul class="item-list">
-        <li>Venta al por mayor</li>
-        <li>Distribución intensiva</li>
-        <li>Agentes comerciales</li>
-        <li>E-commerce</li>
-      </ul>
-      <div class="mt-16">
-        <div class="col-header">Estrategia de Lanzamiento</div>
-        <ul class="item-list">
-          <li>Soft launch en Santa Fe</li>
-          <li>Redes sociales y marketing digital</li>
-          <li>Precios promocionales iniciales</li>
-        </ul>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px">
+        <div class="card" style="padding:14px 18px;display:flex;align-items:center;gap:12px">
+          <span style="font-size:1.5rem">🏪</span><span style="font-size:1.1rem">Venta al por mayor</span>
+        </div>
+        <div class="card" style="padding:14px 18px;display:flex;align-items:center;gap:12px">
+          <span style="font-size:1.5rem">🚚</span><span style="font-size:1.1rem">Distribución intensiva</span>
+        </div>
+        <div class="card" style="padding:14px 18px;display:flex;align-items:center;gap:12px">
+          <span style="font-size:1.5rem">🤝</span><span style="font-size:1.1rem">Agentes comerciales</span>
+        </div>
+        <div class="card" style="padding:14px 18px;display:flex;align-items:center;gap:12px">
+          <span style="font-size:1.5rem">🛒</span><span style="font-size:1.1rem">E-commerce</span>
+        </div>
+      </div>
+      <div class="col-header">Estrategia de Lanzamiento</div>
+      <div class="cards-grid" style="grid-template-columns:1fr;gap:10px">
+        <div class="card" style="padding:14px 18px;display:flex;align-items:center;gap:12px">
+          <span style="font-size:1.5rem">📍</span><span style="font-size:1.1rem"><strong>Soft launch</strong> en Santa Fe</span>
+        </div>
+        <div class="card" style="padding:14px 18px;display:flex;align-items:center;gap:12px">
+          <span style="font-size:1.5rem">📱</span><span style="font-size:1.1rem"><strong>Redes sociales</strong> y marketing digital</span>
+        </div>
+        <div class="card" style="padding:14px 18px;display:flex;align-items:center;gap:12px">
+          <span style="font-size:1.5rem">🏷️</span><span style="font-size:1.1rem"><strong>Precios promocionales</strong> iniciales</span>
+        </div>
       </div>
     </div>
   </div>
@@ -1417,29 +1473,98 @@ tbody tr:nth-child(even) {
   <div class="accent-bar"></div>
   <div class="section-tag">Producto Elaborado</div>
   <div class="slide-title">Envase y Rotulación</div>
-  <div class="two-col">
+  <div style="display:grid;grid-template-columns:auto 1fr 1fr;gap:48px;align-items:start;width:100%">
+    <!-- SVG Spray Bottle Illustration -->
+    <div style="display:flex;justify-content:center;align-items:center">
+      <svg viewBox="0 0 160 380" style="width:160px;filter:drop-shadow(0 8px 30px rgba(0,0,0,0.3))">
+        <!-- Spray head -->
+        <rect x="55" y="8" width="50" height="18" rx="4" fill="#e0e0e0" stroke="#bbb" stroke-width="1"/>
+        <!-- Nozzle -->
+        <rect x="100" y="10" width="30" height="10" rx="3" fill="#ccc" stroke="#aaa" stroke-width="1"/>
+        <circle cx="132" cy="15" r="3" fill="#999"/>
+        <!-- Pump tube -->
+        <rect x="70" y="26" width="20" height="20" rx="2" fill="#d4d4d4" stroke="#bbb" stroke-width="1"/>
+        <!-- Cap ring -->
+        <rect x="48" y="46" width="64" height="12" rx="3" fill="#ddd" stroke="#bbb" stroke-width="1"/>
+        <!-- Bottle body -->
+        <path d="M48,58 L48,320 Q48,340 68,340 L92,340 Q112,340 112,320 L112,58 Z" fill="rgba(255,255,255,0.92)" stroke="#ddd" stroke-width="1.5"/>
+        <!-- Label area -->
+        <rect x="52" y="100" width="56" height="180" rx="6" fill="rgba(44,95,45,0.12)" stroke="rgba(44,95,45,0.25)" stroke-width="1"/>
+        <!-- Label content -->
+        <text x="80" y="128" fill="#2C5F2D" font-size="7" text-anchor="middle" font-family="Outfit" font-weight="700" letter-spacing="0.5">REPELENTE</text>
+        <text x="80" y="140" fill="#2C5F2D" font-size="6" text-anchor="middle" font-family="Outfit" font-weight="600">NATURAL</text>
+        <line x1="62" y1="148" x2="98" y2="148" stroke="rgba(44,95,45,0.3)" stroke-width="0.5"/>
+        <!-- Eucalyptus leaf on label -->
+        <ellipse cx="80" cy="175" rx="12" ry="22" fill="rgba(95,168,107,0.25)" transform="rotate(-15,80,175)"/>
+        <ellipse cx="80" cy="175" rx="8" ry="18" fill="rgba(95,168,107,0.15)" transform="rotate(15,80,175)"/>
+        <line x1="80" y1="155" x2="80" y2="198" stroke="rgba(95,168,107,0.4)" stroke-width="0.8"/>
+        <!-- Label text lines -->
+        <rect x="62" y="210" width="36" height="3" rx="1" fill="rgba(44,95,45,0.15)"/>
+        <rect x="62" y="218" width="28" height="3" rx="1" fill="rgba(44,95,45,0.1)"/>
+        <rect x="62" y="226" width="32" height="3" rx="1" fill="rgba(44,95,45,0.1)"/>
+        <!-- ANMAT text -->
+        <text x="80" y="250" fill="rgba(44,95,45,0.35)" font-size="5" text-anchor="middle" font-family="Outfit" font-weight="500">ANMAT</text>
+        <!-- Volume -->
+        <text x="80" y="268" fill="rgba(44,95,45,0.5)" font-size="9" text-anchor="middle" font-family="Outfit" font-weight="700">100 mL</text>
+        <!-- Recycle symbol -->
+        <text x="80" y="310" fill="rgba(44,95,45,0.3)" font-size="12" text-anchor="middle">♻</text>
+        <!-- Liquid inside (green tint) -->
+        <path d="M50,200 L50,318 Q50,338 68,338 L92,338 Q110,338 110,318 L110,200 Z" fill="rgba(95,168,107,0.08)"/>
+        <!-- Spray mist -->
+        <circle cx="145" cy="8" r="2" fill="rgba(168,213,176,0.3)"><animate attributeName="cy" values="8;-5" dur="1.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.4;0" dur="1.5s" repeatCount="indefinite"/></circle>
+        <circle cx="150" cy="12" r="1.5" fill="rgba(168,213,176,0.25)"><animate attributeName="cy" values="12;0" dur="1.8s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.3;0" dur="1.8s" repeatCount="indefinite"/></circle>
+        <circle cx="140" cy="5" r="1" fill="rgba(168,213,176,0.2)"><animate attributeName="cy" values="5;-8" dur="2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.3;0" dur="2s" repeatCount="indefinite"/></circle>
+      </svg>
+    </div>
+    <!-- Envase Primario -->
     <div>
       <div class="col-header">Envase Primario</div>
-      <ul class="item-list mb-20">
-        <li>Atomizador spray PET blanco — 100 mL</li>
-        <li>PET virgen, reciclable (símbolo SPI ♻️)</li>
-        <li>Funcionamiento por principio de Bernoulli</li>
-        <li>Rotulación según normativa ANMAT</li>
-      </ul>
+      <div class="card" style="margin-bottom:16px">
+        <div class="card-title" style="font-size:1.3rem">Atomizador Spray PET</div>
+        <div class="card-text">Botella blanca de 100 mL con sistema atomizador. Funcionamiento por principio de Bernoulli.</div>
+      </div>
+      <div class="table-wrapper">
+        <table>
+          <tbody>
+            <tr><td class="font-semibold">Material</td><td>PET virgen</td></tr>
+            <tr><td class="font-semibold">Capacidad</td><td>100 mL</td></tr>
+            <tr><td class="font-semibold">Reciclable</td><td>Sí — SPI ♻️</td></tr>
+            <tr><td class="font-semibold">Rotulación</td><td>Según ANMAT</td></tr>
+          </tbody>
+        </table>
+      </div>
     </div>
+    <!-- Embalaje -->
     <div>
       <div class="col-header">Embalaje y Distribución</div>
-      <div class="flow-horizontal">
-        <div class="flow-step">🧴 Botella</div>
-        <span class="flow-arrow">→</span>
-        <div class="flow-step">📦 Caja cartón corrugado</div>
-        <span class="flow-arrow">→</span>
-        <div class="flow-step">🏗️ Pallet retornable</div>
+      <div class="cards-grid" style="grid-template-columns:1fr;gap:14px">
+        <div class="card" style="display:flex;align-items:center;gap:16px;padding:20px 24px">
+          <span style="font-size:2.2rem">🧴</span>
+          <div>
+            <div class="card-title" style="margin-bottom:2px">Botella 100 mL</div>
+            <div class="card-text" style="font-size:1rem">Envase primario con atomizador spray</div>
+          </div>
+        </div>
+        <div class="card" style="display:flex;align-items:center;gap:16px;padding:20px 24px">
+          <span style="font-size:2.2rem">📦</span>
+          <div>
+            <div class="card-title" style="margin-bottom:2px">Caja Cartón Corrugado</div>
+            <div class="card-text" style="font-size:1rem">Embalaje secundario para agrupación</div>
+          </div>
+        </div>
+        <div class="card" style="display:flex;align-items:center;gap:16px;padding:20px 24px">
+          <span style="font-size:2.2rem">🏗️</span>
+          <div>
+            <div class="card-title" style="margin-bottom:2px">Pallet Retornable</div>
+            <div class="card-text" style="font-size:1rem">Plástico reutilizable + film stretch</div>
+          </div>
+        </div>
       </div>
-      <div class="mt-16">
+      <div class="mt-16" style="display:flex;gap:8px;flex-wrap:wrap">
         <span class="pill pill--green">Film stretch</span>
         <span class="pill pill--green">Pallets plástico</span>
         <span class="pill pill--green">Reciclable</span>
+        <span class="pill pill--green">FIFO</span>
       </div>
     </div>
   </div>
@@ -1479,33 +1604,42 @@ tbody tr:nth-child(even) {
       </div>
     </div>
     <div>
-      <!-- SVG Argentina Map -->
-      <svg viewBox="0 0 320 440" style="width:100%;max-width:320px;margin:0 auto;display:block">
-        <!-- Argentina silhouette simplified -->
-        <path d="M160,10 L185,15 L200,25 L215,20 L230,30 L240,28 L250,35 L255,45 L260,55 L265,65 L260,80 L255,95 L260,105 L265,115 L260,130 L255,145 L250,155 L248,170 L250,185 L252,200 L248,215 L245,230 L240,245 L235,260 L230,275 L225,290 L220,305 L210,315 L200,325 L195,340 L190,355 L185,365 L175,370 L165,375 L160,385 L155,395 L150,405 L140,410 L135,420 L140,425 L155,428 L160,430 L150,432 L135,430 L125,425 L120,415 L115,405 L120,395 L125,385 L130,370 L125,355 L120,340 L115,325 L110,310 L105,295 L100,280 L95,265 L90,250 L88,235 L85,220 L82,205 L80,190 L78,175 L80,160 L82,145 L85,130 L88,115 L92,100 L95,85 L100,70 L105,60 L110,50 L120,40 L130,30 L140,20 L150,12 Z"
-          fill="#d4ecd8" stroke="#2C5F2D" stroke-width="1.5" opacity="0.6"/>
-        <!-- Santa Fe province highlighted -->
-        <path d="M135,120 L155,115 L175,110 L195,112 L210,118 L215,125 L218,135 L220,150 L218,165 L212,175 L200,180 L185,182 L170,180 L155,175 L142,168 L135,158 L130,145 L132,132 Z"
-          fill="#2C5F2D" stroke="#1a3a2a" stroke-width="2" opacity="0.9">
-          <animate attributeName="opacity" values="0.5;0.9;0.5;0.9" dur="3s" repeatCount="indefinite"/>
-        </path>
-        <!-- Buenos Aires province (lighter) -->
-        <path d="M150,180 L170,183 L190,185 L210,182 L220,190 L228,205 L230,220 L225,240 L215,255 L200,260 L185,258 L170,252 L155,245 L140,235 L132,220 L128,205 L130,190 L140,183 Z"
-          fill="#a8d5b0" stroke="#2C5F2D" stroke-width="1" opacity="0.5"/>
-        <!-- Labels -->
-        <text x="172" y="150" fill="white" font-size="14" font-weight="700" text-anchor="middle" font-family="Outfit" style="text-shadow:0 1px 4px rgba(0,0,0,0.5)">SANTA FE</text>
-        <text x="178" y="225" fill="#3d7a4a" font-size="11" text-anchor="middle" font-family="Outfit" opacity="0.8">Bs. As.</text>
-        <!-- Pin marker for Sauce Viejo -->
-        <circle cx="175" cy="155" r="6" fill="#c4a35a" stroke="white" stroke-width="2">
-          <animate attributeName="r" values="6;8;6" dur="2s" repeatCount="indefinite"/>
-        </circle>
-        <text x="195" y="162" fill="#5c4a3a" font-size="10" font-family="Outfit" font-weight="500">Sauce Viejo</text>
-        <!-- Route lines -->
-        <line x1="175" y1="155" x2="175" y2="210" stroke="#c4a35a" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.6"/>
-        <text x="188" y="188" fill="#5c4a3a" font-size="9" font-family="Outfit" opacity="0.6">RN 11</text>
-        <line x1="175" y1="148" x2="220" y2="148" stroke="#c4a35a" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.6"/>
-        <text x="200" y="143" fill="#5c4a3a" font-size="9" font-family="Outfit" opacity="0.6">RN 19</text>
-      </svg>
+      <!-- Simplified map diagram - not a geographic SVG, just a clean schematic -->
+      <div style="display:flex;flex-direction:column;align-items:center;gap:20px">
+        <!-- Schematic map card -->
+        <div style="background:white;border-radius:16px;padding:32px;box-shadow:0 4px 20px rgba(0,0,0,0.06);width:100%;max-width:420px">
+          <div style="text-align:center;margin-bottom:16px;font-size:0.9rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-mid);opacity:0.6;font-weight:600">República Argentina</div>
+          <!-- Visual hierarchy: provinces as stacked blocks -->
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <!-- North -->
+            <div style="background:#e8f0e9;border-radius:8px;padding:12px 18px;text-align:center;color:var(--text-mid);font-size:0.95rem;opacity:0.5">Norte argentino</div>
+            <!-- Center row: Córdoba + Santa Fe + Entre Ríos -->
+            <div style="display:flex;gap:8px">
+              <div style="background:#e8f0e9;border-radius:8px;padding:14px 12px;flex:1;text-align:center;color:var(--text-mid);font-size:0.95rem;opacity:0.5">Córdoba</div>
+              <div style="background:var(--green-dark);border-radius:8px;padding:14px 12px;flex:1.3;text-align:center;color:white;font-size:1.1rem;font-weight:700;position:relative;box-shadow:0 2px 12px rgba(44,95,45,0.3)">
+                SANTA FE
+                <div style="font-size:0.75rem;font-weight:400;opacity:0.8;margin-top:2px">📍 Sauce Viejo</div>
+              </div>
+              <div style="background:#e8f0e9;border-radius:8px;padding:14px 12px;flex:0.8;text-align:center;color:var(--text-mid);font-size:0.9rem;opacity:0.5">E. Ríos</div>
+            </div>
+            <!-- Buenos Aires -->
+            <div style="background:#d4ecd8;border-radius:8px;padding:14px 18px;text-align:center;color:var(--green-dark);font-size:1rem;opacity:0.6">Buenos Aires</div>
+            <!-- Patagonia -->
+            <div style="background:#e8f0e9;border-radius:8px;padding:12px 18px;text-align:center;color:var(--text-mid);font-size:0.95rem;opacity:0.4">Patagonia</div>
+          </div>
+        </div>
+        <!-- Key info below map -->
+        <div style="display:flex;gap:16px;width:100%;max-width:420px">
+          <div style="flex:1;background:white;border-radius:10px;padding:16px;text-align:center;box-shadow:0 2px 10px rgba(0,0,0,0.04)">
+            <div style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-mid);opacity:0.6;font-weight:600;margin-bottom:4px">Rutas</div>
+            <div style="font-size:1.1rem;font-weight:700;color:var(--green-dark)">RN 11 · RN 19</div>
+          </div>
+          <div style="flex:1;background:white;border-radius:10px;padding:16px;text-align:center;box-shadow:0 2px 10px rgba(0,0,0,0.04)">
+            <div style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-mid);opacity:0.6;font-weight:600;margin-bottom:4px">Aeropuertos</div>
+            <div style="font-size:1.1rem;font-weight:700;color:var(--green-dark)">2</div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -2012,23 +2146,53 @@ tbody tr:nth-child(even) {
   <div class="two-col">
     <div>
       <div class="col-header">Condiciones de Trabajo</div>
-      <ul class="item-list">
-        <li>Ventilación controlada</li>
-        <li>Iluminación por método de cavidades zonales</li>
-        <li>Ruidos y vibraciones controlados</li>
-        <li>Instalaciones eléctricas seguras</li>
-        <li>Colores en cañerías según DIN 2.403</li>
-      </ul>
+      <div class="cards-grid" style="grid-template-columns:1fr;gap:12px">
+        <div class="card" style="display:flex;align-items:center;gap:16px;padding:16px 22px">
+          <span style="font-size:1.8rem;flex-shrink:0">💨</span>
+          <span style="font-size:1.15rem">Ventilación controlada</span>
+        </div>
+        <div class="card" style="display:flex;align-items:center;gap:16px;padding:16px 22px">
+          <span style="font-size:1.8rem;flex-shrink:0">💡</span>
+          <span style="font-size:1.15rem">Iluminación por método de cavidades zonales</span>
+        </div>
+        <div class="card" style="display:flex;align-items:center;gap:16px;padding:16px 22px">
+          <span style="font-size:1.8rem;flex-shrink:0">🔇</span>
+          <span style="font-size:1.15rem">Ruidos y vibraciones controlados</span>
+        </div>
+        <div class="card" style="display:flex;align-items:center;gap:16px;padding:16px 22px">
+          <span style="font-size:1.8rem;flex-shrink:0">⚡</span>
+          <span style="font-size:1.15rem">Instalaciones eléctricas seguras</span>
+        </div>
+        <div class="card" style="display:flex;align-items:center;gap:16px;padding:16px 22px">
+          <span style="font-size:1.8rem;flex-shrink:0">🎨</span>
+          <span style="font-size:1.15rem">Colores en cañerías según DIN 2.403</span>
+        </div>
+      </div>
     </div>
     <div>
       <div class="col-header">Protección Contra Incendio</div>
-      <ul class="item-list">
-        <li>Clasificación de riesgo del sector</li>
-        <li>Extintores adecuados según tipo de fuego</li>
-        <li>Plan de evacuación documentado</li>
-        <li>Señalización de obligación, advertencia e informativa</li>
-        <li>Rombo NFPA para productos almacenados</li>
-      </ul>
+      <div class="cards-grid" style="grid-template-columns:1fr;gap:12px">
+        <div class="card" style="display:flex;align-items:center;gap:16px;padding:16px 22px">
+          <span style="font-size:1.8rem;flex-shrink:0">⚠️</span>
+          <span style="font-size:1.15rem">Clasificación de riesgo del sector</span>
+        </div>
+        <div class="card" style="display:flex;align-items:center;gap:16px;padding:16px 22px">
+          <span style="font-size:1.8rem;flex-shrink:0">🧯</span>
+          <span style="font-size:1.15rem">Extintores adecuados según tipo de fuego</span>
+        </div>
+        <div class="card" style="display:flex;align-items:center;gap:16px;padding:16px 22px">
+          <span style="font-size:1.8rem;flex-shrink:0">🚪</span>
+          <span style="font-size:1.15rem">Plan de evacuación documentado</span>
+        </div>
+        <div class="card" style="display:flex;align-items:center;gap:16px;padding:16px 22px">
+          <span style="font-size:1.8rem;flex-shrink:0">🪧</span>
+          <span style="font-size:1.15rem">Señalización de obligación y advertencia</span>
+        </div>
+        <div class="card" style="display:flex;align-items:center;gap:16px;padding:16px 22px">
+          <span style="font-size:1.8rem;flex-shrink:0">🔶</span>
+          <span style="font-size:1.15rem">Rombo NFPA para productos almacenados</span>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -2256,48 +2420,40 @@ tbody tr:nth-child(even) {
   <div class="two-col">
     <div>
       <div class="col-header">💧 Agua Total: 44,80 m³/sem</div>
-      <div style="display:flex;align-items:center;gap:24px">
+      <div style="display:flex;align-items:center;gap:36px;margin-top:12px">
         <!-- SVG Donut Chart - Water -->
-        <svg viewBox="0 0 180 180" style="width:180px;flex-shrink:0">
-          <!-- Vapor: 46% = 165.6° -->
-          <circle cx="90" cy="90" r="65" fill="none" stroke="#2C5F2D" stroke-width="22" stroke-dasharray="102.9 311.5" stroke-dashoffset="0" transform="rotate(-90,90,90)"><animate attributeName="stroke-dasharray" from="0 414.4" to="102.9 311.5" dur="0.8s" fill="freeze"/></circle>
-          <!-- Refrigeración: 27.3% = 98.4° -->
-          <circle cx="90" cy="90" r="65" fill="none" stroke="#3d7a4a" stroke-width="22" stroke-dasharray="61.0 353.4" stroke-dashoffset="-102.9" transform="rotate(-90,90,90)"><animate attributeName="stroke-dasharray" from="0 414.4" to="61.0 353.4" dur="0.8s" begin="0.2s" fill="freeze"/></circle>
-          <!-- Limpieza: 16.1% -->
-          <circle cx="90" cy="90" r="65" fill="none" stroke="#5fa86b" stroke-width="22" stroke-dasharray="36.0 378.4" stroke-dashoffset="-163.9" transform="rotate(-90,90,90)"><animate attributeName="stroke-dasharray" from="0 414.4" to="36.0 378.4" dur="0.8s" begin="0.4s" fill="freeze"/></circle>
-          <!-- Uso humano: 6% -->
-          <circle cx="90" cy="90" r="65" fill="none" stroke="#a8d5b0" stroke-width="22" stroke-dasharray="13.5 400.9" stroke-dashoffset="-199.9" transform="rotate(-90,90,90)"><animate attributeName="stroke-dasharray" from="0 414.4" to="13.5 400.9" dur="0.8s" begin="0.6s" fill="freeze"/></circle>
-          <!-- Center text -->
-          <text x="90" y="85" fill="white" font-size="18" text-anchor="middle" font-family="Cormorant Garamond" font-weight="700">44,80</text>
-          <text x="90" y="102" fill="rgba(255,255,255,0.5)" font-size="10" text-anchor="middle" font-family="Outfit">m³/sem</text>
+        <svg viewBox="0 0 240 240" style="width:240px;flex-shrink:0">
+          <circle cx="120" cy="120" r="85" fill="none" stroke="#2C5F2D" stroke-width="30" stroke-dasharray="131.9 402.1" stroke-dashoffset="0" transform="rotate(-90,120,120)"><animate attributeName="stroke-dasharray" from="0 534" to="131.9 402.1" dur="0.8s" fill="freeze"/></circle>
+          <circle cx="120" cy="120" r="85" fill="none" stroke="#3d7a4a" stroke-width="30" stroke-dasharray="78.3 455.7" stroke-dashoffset="-131.9" transform="rotate(-90,120,120)"><animate attributeName="stroke-dasharray" from="0 534" to="78.3 455.7" dur="0.8s" begin="0.2s" fill="freeze"/></circle>
+          <circle cx="120" cy="120" r="85" fill="none" stroke="#5fa86b" stroke-width="30" stroke-dasharray="46.2 487.8" stroke-dashoffset="-210.2" transform="rotate(-90,120,120)"><animate attributeName="stroke-dasharray" from="0 534" to="46.2 487.8" dur="0.8s" begin="0.4s" fill="freeze"/></circle>
+          <circle cx="120" cy="120" r="85" fill="none" stroke="#a8d5b0" stroke-width="30" stroke-dasharray="17.3 516.7" stroke-dashoffset="-256.4" transform="rotate(-90,120,120)"><animate attributeName="stroke-dasharray" from="0 534" to="17.3 516.7" dur="0.8s" begin="0.6s" fill="freeze"/></circle>
+          <text x="120" y="112" fill="white" font-size="28" text-anchor="middle" font-family="Cormorant Garamond" font-weight="700">44,80</text>
+          <text x="120" y="138" fill="rgba(255,255,255,0.5)" font-size="14" text-anchor="middle" font-family="Outfit">m³/sem</text>
         </svg>
-        <div style="display:flex;flex-direction:column;gap:8px">
-          <div class="flex-center"><span style="width:10px;height:10px;border-radius:3px;background:#2C5F2D;flex-shrink:0"></span><span class="text-sm">Vapor — 20,59</span></div>
-          <div class="flex-center"><span style="width:10px;height:10px;border-radius:3px;background:#3d7a4a;flex-shrink:0"></span><span class="text-sm">Refrigeración — 12,25</span></div>
-          <div class="flex-center"><span style="width:10px;height:10px;border-radius:3px;background:#5fa86b;flex-shrink:0"></span><span class="text-sm">Limpieza — 7,22</span></div>
-          <div class="flex-center"><span style="width:10px;height:10px;border-radius:3px;background:#a8d5b0;flex-shrink:0"></span><span class="text-sm">Uso humano — 2,70</span></div>
+        <div style="display:flex;flex-direction:column;gap:16px">
+          <div class="flex-center" style="gap:12px"><span style="width:16px;height:16px;border-radius:4px;background:#2C5F2D;flex-shrink:0"></span><span style="font-size:1.2rem">Vapor — <strong>20,59</strong></span></div>
+          <div class="flex-center" style="gap:12px"><span style="width:16px;height:16px;border-radius:4px;background:#3d7a4a;flex-shrink:0"></span><span style="font-size:1.2rem">Refrigeración — <strong>12,25</strong></span></div>
+          <div class="flex-center" style="gap:12px"><span style="width:16px;height:16px;border-radius:4px;background:#5fa86b;flex-shrink:0"></span><span style="font-size:1.2rem">Limpieza — <strong>7,22</strong></span></div>
+          <div class="flex-center" style="gap:12px"><span style="width:16px;height:16px;border-radius:4px;background:#a8d5b0;flex-shrink:0"></span><span style="font-size:1.2rem">Uso humano — <strong>2,70</strong></span></div>
         </div>
       </div>
-      <div class="text-xs opacity-60 mt-8">+ Agua de pozo: 14,1 m³/sem (riego e incendio)</div>
+      <div class="mt-16" style="font-size:1.05rem;opacity:0.5">+ Agua de pozo: 14,1 m³/sem (riego e incendio)</div>
     </div>
     <div>
       <div class="col-header">🔥 Gas Natural: 161 m³/sem</div>
-      <div style="display:flex;align-items:center;gap:24px">
+      <div style="display:flex;align-items:center;gap:36px;margin-top:12px">
         <!-- SVG Donut Chart - Gas -->
-        <svg viewBox="0 0 180 180" style="width:180px;flex-shrink:0">
-          <!-- Calefacción: 73.5% -->
-          <circle cx="90" cy="90" r="65" fill="none" stroke="#c4a35a" stroke-width="22" stroke-dasharray="300.0 114.4" stroke-dashoffset="0" transform="rotate(-90,90,90)"><animate attributeName="stroke-dasharray" from="0 414.4" to="300.0 114.4" dur="0.8s" fill="freeze"/></circle>
-          <!-- Lixiviación: 16.7% -->
-          <circle cx="90" cy="90" r="65" fill="none" stroke="#e8d5a0" stroke-width="22" stroke-dasharray="69.2 345.2" stroke-dashoffset="-300.0" transform="rotate(-90,90,90)"><animate attributeName="stroke-dasharray" from="0 414.4" to="69.2 345.2" dur="0.8s" begin="0.2s" fill="freeze"/></circle>
-          <!-- Arrastre: 9.9% -->
-          <circle cx="90" cy="90" r="65" fill="none" stroke="#8a7565" stroke-width="22" stroke-dasharray="41.0 373.4" stroke-dashoffset="-369.2" transform="rotate(-90,90,90)"><animate attributeName="stroke-dasharray" from="0 414.4" to="41.0 373.4" dur="0.8s" begin="0.4s" fill="freeze"/></circle>
-          <text x="90" y="85" fill="white" font-size="18" text-anchor="middle" font-family="Cormorant Garamond" font-weight="700">161</text>
-          <text x="90" y="102" fill="rgba(255,255,255,0.5)" font-size="10" text-anchor="middle" font-family="Outfit">m³/sem</text>
+        <svg viewBox="0 0 240 240" style="width:240px;flex-shrink:0">
+          <circle cx="120" cy="120" r="85" fill="none" stroke="#c4a35a" stroke-width="30" stroke-dasharray="392.5 141.5" stroke-dashoffset="0" transform="rotate(-90,120,120)"><animate attributeName="stroke-dasharray" from="0 534" to="392.5 141.5" dur="0.8s" fill="freeze"/></circle>
+          <circle cx="120" cy="120" r="85" fill="none" stroke="#e8d5a0" stroke-width="30" stroke-dasharray="89.2 444.8" stroke-dashoffset="-392.5" transform="rotate(-90,120,120)"><animate attributeName="stroke-dasharray" from="0 534" to="89.2 444.8" dur="0.8s" begin="0.2s" fill="freeze"/></circle>
+          <circle cx="120" cy="120" r="85" fill="none" stroke="#8a7565" stroke-width="30" stroke-dasharray="52.9 481.1" stroke-dashoffset="-481.7" transform="rotate(-90,120,120)"><animate attributeName="stroke-dasharray" from="0 534" to="52.9 481.1" dur="0.8s" begin="0.4s" fill="freeze"/></circle>
+          <text x="120" y="112" fill="white" font-size="30" text-anchor="middle" font-family="Cormorant Garamond" font-weight="700">161</text>
+          <text x="120" y="138" fill="rgba(255,255,255,0.5)" font-size="14" text-anchor="middle" font-family="Outfit">m³/sem</text>
         </svg>
-        <div style="display:flex;flex-direction:column;gap:8px">
-          <div class="flex-center"><span style="width:10px;height:10px;border-radius:3px;background:#c4a35a;flex-shrink:0"></span><span class="text-sm">Calefacción — 28,38 m³/d</span></div>
-          <div class="flex-center"><span style="width:10px;height:10px;border-radius:3px;background:#e8d5a0;flex-shrink:0"></span><span class="text-sm">Lixiviación — 6,45 m³/d</span></div>
-          <div class="flex-center"><span style="width:10px;height:10px;border-radius:3px;background:#8a7565;flex-shrink:0"></span><span class="text-sm">Arrastre — 3,82 m³/d</span></div>
+        <div style="display:flex;flex-direction:column;gap:16px">
+          <div class="flex-center" style="gap:12px"><span style="width:16px;height:16px;border-radius:4px;background:#c4a35a;flex-shrink:0"></span><span style="font-size:1.2rem">Calefacción — <strong>28,38</strong> m³/d</span></div>
+          <div class="flex-center" style="gap:12px"><span style="width:16px;height:16px;border-radius:4px;background:#e8d5a0;flex-shrink:0"></span><span style="font-size:1.2rem">Lixiviación — <strong>6,45</strong> m³/d</span></div>
+          <div class="flex-center" style="gap:12px"><span style="width:16px;height:16px;border-radius:4px;background:#8a7565;flex-shrink:0"></span><span style="font-size:1.2rem">Arrastre — <strong>3,82</strong> m³/d</span></div>
         </div>
       </div>
     </div>
@@ -2571,22 +2727,36 @@ tbody tr:nth-child(even) {
   <div class="slide-title">Factibilidad del Proyecto</div>
   <div class="two-col">
     <div>
-      <ul class="item-list">
-        <li>VAN positivo en los 3 escenarios → proyecto viable</li>
-        <li>TIR muy superior a TMAR → inversión favorable</li>
-        <li>FNE crecientes en los 5 años de evaluación</li>
-        <li>Valor de salvamento: $2.379 millones</li>
-        <li>Escenario 3 elegido (mayor VAN y TIR)</li>
-        <li>Un turno adicional incrementa rentabilidad</li>
-      </ul>
+      <div class="cards-grid" style="grid-template-columns:1fr;gap:12px">
+        <div class="card" style="display:flex;align-items:center;gap:16px;padding:16px 22px">
+          <span style="font-size:1.6rem;flex-shrink:0">✅</span>
+          <span style="font-size:1.15rem"><strong>VAN positivo</strong> en los 3 escenarios → proyecto viable</span>
+        </div>
+        <div class="card" style="display:flex;align-items:center;gap:16px;padding:16px 22px">
+          <span style="font-size:1.6rem;flex-shrink:0">📈</span>
+          <span style="font-size:1.15rem"><strong>TIR muy superior</strong> a TMAR → inversión favorable</span>
+        </div>
+        <div class="card" style="display:flex;align-items:center;gap:16px;padding:16px 22px">
+          <span style="font-size:1.6rem;flex-shrink:0">💹</span>
+          <span style="font-size:1.15rem"><strong>FNE crecientes</strong> en los 5 años de evaluación</span>
+        </div>
+        <div class="card" style="display:flex;align-items:center;gap:16px;padding:16px 22px">
+          <span style="font-size:1.6rem;flex-shrink:0">🏦</span>
+          <span style="font-size:1.15rem">Valor de salvamento: <strong>$2.379 millones</strong></span>
+        </div>
+        <div class="card" style="display:flex;align-items:center;gap:16px;padding:16px 22px">
+          <span style="font-size:1.6rem;flex-shrink:0">🎯</span>
+          <span style="font-size:1.15rem"><strong>Escenario 3</strong> elegido (mayor VAN y TIR)</span>
+        </div>
+      </div>
     </div>
-    <div style="display:flex;flex-direction:column;justify-content:center;align-items:center;gap:20px">
-      <div class="pill pill--viable" style="font-size:1.4rem;padding:16px 40px;border-radius:16px">
+    <div style="display:flex;flex-direction:column;justify-content:center;align-items:center;gap:24px">
+      <div class="pill pill--viable" style="font-size:1.6rem;padding:20px 48px;border-radius:16px">
         ✓ PROYECTO VIABLE
       </div>
-      <div class="text-sm opacity-60" style="text-align:center">
+      <div style="text-align:center;opacity:0.6;font-size:1.1rem">
         Precio mínimo rentable:<br>
-        <strong style="font-size:1.2rem;opacity:1">$29.190,95/botella</strong>
+        <strong style="font-size:1.4rem;opacity:1;color:var(--green-pale)">$29.190,95/botella</strong>
       </div>
     </div>
   </div>
@@ -2595,16 +2765,40 @@ tbody tr:nth-child(even) {
 <!-- ═══════════════════════════════════════ SLIDE 50: CONCLUSIONES ═══════════════════════════════════════ -->
 <div class="slide slide--dark" data-slide="50">
   <div class="accent-bar"></div>
+  <!-- Decorative circles -->
+  <svg viewBox="0 0 200 200" style="position:absolute;right:80px;bottom:100px;width:250px;opacity:0.03;pointer-events:none">
+    <circle cx="100" cy="100" r="90" stroke="white" stroke-width="2" fill="none"/>
+    <circle cx="100" cy="100" r="60" stroke="white" stroke-width="1.5" fill="none"/>
+    <circle cx="100" cy="100" r="30" stroke="white" stroke-width="1" fill="none"/>
+  </svg>
   <div class="section-tag">Conclusiones</div>
   <div class="slide-title">Conclusiones Generales</div>
-  <ol class="objective-list">
-    <li><span class="obj-num">1</span> Condiciones favorables de implementación técnica y territorial</li>
-    <li><span class="obj-num">2</span> Proyección de ingresos justifica la inversión (VAN $6.128M, TIR 381,98%)</li>
-    <li><span class="obj-num">3</span> Aporte al desarrollo local: empleo e industria en Sauce Viejo</li>
-    <li><span class="obj-num">4</span> Criterios de calidad en cada etapa (Farmacopea Argentina)</li>
-    <li><span class="obj-num">5</span> Valor agregado a recursos forestales locales</li>
-    <li><span class="obj-num">6</span> Alternativa sostenible y competitiva en el mercado</li>
-  </ol>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px 32px;width:100%">
+    <div class="card" style="display:flex;align-items:flex-start;gap:16px;padding:20px 24px">
+      <span class="obj-num" style="margin-top:2px">1</span>
+      <div style="font-size:1.2rem">Condiciones favorables de <strong>implementación técnica y territorial</strong></div>
+    </div>
+    <div class="card" style="display:flex;align-items:flex-start;gap:16px;padding:20px 24px">
+      <span class="obj-num" style="margin-top:2px">2</span>
+      <div style="font-size:1.2rem">Proyección de ingresos justifica la inversión (<strong>VAN $6.128M, TIR 381,98%</strong>)</div>
+    </div>
+    <div class="card" style="display:flex;align-items:flex-start;gap:16px;padding:20px 24px">
+      <span class="obj-num" style="margin-top:2px">3</span>
+      <div style="font-size:1.2rem">Aporte al <strong>desarrollo local</strong>: empleo e industria en Sauce Viejo</div>
+    </div>
+    <div class="card" style="display:flex;align-items:flex-start;gap:16px;padding:20px 24px">
+      <span class="obj-num" style="margin-top:2px">4</span>
+      <div style="font-size:1.2rem">Criterios de <strong>calidad</strong> en cada etapa (Farmacopea Argentina)</div>
+    </div>
+    <div class="card" style="display:flex;align-items:flex-start;gap:16px;padding:20px 24px">
+      <span class="obj-num" style="margin-top:2px">5</span>
+      <div style="font-size:1.2rem"><strong>Valor agregado</strong> a recursos forestales locales</div>
+    </div>
+    <div class="card" style="display:flex;align-items:flex-start;gap:16px;padding:20px 24px">
+      <span class="obj-num" style="margin-top:2px">6</span>
+      <div style="font-size:1.2rem">Alternativa <strong>sostenible y competitiva</strong> en el mercado</div>
+    </div>
+  </div>
 </div>
 
 <!-- ═══════════════════════════════════════ SLIDE 51: DASHBOARD ═══════════════════════════════════════ -->
@@ -2657,6 +2851,19 @@ tbody tr:nth-child(even) {
   <div class="highlight-box mt-16" style="text-align:center">
     <strong>Sauce Viejo, Santa Fe</strong> — Universidad Tecnológica Nacional, FRSF
   </div>
+</div>
+
+<!-- ═══════════════════════════════════════ SLIDE: PREGUNTAS ═══════════════════════════════════════ -->
+<div class="slide slide--separator" data-slide="preguntas" style="background:linear-gradient(135deg, var(--green-deep) 0%, #0f2618 50%, var(--green-deep) 100%)">
+  <svg viewBox="0 0 300 300" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:500px;opacity:0.03;pointer-events:none">
+    <circle cx="150" cy="150" r="140" stroke="white" stroke-width="1.5" fill="none"/>
+    <circle cx="150" cy="150" r="100" stroke="white" stroke-width="1" fill="none"/>
+    <circle cx="150" cy="150" r="60" stroke="white" stroke-width="0.8" fill="none"/>
+  </svg>
+  <div class="sep-icon" style="font-size:5rem">❓</div>
+  <div class="sep-title" style="font-size:4.5rem">¿Preguntas?</div>
+  <div class="sep-line"></div>
+  <div class="sep-subtitle" style="font-size:1.4rem;margin-top:8px">Estamos a disposición para responder sus consultas</div>
 </div>
 
 <!-- ═══════════════════════════════════════ SLIDE 52: GRACIAS ═══════════════════════════════════════ -->
