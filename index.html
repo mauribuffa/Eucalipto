@@ -49,8 +49,8 @@ html, body {
   inset: 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 50px 64px 60px;
+  justify-content: flex-start;
+  padding: 48px 100px 60px;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
@@ -88,7 +88,7 @@ html, body {
 .slide--separator {
   background: linear-gradient(135deg, var(--green-deep) 0%, var(--green-dark) 50%, var(--green-mid) 100%);
   color: var(--text-light);
-  justify-content: center;
+  justify-content: center !important;
   align-items: center;
   text-align: center;
 }
@@ -130,9 +130,9 @@ html, body {
 .slide-title {
   font-family: 'Cormorant Garamond', serif;
   font-weight: 700;
-  font-size: 3.2rem;
+  font-size: 3.4rem;
   line-height: 1.15;
-  margin-bottom: 28px;
+  margin-bottom: 24px;
   letter-spacing: -0.02em;
 }
 
@@ -249,7 +249,7 @@ html, body {
 .stat-number {
   font-family: 'Cormorant Garamond', serif;
   font-weight: 700;
-  font-size: 2.8rem;
+  font-size: 3rem;
   line-height: 1.1;
   margin-bottom: 8px;
 }
@@ -258,7 +258,7 @@ html, body {
 .slide--dark .stat-number { color: var(--green-pale); }
 
 .stat-label {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   opacity: 0.6;
@@ -276,7 +276,7 @@ html, body {
 table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
 .slide--cream table,
@@ -293,7 +293,7 @@ thead th {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  font-size: 0.82rem;
+  font-size: 0.85rem;
   padding: 14px 20px;
   text-align: left;
 }
@@ -396,9 +396,9 @@ tbody tr:nth-child(even) {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 12px 20px;
+  padding: 14px 22px;
   border-radius: 10px;
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   font-weight: 500;
 }
 
@@ -431,9 +431,9 @@ tbody tr:nth-child(even) {
 /* ─── Badges / Pills ─── */
 .pill {
   display: inline-block;
-  padding: 6px 16px;
+  padding: 6px 18px;
   border-radius: 20px;
-  font-size: 0.88rem;
+  font-size: 0.95rem;
   font-weight: 500;
   margin: 3px;
 }
@@ -495,7 +495,7 @@ tbody tr:nth-child(even) {
 
 /* ─── Portada ─── */
 .portada {
-  justify-content: center;
+  justify-content: center !important;
   align-items: center;
   text-align: center;
   padding: 60px;
@@ -581,7 +581,7 @@ tbody tr:nth-child(even) {
 
 /* ─── Gracias ─── */
 .gracias {
-  justify-content: center;
+  justify-content: center !important;
   align-items: center;
   text-align: center;
   background:
@@ -618,11 +618,11 @@ tbody tr:nth-child(even) {
 
 /* ─── Section Tag ─── */
 .section-tag {
-  font-size: 0.82rem;
+  font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.14em;
   font-weight: 600;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   opacity: 0.5;
 }
 
@@ -929,7 +929,7 @@ tbody tr:nth-child(even) {
   <div class="accent-bar"></div>
   <div class="section-tag">Contexto</div>
   <div class="slide-title" style="font-style:italic">Tendencias Mundiales</div>
-  <ul class="item-list" style="max-width:700px">
+  <ul class="item-list">
     <li>Preocupación creciente por la salud y el bienestar</li>
     <li>Crecimiento sostenido del mercado de cosméticos naturales</li>
     <li>Mayor empleo de derivados de plantas medicinales y aromáticas</li>
@@ -999,37 +999,67 @@ tbody tr:nth-child(even) {
   <div class="slide-title">Proyección de la Demanda</div>
   <div class="two-col">
     <div>
-      <div class="col-header">Escenario Optimista (miles de L)</div>
-      <div class="table-wrapper">
-        <table>
-          <thead><tr><th>Año</th><th>DPIO</th></tr></thead>
-          <tbody>
-            <tr><td>2023</td><td>91,85</td></tr>
-            <tr><td>2024</td><td>100,39</td></tr>
-            <tr><td>2025</td><td>108,93</td></tr>
-            <tr><td>2026</td><td>117,46</td></tr>
-            <tr><td>2027</td><td>125,99</td></tr>
-          </tbody>
-        </table>
-      </div>
+      <!-- SVG Bar Chart - Demand -->
+      <svg viewBox="0 0 480 280" style="width:100%;border-radius:12px;background:rgba(255,255,255,0.03)">
+        <!-- Grid lines -->
+        <line x1="60" y1="40" x2="460" y2="40" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+        <line x1="60" y1="90" x2="460" y2="90" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+        <line x1="60" y1="140" x2="460" y2="140" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+        <line x1="60" y1="190" x2="460" y2="190" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+        <!-- Y axis labels -->
+        <text x="52" y="44" fill="rgba(255,255,255,0.4)" font-size="11" text-anchor="end" font-family="Outfit">130</text>
+        <text x="52" y="94" fill="rgba(255,255,255,0.4)" font-size="11" text-anchor="end" font-family="Outfit">110</text>
+        <text x="52" y="144" fill="rgba(255,255,255,0.4)" font-size="11" text-anchor="end" font-family="Outfit">90</text>
+        <text x="52" y="194" fill="rgba(255,255,255,0.4)" font-size="11" text-anchor="end" font-family="Outfit">70</text>
+        <text x="20" y="130" fill="rgba(255,255,255,0.3)" font-size="10" text-anchor="middle" transform="rotate(-90,20,130)" font-family="Outfit">miles de L</text>
+        <!-- Optimista bars (green) -->
+        <rect x="80" y="148" width="28" height="92" rx="4" fill="#5fa86b" opacity="0.9"><animate attributeName="height" from="0" to="92" dur="0.6s" fill="freeze"/><animate attributeName="y" from="240" to="148" dur="0.6s" fill="freeze"/></rect>
+        <rect x="160" y="127" width="28" height="113" rx="4" fill="#5fa86b" opacity="0.9"><animate attributeName="height" from="0" to="113" dur="0.6s" begin="0.1s" fill="freeze"/><animate attributeName="y" from="240" to="127" dur="0.6s" begin="0.1s" fill="freeze"/></rect>
+        <rect x="240" y="106" width="28" height="134" rx="4" fill="#5fa86b" opacity="0.9"><animate attributeName="height" from="0" to="134" dur="0.6s" begin="0.2s" fill="freeze"/><animate attributeName="y" from="240" to="106" dur="0.6s" begin="0.2s" fill="freeze"/></rect>
+        <rect x="320" y="84" width="28" height="156" rx="4" fill="#5fa86b" opacity="0.9"><animate attributeName="height" from="0" to="156" dur="0.6s" begin="0.3s" fill="freeze"/><animate attributeName="y" from="240" to="84" dur="0.6s" begin="0.3s" fill="freeze"/></rect>
+        <rect x="400" y="63" width="28" height="177" rx="4" fill="#5fa86b" opacity="0.9"><animate attributeName="height" from="0" to="177" dur="0.6s" begin="0.4s" fill="freeze"/><animate attributeName="y" from="240" to="63" dur="0.6s" begin="0.4s" fill="freeze"/></rect>
+        <!-- Pesimista bars (gold) -->
+        <rect x="112" y="189" width="28" height="51" rx="4" fill="#c4a35a" opacity="0.7"><animate attributeName="height" from="0" to="51" dur="0.6s" fill="freeze"/><animate attributeName="y" from="240" to="189" dur="0.6s" fill="freeze"/></rect>
+        <rect x="192" y="168" width="28" height="72" rx="4" fill="#c4a35a" opacity="0.7"><animate attributeName="height" from="0" to="72" dur="0.6s" begin="0.1s" fill="freeze"/><animate attributeName="y" from="240" to="168" dur="0.6s" begin="0.1s" fill="freeze"/></rect>
+        <rect x="272" y="147" width="28" height="93" rx="4" fill="#c4a35a" opacity="0.7"><animate attributeName="height" from="0" to="93" dur="0.6s" begin="0.2s" fill="freeze"/><animate attributeName="y" from="240" to="147" dur="0.6s" begin="0.2s" fill="freeze"/></rect>
+        <rect x="352" y="125" width="28" height="115" rx="4" fill="#c4a35a" opacity="0.7"><animate attributeName="height" from="0" to="115" dur="0.6s" begin="0.3s" fill="freeze"/><animate attributeName="y" from="240" to="125" dur="0.6s" begin="0.3s" fill="freeze"/></rect>
+        <rect x="432" y="104" width="28" height="136" rx="4" fill="#c4a35a" opacity="0.7"><animate attributeName="height" from="0" to="136" dur="0.6s" begin="0.4s" fill="freeze"/><animate attributeName="y" from="240" to="104" dur="0.6s" begin="0.4s" fill="freeze"/></rect>
+        <!-- Value labels -->
+        <text x="94" y="142" fill="white" font-size="10" text-anchor="middle" font-family="Outfit" font-weight="500">91,9</text>
+        <text x="174" y="121" fill="white" font-size="10" text-anchor="middle" font-family="Outfit" font-weight="500">100,4</text>
+        <text x="254" y="100" fill="white" font-size="10" text-anchor="middle" font-family="Outfit" font-weight="500">108,9</text>
+        <text x="334" y="78" fill="white" font-size="10" text-anchor="middle" font-family="Outfit" font-weight="500">117,5</text>
+        <text x="414" y="57" fill="white" font-size="10" text-anchor="middle" font-family="Outfit" font-weight="500">126,0</text>
+        <!-- X axis labels -->
+        <text x="110" y="258" fill="rgba(255,255,255,0.6)" font-size="12" text-anchor="middle" font-family="Outfit">2023</text>
+        <text x="190" y="258" fill="rgba(255,255,255,0.6)" font-size="12" text-anchor="middle" font-family="Outfit">2024</text>
+        <text x="270" y="258" fill="rgba(255,255,255,0.6)" font-size="12" text-anchor="middle" font-family="Outfit">2025</text>
+        <text x="350" y="258" fill="rgba(255,255,255,0.6)" font-size="12" text-anchor="middle" font-family="Outfit">2026</text>
+        <text x="430" y="258" fill="rgba(255,255,255,0.6)" font-size="12" text-anchor="middle" font-family="Outfit">2027</text>
+        <!-- Legend -->
+        <rect x="140" y="270" width="12" height="8" rx="2" fill="#5fa86b"/>
+        <text x="156" y="278" fill="rgba(255,255,255,0.6)" font-size="10" font-family="Outfit">Optimista</text>
+        <rect x="220" y="270" width="12" height="8" rx="2" fill="#c4a35a"/>
+        <text x="236" y="278" fill="rgba(255,255,255,0.6)" font-size="10" font-family="Outfit">Pesimista</text>
+      </svg>
     </div>
     <div>
-      <div class="col-header">Escenario Pesimista (miles de L)</div>
+      <div class="col-header">Datos de Demanda (miles de L)</div>
       <div class="table-wrapper">
         <table>
-          <thead><tr><th>Año</th><th>DPIP</th></tr></thead>
+          <thead><tr><th>Año</th><th>Optimista</th><th>Pesimista</th></tr></thead>
           <tbody>
-            <tr><td>2023</td><td>72,16</td></tr>
-            <tr><td>2024</td><td>80,69</td></tr>
-            <tr><td>2025</td><td>89,23</td></tr>
-            <tr><td>2026</td><td>97,76</td></tr>
-            <tr><td>2027</td><td>106,30</td></tr>
+            <tr><td>2023</td><td class="highlight-cell green-text">91,85</td><td>72,16</td></tr>
+            <tr><td>2024</td><td class="highlight-cell green-text">100,39</td><td>80,69</td></tr>
+            <tr><td>2025</td><td class="highlight-cell green-text">108,93</td><td>89,23</td></tr>
+            <tr><td>2026</td><td class="highlight-cell green-text">117,46</td><td>97,76</td></tr>
+            <tr><td>2027</td><td class="highlight-cell green-text">125,99</td><td>106,30</td></tr>
           </tbody>
         </table>
       </div>
+      <div class="mt-8 text-xs opacity-60">Fuente: INDEC</div>
     </div>
   </div>
-  <div class="mt-8 text-xs opacity-60">Fuente: INDEC</div>
 </div>
 
 <!-- ═══════════════════════════════════════ SLIDE 10: OFERTA ═══════════════════════════════════════ -->
@@ -1039,31 +1069,76 @@ tbody tr:nth-child(even) {
   <div class="slide-title">Proyección de la Oferta</div>
   <div class="two-col">
     <div>
-      <div class="col-header">Oferta Optimista (miles de L)</div>
-      <div class="table-wrapper">
-        <table>
-          <thead><tr><th>Año</th><th>Oferta</th></tr></thead>
-          <tbody>
-            <tr><td>2023</td><td>534,70</td></tr>
-            <tr><td>2024</td><td>582,81</td></tr>
-            <tr><td>2025</td><td>630,92</td></tr>
-            <tr><td>2026</td><td>679,03</td></tr>
-            <tr><td>2027</td><td>727,15</td></tr>
-          </tbody>
-        </table>
-      </div>
+      <!-- SVG Line Chart - Supply -->
+      <svg viewBox="0 0 480 280" style="width:100%;border-radius:12px;background:white;box-shadow:0 2px 16px rgba(0,0,0,0.06)">
+        <defs>
+          <linearGradient id="areaGreen" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#2C5F2D" stop-opacity="0.2"/>
+            <stop offset="100%" stop-color="#2C5F2D" stop-opacity="0.02"/>
+          </linearGradient>
+          <linearGradient id="areaGold" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#c4a35a" stop-opacity="0.15"/>
+            <stop offset="100%" stop-color="#c4a35a" stop-opacity="0.02"/>
+          </linearGradient>
+        </defs>
+        <!-- Grid -->
+        <line x1="60" y1="40" x2="440" y2="40" stroke="rgba(0,0,0,0.06)" stroke-width="1"/>
+        <line x1="60" y1="90" x2="440" y2="90" stroke="rgba(0,0,0,0.06)" stroke-width="1"/>
+        <line x1="60" y1="140" x2="440" y2="140" stroke="rgba(0,0,0,0.06)" stroke-width="1"/>
+        <line x1="60" y1="190" x2="440" y2="190" stroke="rgba(0,0,0,0.06)" stroke-width="1"/>
+        <!-- Y labels -->
+        <text x="52" y="44" fill="rgba(0,0,0,0.4)" font-size="11" text-anchor="end" font-family="Outfit">750</text>
+        <text x="52" y="94" fill="rgba(0,0,0,0.4)" font-size="11" text-anchor="end" font-family="Outfit">650</text>
+        <text x="52" y="144" fill="rgba(0,0,0,0.4)" font-size="11" text-anchor="end" font-family="Outfit">550</text>
+        <text x="52" y="194" fill="rgba(0,0,0,0.4)" font-size="11" text-anchor="end" font-family="Outfit">450</text>
+        <text x="18" y="130" fill="rgba(0,0,0,0.3)" font-size="10" text-anchor="middle" transform="rotate(-90,18,130)" font-family="Outfit">miles de L</text>
+        <!-- Area fills -->
+        <path d="M90,153 L185,130 L280,108 L375,85 L440,67 L440,240 L90,240 Z" fill="url(#areaGreen)"/>
+        <path d="M90,192 L185,170 L280,147 L375,125 L440,105 L440,240 L90,240 Z" fill="url(#areaGold)"/>
+        <!-- Optimista line -->
+        <polyline points="90,153 185,130 280,108 375,85 440,67" fill="none" stroke="#2C5F2D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="90" cy="153" r="5" fill="#2C5F2D" stroke="white" stroke-width="2"/>
+        <circle cx="185" cy="130" r="5" fill="#2C5F2D" stroke="white" stroke-width="2"/>
+        <circle cx="280" cy="108" r="5" fill="#2C5F2D" stroke="white" stroke-width="2"/>
+        <circle cx="375" cy="85" r="5" fill="#2C5F2D" stroke="white" stroke-width="2"/>
+        <circle cx="440" cy="67" r="5" fill="#2C5F2D" stroke="white" stroke-width="2"/>
+        <!-- Pesimista line -->
+        <polyline points="90,192 185,170 280,147 375,125 440,105" fill="none" stroke="#c4a35a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8,4"/>
+        <circle cx="90" cy="192" r="5" fill="#c4a35a" stroke="white" stroke-width="2"/>
+        <circle cx="185" cy="170" r="5" fill="#c4a35a" stroke="white" stroke-width="2"/>
+        <circle cx="280" cy="147" r="5" fill="#c4a35a" stroke="white" stroke-width="2"/>
+        <circle cx="375" cy="125" r="5" fill="#c4a35a" stroke="white" stroke-width="2"/>
+        <circle cx="440" cy="105" r="5" fill="#c4a35a" stroke="white" stroke-width="2"/>
+        <!-- Value labels optimista -->
+        <text x="90" y="145" fill="#2C5F2D" font-size="10" text-anchor="middle" font-family="Outfit" font-weight="600">534,7</text>
+        <text x="185" y="122" fill="#2C5F2D" font-size="10" text-anchor="middle" font-family="Outfit" font-weight="600">582,8</text>
+        <text x="280" y="100" fill="#2C5F2D" font-size="10" text-anchor="middle" font-family="Outfit" font-weight="600">630,9</text>
+        <text x="375" y="77" fill="#2C5F2D" font-size="10" text-anchor="middle" font-family="Outfit" font-weight="600">679,0</text>
+        <text x="440" y="59" fill="#2C5F2D" font-size="10" text-anchor="middle" font-family="Outfit" font-weight="600">727,2</text>
+        <!-- X axis labels -->
+        <text x="90" y="258" fill="rgba(0,0,0,0.5)" font-size="12" text-anchor="middle" font-family="Outfit">2023</text>
+        <text x="185" y="258" fill="rgba(0,0,0,0.5)" font-size="12" text-anchor="middle" font-family="Outfit">2024</text>
+        <text x="280" y="258" fill="rgba(0,0,0,0.5)" font-size="12" text-anchor="middle" font-family="Outfit">2025</text>
+        <text x="375" y="258" fill="rgba(0,0,0,0.5)" font-size="12" text-anchor="middle" font-family="Outfit">2026</text>
+        <text x="440" y="258" fill="rgba(0,0,0,0.5)" font-size="12" text-anchor="middle" font-family="Outfit">2027</text>
+        <!-- Legend -->
+        <line x1="120" y1="274" x2="140" y2="274" stroke="#2C5F2D" stroke-width="3"/>
+        <text x="145" y="278" fill="rgba(0,0,0,0.5)" font-size="10" font-family="Outfit">Optimista</text>
+        <line x1="220" y1="274" x2="240" y2="274" stroke="#c4a35a" stroke-width="3" stroke-dasharray="6,3"/>
+        <text x="245" y="278" fill="rgba(0,0,0,0.5)" font-size="10" font-family="Outfit">Pesimista</text>
+      </svg>
     </div>
     <div>
-      <div class="col-header">Oferta Pesimista (miles de L)</div>
+      <div class="col-header">Datos de Oferta (miles de L)</div>
       <div class="table-wrapper">
         <table>
-          <thead><tr><th>Año</th><th>Oferta</th></tr></thead>
+          <thead><tr><th>Año</th><th>Optimista</th><th>Pesimista</th></tr></thead>
           <tbody>
-            <tr><td>2023</td><td>408,84</td></tr>
-            <tr><td>2024</td><td>456,96</td></tr>
-            <tr><td>2025</td><td>505,07</td></tr>
-            <tr><td>2026</td><td>553,18</td></tr>
-            <tr><td>2027</td><td>601,29</td></tr>
+            <tr><td>2023</td><td class="highlight-cell green-text">534,70</td><td>408,84</td></tr>
+            <tr><td>2024</td><td class="highlight-cell green-text">582,81</td><td>456,95</td></tr>
+            <tr><td>2025</td><td class="highlight-cell green-text">630,92</td><td>505,07</td></tr>
+            <tr><td>2026</td><td class="highlight-cell green-text">679,03</td><td>553,18</td></tr>
+            <tr><td>2027</td><td class="highlight-cell green-text">727,15</td><td>601,29</td></tr>
           </tbody>
         </table>
       </div>
@@ -1107,23 +1182,33 @@ tbody tr:nth-child(even) {
   <div class="two-col">
     <div>
       <div class="col-header">Precios de Competencia</div>
-      <div class="table-wrapper">
-        <table>
-          <thead><tr><th>Marca</th><th>Precio</th></tr></thead>
-          <tbody>
-            <tr><td>Just</td><td>$3.500</td></tr>
-            <tr><td>OFF</td><td>$2.143</td></tr>
-            <tr><td>Farmacity</td><td>$1.230</td></tr>
-            <tr><td>Exilet</td><td>$3.861</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="highlight-box mt-16">
-        <strong>Precio promedio fábrica:</strong> $1.878,45/envase
-      </div>
+      <!-- SVG Horizontal Bar Chart -->
+      <svg viewBox="0 0 420 220" style="width:100%;border-radius:12px;background:white;box-shadow:0 2px 16px rgba(0,0,0,0.06)">
+        <!-- Bars -->
+        <text x="15" y="42" fill="#3a4a3e" font-size="13" font-family="Outfit" font-weight="500">Exilet</text>
+        <rect x="90" y="28" width="276" height="24" rx="6" fill="#2C5F2D" opacity="0.8"><animate attributeName="width" from="0" to="276" dur="0.6s" fill="freeze"/></rect>
+        <text x="372" y="45" fill="white" font-size="12" font-family="Outfit" font-weight="600">$3.861</text>
+
+        <text x="15" y="82" fill="#3a4a3e" font-size="13" font-family="Outfit" font-weight="500">Just</text>
+        <rect x="90" y="68" width="250" height="24" rx="6" fill="#3d7a4a" opacity="0.8"><animate attributeName="width" from="0" to="250" dur="0.6s" begin="0.1s" fill="freeze"/></rect>
+        <text x="346" y="85" fill="white" font-size="12" font-family="Outfit" font-weight="600">$3.500</text>
+
+        <text x="15" y="122" fill="#3a4a3e" font-size="13" font-family="Outfit" font-weight="500">OFF</text>
+        <rect x="90" y="108" width="153" height="24" rx="6" fill="#5fa86b" opacity="0.8"><animate attributeName="width" from="0" to="153" dur="0.6s" begin="0.2s" fill="freeze"/></rect>
+        <text x="249" y="125" fill="white" font-size="12" font-family="Outfit" font-weight="600">$2.143</text>
+
+        <text x="15" y="162" fill="#3a4a3e" font-size="13" font-family="Outfit" font-weight="500">Farmacity</text>
+        <rect x="90" y="148" width="88" height="24" rx="6" fill="#a8d5b0" opacity="0.9"><animate attributeName="width" from="0" to="88" dur="0.6s" begin="0.3s" fill="freeze"/></rect>
+        <text x="184" y="165" fill="#2C5F2D" font-size="12" font-family="Outfit" font-weight="600">$1.230</text>
+
+        <!-- Average line -->
+        <line x1="224" y1="20" x2="224" y2="180" stroke="#c4a35a" stroke-width="2" stroke-dasharray="6,4"/>
+        <text x="224" y="198" fill="#c4a35a" font-size="11" text-anchor="middle" font-family="Outfit" font-weight="600">Promedio fábrica</text>
+        <text x="224" y="212" fill="#c4a35a" font-size="11" text-anchor="middle" font-family="Outfit">$1.878</text>
+      </svg>
     </div>
     <div>
-      <div class="col-header">Canales y Estrategia</div>
+      <div class="col-header">Canales de Distribución</div>
       <ul class="item-list">
         <li>Venta al por mayor</li>
         <li>Distribución intensiva</li>
@@ -1388,12 +1473,39 @@ tbody tr:nth-child(even) {
           </tbody>
         </table>
       </div>
+      <div class="highlight-box mt-16">
+        <strong style="font-size:1.1rem">✓ Santa Fe seleccionada</strong><br>
+        <span class="text-sm">Producción local de eucalipto, infraestructura vial, 2 aeropuertos.</span>
+      </div>
     </div>
     <div>
-      <div class="highlight-box">
-        <strong style="font-size:1.1rem">✓ Santa Fe seleccionada</strong><br><br>
-        <span class="text-sm">Producción local de eucalipto, infraestructura vial (RN 11, RN 19), 2 aeropuertos, parques industriales activos.</span>
-      </div>
+      <!-- SVG Argentina Map -->
+      <svg viewBox="0 0 320 440" style="width:100%;max-width:320px;margin:0 auto;display:block">
+        <!-- Argentina silhouette simplified -->
+        <path d="M160,10 L185,15 L200,25 L215,20 L230,30 L240,28 L250,35 L255,45 L260,55 L265,65 L260,80 L255,95 L260,105 L265,115 L260,130 L255,145 L250,155 L248,170 L250,185 L252,200 L248,215 L245,230 L240,245 L235,260 L230,275 L225,290 L220,305 L210,315 L200,325 L195,340 L190,355 L185,365 L175,370 L165,375 L160,385 L155,395 L150,405 L140,410 L135,420 L140,425 L155,428 L160,430 L150,432 L135,430 L125,425 L120,415 L115,405 L120,395 L125,385 L130,370 L125,355 L120,340 L115,325 L110,310 L105,295 L100,280 L95,265 L90,250 L88,235 L85,220 L82,205 L80,190 L78,175 L80,160 L82,145 L85,130 L88,115 L92,100 L95,85 L100,70 L105,60 L110,50 L120,40 L130,30 L140,20 L150,12 Z"
+          fill="#d4ecd8" stroke="#2C5F2D" stroke-width="1.5" opacity="0.6"/>
+        <!-- Santa Fe province highlighted -->
+        <path d="M135,120 L155,115 L175,110 L195,112 L210,118 L215,125 L218,135 L220,150 L218,165 L212,175 L200,180 L185,182 L170,180 L155,175 L142,168 L135,158 L130,145 L132,132 Z"
+          fill="#2C5F2D" stroke="#1a3a2a" stroke-width="2" opacity="0.9">
+          <animate attributeName="opacity" values="0.5;0.9;0.5;0.9" dur="3s" repeatCount="indefinite"/>
+        </path>
+        <!-- Buenos Aires province (lighter) -->
+        <path d="M150,180 L170,183 L190,185 L210,182 L220,190 L228,205 L230,220 L225,240 L215,255 L200,260 L185,258 L170,252 L155,245 L140,235 L132,220 L128,205 L130,190 L140,183 Z"
+          fill="#a8d5b0" stroke="#2C5F2D" stroke-width="1" opacity="0.5"/>
+        <!-- Labels -->
+        <text x="172" y="150" fill="white" font-size="14" font-weight="700" text-anchor="middle" font-family="Outfit" style="text-shadow:0 1px 4px rgba(0,0,0,0.5)">SANTA FE</text>
+        <text x="178" y="225" fill="#3d7a4a" font-size="11" text-anchor="middle" font-family="Outfit" opacity="0.8">Bs. As.</text>
+        <!-- Pin marker for Sauce Viejo -->
+        <circle cx="175" cy="155" r="6" fill="#c4a35a" stroke="white" stroke-width="2">
+          <animate attributeName="r" values="6;8;6" dur="2s" repeatCount="indefinite"/>
+        </circle>
+        <text x="195" y="162" fill="#5c4a3a" font-size="10" font-family="Outfit" font-weight="500">Sauce Viejo</text>
+        <!-- Route lines -->
+        <line x1="175" y1="155" x2="175" y2="210" stroke="#c4a35a" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.6"/>
+        <text x="188" y="188" fill="#5c4a3a" font-size="9" font-family="Outfit" opacity="0.6">RN 11</text>
+        <line x1="175" y1="148" x2="220" y2="148" stroke="#c4a35a" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.6"/>
+        <text x="200" y="143" fill="#5c4a3a" font-size="9" font-family="Outfit" opacity="0.6">RN 19</text>
+      </svg>
     </div>
   </div>
 </div>
@@ -1405,14 +1517,37 @@ tbody tr:nth-child(even) {
   <div class="slide-title">Microlocalización: Sauce Viejo</div>
   <div class="two-col">
     <div>
-      <ul class="item-list mb-16">
-        <li>Proveedor: Forestal Sauce Viejo S.A. (hojas como residuo maderero)</li>
-        <li>22 km de Santa Fe capital</li>
-        <li>Parque Industrial con accesos pavimentados</li>
-        <li>Central eléctrica 280 MW</li>
-        <li>Servicios de Aguas Santafesinas</li>
-        <li>Población: ~17.000 hab. — RN 11</li>
-      </ul>
+      <!-- SVG Local Map -->
+      <svg viewBox="0 0 400 300" style="width:100%;border-radius:12px;background:rgba(255,255,255,0.03);overflow:hidden">
+        <!-- River Paraná -->
+        <path d="M320,0 Q310,50 315,100 Q320,150 310,200 Q305,250 310,300" fill="none" stroke="rgba(90,138,196,0.3)" stroke-width="30"/>
+        <path d="M320,0 Q310,50 315,100 Q320,150 310,200 Q305,250 310,300" fill="none" stroke="rgba(90,138,196,0.15)" stroke-width="50"/>
+        <text x="330" y="150" fill="rgba(90,138,196,0.5)" font-size="10" font-family="Outfit" transform="rotate(-85,330,150)">Río Paraná</text>
+        <!-- RN 11 route -->
+        <line x1="200" y1="0" x2="200" y2="300" stroke="rgba(196,163,90,0.4)" stroke-width="4"/>
+        <line x1="200" y1="0" x2="200" y2="300" stroke="rgba(196,163,90,0.6)" stroke-width="2" stroke-dasharray="12,6"/>
+        <rect x="185" y="10" width="30" height="16" rx="3" fill="rgba(196,163,90,0.8)"/>
+        <text x="200" y="22" fill="white" font-size="9" text-anchor="middle" font-family="Outfit" font-weight="700">RN 11</text>
+        <!-- Santa Fe city -->
+        <circle cx="230" cy="60" r="20" fill="rgba(168,213,176,0.15)" stroke="rgba(168,213,176,0.3)" stroke-width="1"/>
+        <circle cx="230" cy="60" r="5" fill="#a8d5b0"/>
+        <text x="255" y="58" fill="rgba(255,255,255,0.7)" font-size="13" font-family="Outfit" font-weight="500">Santa Fe</text>
+        <text x="255" y="72" fill="rgba(255,255,255,0.4)" font-size="10" font-family="Outfit">Capital</text>
+        <!-- Distance line -->
+        <line x1="220" y1="78" x2="190" y2="175" stroke="rgba(255,255,255,0.2)" stroke-width="1" stroke-dasharray="4,4"/>
+        <text x="185" y="130" fill="rgba(196,163,90,0.8)" font-size="12" font-family="Outfit" font-weight="600" transform="rotate(-68,185,130)">22 km</text>
+        <!-- Sauce Viejo -->
+        <rect x="100" y="168" width="160" height="70" rx="10" fill="rgba(44,95,45,0.3)" stroke="rgba(95,168,107,0.5)" stroke-width="2">
+          <animate attributeName="stroke-opacity" values="0.3;0.7;0.3" dur="3s" repeatCount="indefinite"/>
+        </rect>
+        <text x="180" y="195" fill="white" font-size="15" text-anchor="middle" font-family="Outfit" font-weight="700">SAUCE VIEJO</text>
+        <text x="180" y="213" fill="rgba(255,255,255,0.5)" font-size="10" text-anchor="middle" font-family="Outfit">Parque Industrial</text>
+        <text x="180" y="228" fill="rgba(196,163,90,0.7)" font-size="10" text-anchor="middle" font-family="Outfit">📍 Planta Propuesta</text>
+        <!-- Forestal -->
+        <circle cx="130" cy="265" r="4" fill="#5fa86b"/>
+        <text x="142" y="269" fill="rgba(255,255,255,0.5)" font-size="10" font-family="Outfit">Forestal Sauce Viejo S.A.</text>
+        <line x1="135" y1="260" x2="160" y2="240" stroke="rgba(95,168,107,0.3)" stroke-width="1" stroke-dasharray="3,3"/>
+      </svg>
     </div>
     <div>
       <div class="cards-grid" style="grid-template-columns:1fr 1fr; gap:12px">
@@ -1424,10 +1559,18 @@ tbody tr:nth-child(even) {
           <div class="stat-number">280 MW</div>
           <div class="stat-label">Central eléctrica</div>
         </div>
+        <div class="stat-card">
+          <div class="stat-number">17.000</div>
+          <div class="stat-label">Habitantes</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">RN 11</div>
+          <div class="stat-label">Ruta Nacional</div>
+        </div>
       </div>
       <div class="highlight-box mt-16">
         <strong>✓ Sauce Viejo seleccionada</strong><br>
-        <span class="text-sm opacity-70">Proximidad al proveedor y servicios industriales completos.</span>
+        <span class="text-sm opacity-70">Proveedor a metros de la planta. Parque Industrial con accesos pavimentados. Aguas Santafesinas disponible.</span>
       </div>
     </div>
   </div>
@@ -1471,26 +1614,109 @@ tbody tr:nth-child(even) {
   <div class="accent-bar"></div>
   <div class="section-tag">Proceso Productivo</div>
   <div class="slide-title">Etapas del Proceso — Flujo Completo</div>
-  <div class="flow-horizontal">
-    <div class="flow-step"><span class="flow-step-num">1</span> Recepción y control</div>
-    <span class="flow-arrow">→</span>
-    <div class="flow-step"><span class="flow-step-num">2</span> Separación manual</div>
-    <span class="flow-arrow">→</span>
-    <div class="flow-step"><span class="flow-step-num">3</span> Lixiviación</div>
-    <span class="flow-arrow">→</span>
-    <div class="flow-step"><span class="flow-step-num">4</span> Arrastre con vapor</div>
-    <span class="flow-arrow">→</span>
-    <div class="flow-step"><span class="flow-step-num">5</span> Condensación</div>
-  </div>
-  <div class="flow-horizontal mt-16">
-    <div class="flow-step"><span class="flow-step-num">6</span> Decantación</div>
-    <span class="flow-arrow">→</span>
-    <div class="flow-step"><span class="flow-step-num">7</span> Mezclado</div>
-    <span class="flow-arrow">→</span>
-    <div class="flow-step"><span class="flow-step-num">8</span> Envasado</div>
-    <span class="flow-arrow">→</span>
-    <div class="flow-step"><span class="flow-step-num">9</span> Almacenamiento</div>
-  </div>
+  <!-- SVG Process Flow Diagram -->
+  <svg viewBox="0 0 960 340" style="width:100%;max-height:55vh" preserveAspectRatio="xMidYMid meet">
+    <defs>
+      <linearGradient id="stepGrad" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="rgba(255,255,255,0.08)"/>
+        <stop offset="100%" stop-color="rgba(255,255,255,0.02)"/>
+      </linearGradient>
+      <marker id="arrowHead" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+        <polygon points="0 0, 8 3, 0 6" fill="rgba(168,213,176,0.5)"/>
+      </marker>
+    </defs>
+    <!-- Row 1: Steps 1-5 -->
+    <g>
+      <rect x="10" y="20" width="160" height="110" rx="12" fill="url(#stepGrad)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+      <circle cx="40" cy="50" r="16" fill="rgba(95,168,107,0.25)" stroke="rgba(168,213,176,0.4)" stroke-width="1"/>
+      <text x="40" y="55" fill="#a8d5b0" font-size="14" text-anchor="middle" font-family="Outfit" font-weight="700">1</text>
+      <text x="90" y="55" fill="white" font-size="13" font-family="Outfit" font-weight="600">Recepción</text>
+      <text x="90" y="75" fill="rgba(255,255,255,0.5)" font-size="10" text-anchor="middle" font-family="Outfit">Control de MP</text>
+      <text x="90" y="115" fill="rgba(255,255,255,0.35)" font-size="9" text-anchor="middle" font-family="Outfit">100 kg/h entrada</text>
+    </g>
+    <line x1="175" y1="75" x2="195" y2="75" stroke="rgba(168,213,176,0.5)" stroke-width="2" marker-end="url(#arrowHead)"/>
+
+    <g>
+      <rect x="200" y="20" width="160" height="110" rx="12" fill="url(#stepGrad)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+      <circle cx="230" cy="50" r="16" fill="rgba(95,168,107,0.25)" stroke="rgba(168,213,176,0.4)" stroke-width="1"/>
+      <text x="230" y="55" fill="#a8d5b0" font-size="14" text-anchor="middle" font-family="Outfit" font-weight="700">2</text>
+      <text x="280" y="55" fill="white" font-size="13" font-family="Outfit" font-weight="600">Separación</text>
+      <text x="280" y="75" fill="rgba(255,255,255,0.5)" font-size="10" text-anchor="middle" font-family="Outfit">Manual de hojas</text>
+      <text x="280" y="115" fill="rgba(255,255,255,0.35)" font-size="9" text-anchor="middle" font-family="Outfit">79 kg/h hojas</text>
+    </g>
+    <line x1="365" y1="75" x2="385" y2="75" stroke="rgba(168,213,176,0.5)" stroke-width="2" marker-end="url(#arrowHead)"/>
+
+    <g>
+      <rect x="390" y="20" width="160" height="110" rx="12" fill="url(#stepGrad)" stroke="rgba(95,168,107,0.3)" stroke-width="1.5"/>
+      <circle cx="420" cy="50" r="16" fill="rgba(95,168,107,0.35)" stroke="rgba(168,213,176,0.5)" stroke-width="1.5"/>
+      <text x="420" y="55" fill="#a8d5b0" font-size="14" text-anchor="middle" font-family="Outfit" font-weight="700">3</text>
+      <text x="470" y="55" fill="white" font-size="13" font-family="Outfit" font-weight="600">Lixiviación</text>
+      <text x="470" y="75" fill="rgba(255,255,255,0.5)" font-size="10" text-anchor="middle" font-family="Outfit">Etanol 96% · 4h</text>
+      <text x="470" y="115" fill="rgba(255,255,255,0.35)" font-size="9" text-anchor="middle" font-family="Outfit">80°C · 1:5 S/L</text>
+    </g>
+    <line x1="555" y1="75" x2="575" y2="75" stroke="rgba(168,213,176,0.5)" stroke-width="2" marker-end="url(#arrowHead)"/>
+
+    <g>
+      <rect x="580" y="20" width="160" height="110" rx="12" fill="url(#stepGrad)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+      <circle cx="610" cy="50" r="16" fill="rgba(95,168,107,0.25)" stroke="rgba(168,213,176,0.4)" stroke-width="1"/>
+      <text x="610" y="55" fill="#a8d5b0" font-size="14" text-anchor="middle" font-family="Outfit" font-weight="700">4</text>
+      <text x="660" y="50" fill="white" font-size="12" font-family="Outfit" font-weight="600">Arrastre con</text>
+      <text x="660" y="66" fill="white" font-size="12" font-family="Outfit" font-weight="600">vapor</text>
+      <text x="660" y="115" fill="rgba(255,255,255,0.35)" font-size="9" text-anchor="middle" font-family="Outfit">3,50 kg/h vapor</text>
+    </g>
+    <line x1="745" y1="75" x2="765" y2="75" stroke="rgba(168,213,176,0.5)" stroke-width="2" marker-end="url(#arrowHead)"/>
+
+    <g>
+      <rect x="770" y="20" width="170" height="110" rx="12" fill="url(#stepGrad)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+      <circle cx="800" cy="50" r="16" fill="rgba(95,168,107,0.25)" stroke="rgba(168,213,176,0.4)" stroke-width="1"/>
+      <text x="800" y="55" fill="#a8d5b0" font-size="14" text-anchor="middle" font-family="Outfit" font-weight="700">5</text>
+      <text x="856" y="55" fill="white" font-size="13" font-family="Outfit" font-weight="600">Condensación</text>
+      <text x="856" y="115" fill="rgba(255,255,255,0.35)" font-size="9" text-anchor="middle" font-family="Outfit">F₆ = 4,26 kg/h</text>
+    </g>
+
+    <!-- Connector row 1 to row 2 -->
+    <line x1="855" y1="135" x2="855" y2="205" stroke="rgba(168,213,176,0.3)" stroke-width="2" marker-end="url(#arrowHead)"/>
+
+    <!-- Row 2: Steps 6-9 (right to left) -->
+    <g>
+      <rect x="770" y="210" width="170" height="110" rx="12" fill="url(#stepGrad)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+      <circle cx="800" cy="240" r="16" fill="rgba(95,168,107,0.25)" stroke="rgba(168,213,176,0.4)" stroke-width="1"/>
+      <text x="800" y="245" fill="#a8d5b0" font-size="14" text-anchor="middle" font-family="Outfit" font-weight="700">6</text>
+      <text x="856" y="245" fill="white" font-size="13" font-family="Outfit" font-weight="600">Decantación</text>
+      <text x="856" y="305" fill="rgba(255,255,255,0.35)" font-size="9" text-anchor="middle" font-family="Outfit">AE: 1,38 kg/h</text>
+    </g>
+    <line x1="765" y1="265" x2="745" y2="265" stroke="rgba(168,213,176,0.5)" stroke-width="2" marker-end="url(#arrowHead)"/>
+
+    <g>
+      <rect x="580" y="210" width="160" height="110" rx="12" fill="url(#stepGrad)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+      <circle cx="610" cy="240" r="16" fill="rgba(95,168,107,0.25)" stroke="rgba(168,213,176,0.4)" stroke-width="1"/>
+      <text x="610" y="245" fill="#a8d5b0" font-size="14" text-anchor="middle" font-family="Outfit" font-weight="700">7</text>
+      <text x="660" y="245" fill="white" font-size="13" font-family="Outfit" font-weight="600">Mezclado</text>
+      <text x="660" y="265" fill="rgba(255,255,255,0.5)" font-size="10" text-anchor="middle" font-family="Outfit">AE + Isoprop + Glic</text>
+      <text x="660" y="305" fill="rgba(255,255,255,0.35)" font-size="9" text-anchor="middle" font-family="Outfit">2,84 kg/h repelente</text>
+    </g>
+    <line x1="575" y1="265" x2="555" y2="265" stroke="rgba(168,213,176,0.5)" stroke-width="2" marker-end="url(#arrowHead)"/>
+
+    <g>
+      <rect x="390" y="210" width="160" height="110" rx="12" fill="url(#stepGrad)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+      <circle cx="420" cy="240" r="16" fill="rgba(95,168,107,0.25)" stroke="rgba(168,213,176,0.4)" stroke-width="1"/>
+      <text x="420" y="245" fill="#a8d5b0" font-size="14" text-anchor="middle" font-family="Outfit" font-weight="700">8</text>
+      <text x="470" y="245" fill="white" font-size="13" font-family="Outfit" font-weight="600">Envasado</text>
+      <text x="470" y="265" fill="rgba(255,255,255,0.5)" font-size="10" text-anchor="middle" font-family="Outfit">ZT-Pack CBZ-4</text>
+      <text x="470" y="305" fill="rgba(255,255,255,0.35)" font-size="9" text-anchor="middle" font-family="Outfit">495 bot/día</text>
+    </g>
+    <line x1="385" y1="265" x2="365" y2="265" stroke="rgba(168,213,176,0.5)" stroke-width="2" marker-end="url(#arrowHead)"/>
+
+    <g>
+      <rect x="200" y="210" width="160" height="110" rx="12" fill="url(#stepGrad)" stroke="rgba(196,163,90,0.3)" stroke-width="1.5"/>
+      <circle cx="230" cy="240" r="16" fill="rgba(196,163,90,0.2)" stroke="rgba(196,163,90,0.5)" stroke-width="1.5"/>
+      <text x="230" y="245" fill="#e8d5a0" font-size="14" text-anchor="middle" font-family="Outfit" font-weight="700">9</text>
+      <text x="280" y="240" fill="white" font-size="12" font-family="Outfit" font-weight="600">Almacena-</text>
+      <text x="280" y="256" fill="white" font-size="12" font-family="Outfit" font-weight="600">miento</text>
+      <text x="280" y="280" fill="rgba(255,255,255,0.5)" font-size="10" text-anchor="middle" font-family="Outfit">FIFO · Pallets</text>
+      <text x="280" y="305" fill="rgba(196,163,90,0.5)" font-size="9" text-anchor="middle" font-family="Outfit">148.500 bot/año</text>
+    </g>
+  </svg>
 </div>
 
 <!-- ═══════════════════════════════════════ SLIDE 26: RECEPCION ═══════════════════════════════════════ -->
@@ -1981,13 +2207,43 @@ tbody tr:nth-child(even) {
         <div class="stat-number" style="color:white">4.895 m²</div>
         <div class="stat-label" style="color:rgba(255,255,255,0.7)">Terreno total</div>
       </div>
-      <div class="col-header">Zona Descubierta — 3.767,73 m²</div>
-      <ul class="item-list">
-        <li>Calles internas</li>
-        <li>Estacionamiento</li>
-        <li>Espacios verdes</li>
-        <li>Senderos peatonales</li>
-      </ul>
+      <!-- SVG Plant Layout -->
+      <svg viewBox="0 0 340 220" style="width:100%;border-radius:10px;background:white;box-shadow:0 2px 12px rgba(0,0,0,0.06)">
+        <!-- Terrain boundary -->
+        <rect x="10" y="10" width="320" height="200" rx="6" fill="#f0f7f1" stroke="#2C5F2D" stroke-width="1.5" stroke-dasharray="6,3"/>
+        <!-- Producción (largest) -->
+        <rect x="20" y="20" width="160" height="90" rx="4" fill="#2C5F2D" opacity="0.85"/>
+        <text x="100" y="60" fill="white" font-size="11" text-anchor="middle" font-family="Outfit" font-weight="600">Producción</text>
+        <text x="100" y="78" fill="rgba(255,255,255,0.7)" font-size="9" text-anchor="middle" font-family="Outfit">539 m²</text>
+        <!-- Almacén -->
+        <rect x="186" y="20" width="65" height="55" rx="4" fill="#3d7a4a" opacity="0.8"/>
+        <text x="218" y="48" fill="white" font-size="9" text-anchor="middle" font-family="Outfit" font-weight="500">Almacén MP</text>
+        <text x="218" y="62" fill="rgba(255,255,255,0.6)" font-size="8" text-anchor="middle" font-family="Outfit">91 m²</text>
+        <!-- Expedición -->
+        <rect x="257" y="20" width="65" height="55" rx="4" fill="#5fa86b" opacity="0.8"/>
+        <text x="289" y="48" fill="white" font-size="9" text-anchor="middle" font-family="Outfit" font-weight="500">Expedición</text>
+        <text x="289" y="62" fill="rgba(255,255,255,0.6)" font-size="8" text-anchor="middle" font-family="Outfit">95 m²</text>
+        <!-- Oficinas -->
+        <rect x="186" y="81" width="136" height="32" rx="4" fill="#a8d5b0" opacity="0.7"/>
+        <text x="254" y="102" fill="#1a3a2a" font-size="9" text-anchor="middle" font-family="Outfit" font-weight="500">Oficinas — 119 m²</text>
+        <!-- Laboratorio -->
+        <rect x="20" y="116" width="80" height="35" rx="4" fill="#c4a35a" opacity="0.6"/>
+        <text x="60" y="138" fill="#3a2a1a" font-size="9" text-anchor="middle" font-family="Outfit" font-weight="500">Lab. 36 m²</text>
+        <!-- Mantenimiento -->
+        <rect x="106" y="116" width="80" height="35" rx="4" fill="#e8d5a0" opacity="0.5"/>
+        <text x="146" y="138" fill="#3a2a1a" font-size="9" text-anchor="middle" font-family="Outfit" font-weight="500">Mant. 52 m²</text>
+        <!-- Baños -->
+        <rect x="192" y="116" width="60" height="35" rx="4" fill="#d4ecd8" opacity="0.7"/>
+        <text x="222" y="138" fill="#1a3a2a" font-size="9" text-anchor="middle" font-family="Outfit" font-weight="500">Baños</text>
+        <!-- Zona descubierta label -->
+        <text x="170" y="175" fill="#5c4a3a" font-size="10" text-anchor="middle" font-family="Outfit" opacity="0.5">— Zona descubierta: estacionamiento, calles, espacios verdes —</text>
+        <!-- Parking -->
+        <rect x="20" y="185" width="140" height="18" rx="3" fill="rgba(0,0,0,0.05)" stroke="rgba(0,0,0,0.1)" stroke-width="0.5"/>
+        <text x="90" y="198" fill="rgba(0,0,0,0.35)" font-size="8" text-anchor="middle" font-family="Outfit">Estacionamiento</text>
+        <!-- Access -->
+        <rect x="270" y="185" width="50" height="18" rx="3" fill="rgba(0,0,0,0.05)" stroke="rgba(0,0,0,0.1)" stroke-width="0.5"/>
+        <text x="295" y="198" fill="rgba(0,0,0,0.35)" font-size="8" text-anchor="middle" font-family="Outfit">Acceso</text>
+      </svg>
     </div>
   </div>
 </div>
@@ -2000,30 +2256,49 @@ tbody tr:nth-child(even) {
   <div class="two-col">
     <div>
       <div class="col-header">💧 Agua Total: 44,80 m³/sem</div>
-      <div class="table-wrapper">
-        <table>
-          <thead><tr><th>Uso</th><th>m³/sem</th></tr></thead>
-          <tbody>
-            <tr><td>Vapor</td><td>20,59</td></tr>
-            <tr><td>Refrigeración</td><td>12,25</td></tr>
-            <tr><td>Limpieza</td><td>7,22</td></tr>
-            <tr><td>Uso humano</td><td>2,70</td></tr>
-          </tbody>
-        </table>
+      <div style="display:flex;align-items:center;gap:24px">
+        <!-- SVG Donut Chart - Water -->
+        <svg viewBox="0 0 180 180" style="width:180px;flex-shrink:0">
+          <!-- Vapor: 46% = 165.6° -->
+          <circle cx="90" cy="90" r="65" fill="none" stroke="#2C5F2D" stroke-width="22" stroke-dasharray="102.9 311.5" stroke-dashoffset="0" transform="rotate(-90,90,90)"><animate attributeName="stroke-dasharray" from="0 414.4" to="102.9 311.5" dur="0.8s" fill="freeze"/></circle>
+          <!-- Refrigeración: 27.3% = 98.4° -->
+          <circle cx="90" cy="90" r="65" fill="none" stroke="#3d7a4a" stroke-width="22" stroke-dasharray="61.0 353.4" stroke-dashoffset="-102.9" transform="rotate(-90,90,90)"><animate attributeName="stroke-dasharray" from="0 414.4" to="61.0 353.4" dur="0.8s" begin="0.2s" fill="freeze"/></circle>
+          <!-- Limpieza: 16.1% -->
+          <circle cx="90" cy="90" r="65" fill="none" stroke="#5fa86b" stroke-width="22" stroke-dasharray="36.0 378.4" stroke-dashoffset="-163.9" transform="rotate(-90,90,90)"><animate attributeName="stroke-dasharray" from="0 414.4" to="36.0 378.4" dur="0.8s" begin="0.4s" fill="freeze"/></circle>
+          <!-- Uso humano: 6% -->
+          <circle cx="90" cy="90" r="65" fill="none" stroke="#a8d5b0" stroke-width="22" stroke-dasharray="13.5 400.9" stroke-dashoffset="-199.9" transform="rotate(-90,90,90)"><animate attributeName="stroke-dasharray" from="0 414.4" to="13.5 400.9" dur="0.8s" begin="0.6s" fill="freeze"/></circle>
+          <!-- Center text -->
+          <text x="90" y="85" fill="white" font-size="18" text-anchor="middle" font-family="Cormorant Garamond" font-weight="700">44,80</text>
+          <text x="90" y="102" fill="rgba(255,255,255,0.5)" font-size="10" text-anchor="middle" font-family="Outfit">m³/sem</text>
+        </svg>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div class="flex-center"><span style="width:10px;height:10px;border-radius:3px;background:#2C5F2D;flex-shrink:0"></span><span class="text-sm">Vapor — 20,59</span></div>
+          <div class="flex-center"><span style="width:10px;height:10px;border-radius:3px;background:#3d7a4a;flex-shrink:0"></span><span class="text-sm">Refrigeración — 12,25</span></div>
+          <div class="flex-center"><span style="width:10px;height:10px;border-radius:3px;background:#5fa86b;flex-shrink:0"></span><span class="text-sm">Limpieza — 7,22</span></div>
+          <div class="flex-center"><span style="width:10px;height:10px;border-radius:3px;background:#a8d5b0;flex-shrink:0"></span><span class="text-sm">Uso humano — 2,70</span></div>
+        </div>
       </div>
-      <div class="text-xs opacity-60 mt-8">Agua de pozo: 14,1 m³/sem (riego e incendio) — Aguas Santafesinas</div>
+      <div class="text-xs opacity-60 mt-8">+ Agua de pozo: 14,1 m³/sem (riego e incendio)</div>
     </div>
     <div>
       <div class="col-header">🔥 Gas Natural: 161 m³/sem</div>
-      <div class="table-wrapper">
-        <table>
-          <thead><tr><th>Uso</th><th>m³/día</th></tr></thead>
-          <tbody>
-            <tr><td>Lixiviación</td><td>6,45</td></tr>
-            <tr><td>Arrastre</td><td>3,82</td></tr>
-            <tr><td>Calefacción (11 calefactores)</td><td>28,38</td></tr>
-          </tbody>
-        </table>
+      <div style="display:flex;align-items:center;gap:24px">
+        <!-- SVG Donut Chart - Gas -->
+        <svg viewBox="0 0 180 180" style="width:180px;flex-shrink:0">
+          <!-- Calefacción: 73.5% -->
+          <circle cx="90" cy="90" r="65" fill="none" stroke="#c4a35a" stroke-width="22" stroke-dasharray="300.0 114.4" stroke-dashoffset="0" transform="rotate(-90,90,90)"><animate attributeName="stroke-dasharray" from="0 414.4" to="300.0 114.4" dur="0.8s" fill="freeze"/></circle>
+          <!-- Lixiviación: 16.7% -->
+          <circle cx="90" cy="90" r="65" fill="none" stroke="#e8d5a0" stroke-width="22" stroke-dasharray="69.2 345.2" stroke-dashoffset="-300.0" transform="rotate(-90,90,90)"><animate attributeName="stroke-dasharray" from="0 414.4" to="69.2 345.2" dur="0.8s" begin="0.2s" fill="freeze"/></circle>
+          <!-- Arrastre: 9.9% -->
+          <circle cx="90" cy="90" r="65" fill="none" stroke="#8a7565" stroke-width="22" stroke-dasharray="41.0 373.4" stroke-dashoffset="-369.2" transform="rotate(-90,90,90)"><animate attributeName="stroke-dasharray" from="0 414.4" to="41.0 373.4" dur="0.8s" begin="0.4s" fill="freeze"/></circle>
+          <text x="90" y="85" fill="white" font-size="18" text-anchor="middle" font-family="Cormorant Garamond" font-weight="700">161</text>
+          <text x="90" y="102" fill="rgba(255,255,255,0.5)" font-size="10" text-anchor="middle" font-family="Outfit">m³/sem</text>
+        </svg>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div class="flex-center"><span style="width:10px;height:10px;border-radius:3px;background:#c4a35a;flex-shrink:0"></span><span class="text-sm">Calefacción — 28,38 m³/d</span></div>
+          <div class="flex-center"><span style="width:10px;height:10px;border-radius:3px;background:#e8d5a0;flex-shrink:0"></span><span class="text-sm">Lixiviación — 6,45 m³/d</span></div>
+          <div class="flex-center"><span style="width:10px;height:10px;border-radius:3px;background:#8a7565;flex-shrink:0"></span><span class="text-sm">Arrastre — 3,82 m³/d</span></div>
+        </div>
       </div>
     </div>
   </div>
@@ -2143,7 +2418,7 @@ tbody tr:nth-child(even) {
           <div class="stat-label" style="color:rgba(255,255,255,0.7)">Costo unitario / botella</div>
         </div>
         <div class="stat-card" style="background:var(--green-dark);color:white">
-          <div class="stat-number" style="color:var(--gold-light)">$41.777</div>
+          <div class="stat-number" style="color:var(--gold-light)">$41.776</div>
           <div class="stat-label" style="color:rgba(255,255,255,0.7)">Precio de venta (25% ganancia)</div>
         </div>
       </div>
@@ -2157,6 +2432,69 @@ tbody tr:nth-child(even) {
   <div class="section-tag">Evaluación</div>
   <div class="slide-title">Punto de Equilibrio</div>
   <div class="two-col">
+    <div>
+      <!-- SVG Break-even Chart -->
+      <svg viewBox="0 0 460 320" style="width:100%;border-radius:12px;background:rgba(255,255,255,0.03)">
+        <defs>
+          <linearGradient id="profitArea" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#5fa86b" stop-opacity="0.2"/>
+            <stop offset="100%" stop-color="#5fa86b" stop-opacity="0.02"/>
+          </linearGradient>
+          <linearGradient id="lossArea" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#c45a5a" stop-opacity="0.1"/>
+            <stop offset="100%" stop-color="#c45a5a" stop-opacity="0.02"/>
+          </linearGradient>
+        </defs>
+        <!-- Grid -->
+        <line x1="60" y1="50" x2="430" y2="50" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+        <line x1="60" y1="110" x2="430" y2="110" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+        <line x1="60" y1="170" x2="430" y2="170" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+        <line x1="60" y1="230" x2="430" y2="230" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+        <!-- Axes -->
+        <line x1="60" y1="270" x2="430" y2="270" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+        <line x1="60" y1="30" x2="60" y2="270" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+        <!-- Axis labels -->
+        <text x="245" y="298" fill="rgba(255,255,255,0.4)" font-size="11" text-anchor="middle" font-family="Outfit">Volumen (miles de botellas)</text>
+        <text x="18" y="155" fill="rgba(255,255,255,0.4)" font-size="11" text-anchor="middle" transform="rotate(-90,18,155)" font-family="Outfit">$ (millones)</text>
+        <!-- X labels -->
+        <text x="60" y="286" fill="rgba(255,255,255,0.4)" font-size="10" text-anchor="middle" font-family="Outfit">0</text>
+        <text x="152" y="286" fill="rgba(255,255,255,0.4)" font-size="10" text-anchor="middle" font-family="Outfit">50k</text>
+        <text x="245" y="286" fill="rgba(255,255,255,0.4)" font-size="10" text-anchor="middle" font-family="Outfit">100k</text>
+        <text x="338" y="286" fill="rgba(255,255,255,0.4)" font-size="10" text-anchor="middle" font-family="Outfit">150k</text>
+        <!-- Fixed cost (horizontal line) -->
+        <line x1="60" y1="220" x2="430" y2="220" stroke="rgba(196,90,90,0.4)" stroke-width="1.5" stroke-dasharray="6,4"/>
+        <text x="435" y="218" fill="rgba(196,90,90,0.6)" font-size="9" font-family="Outfit">CF</text>
+        <!-- Total cost line (from CF upward) -->
+        <line x1="60" y1="220" x2="430" y2="80" stroke="#c45a5a" stroke-width="2.5" stroke-linecap="round"/>
+        <!-- Revenue line (from 0) -->
+        <line x1="60" y1="270" x2="430" y2="50" stroke="#5fa86b" stroke-width="2.5" stroke-linecap="round"/>
+        <!-- Profit area (after intersection) -->
+        <path d="M242,148 L430,50 L430,80 L242,148 Z" fill="url(#profitArea)"/>
+        <!-- Loss area (before intersection) -->
+        <path d="M60,270 L242,148 L60,220 Z" fill="url(#lossArea)"/>
+        <!-- Intersection point (break-even) -->
+        <circle cx="242" cy="148" r="8" fill="none" stroke="#c4a35a" stroke-width="2">
+          <animate attributeName="r" values="8;12;8" dur="2s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="242" cy="148" r="4" fill="#c4a35a"/>
+        <!-- Break-even label -->
+        <rect x="248" y="127" width="100" height="30" rx="6" fill="rgba(196,163,90,0.15)" stroke="rgba(196,163,90,0.4)" stroke-width="1"/>
+        <text x="298" y="140" fill="#e8d5a0" font-size="10" text-anchor="middle" font-family="Outfit" font-weight="600">Punto de Eq.</text>
+        <text x="298" y="152" fill="#c4a35a" font-size="9" text-anchor="middle" font-family="Outfit">73.677 bot</text>
+        <!-- Capacity marker -->
+        <line x1="400" y1="35" x2="400" y2="270" stroke="rgba(168,213,176,0.3)" stroke-width="1" stroke-dasharray="4,4"/>
+        <text x="400" y="30" fill="rgba(168,213,176,0.6)" font-size="9" text-anchor="middle" font-family="Outfit">Capacidad</text>
+        <!-- Labels for zone -->
+        <text x="140" y="250" fill="rgba(196,90,90,0.5)" font-size="11" text-anchor="middle" font-family="Outfit" font-weight="500">PÉRDIDA</text>
+        <text x="360" y="95" fill="rgba(95,168,107,0.6)" font-size="11" text-anchor="middle" font-family="Outfit" font-weight="500">GANANCIA</text>
+        <!-- Legend -->
+        <line x1="100" y1="310" x2="120" y2="310" stroke="#5fa86b" stroke-width="2.5"/>
+        <text x="125" y="314" fill="rgba(255,255,255,0.5)" font-size="10" font-family="Outfit">Ingresos</text>
+        <line x1="200" y1="310" x2="220" y2="310" stroke="#c45a5a" stroke-width="2.5"/>
+        <text x="225" y="314" fill="rgba(255,255,255,0.5)" font-size="10" font-family="Outfit">Costo total</text>
+      </svg>
+    </div>
     <div>
       <div class="cards-grid" style="grid-template-columns:1fr;gap:16px">
         <div class="stat-card">
@@ -2173,15 +2511,6 @@ tbody tr:nth-child(even) {
         </div>
       </div>
     </div>
-    <div>
-      <div class="col-header">Análisis</div>
-      <ul class="item-list">
-        <li>Ingreso = PV × Q</li>
-        <li>Costo = CF + CV × Q</li>
-        <li>Todo volumen superior al punto de equilibrio genera ganancias</li>
-        <li>Capacidad real (148.500 bot/año) supera ampliamente el equilibrio</li>
-      </ul>
-    </div>
   </div>
 </div>
 
@@ -2194,20 +2523,43 @@ tbody tr:nth-child(even) {
     <table>
       <thead><tr><th>Escenario</th><th>TMAR</th><th>VAN (miles $)</th><th>TIR</th></tr></thead>
       <tbody>
-        <tr><td>Sin inflación, sin financiamiento</td><td>15%</td><td>5.571.871</td><td>190%</td></tr>
-        <tr><td>Con inflación, sin financiamiento</td><td>55%</td><td>5.571.871</td><td>292%</td></tr>
-        <tr class="highlight-row"><td><strong>Con inflación, con financiamiento</strong></td><td><strong>52%</strong></td><td><strong>6.128.700</strong></td><td><strong>382%</strong></td></tr>
+        <tr><td>Sin inflación, sin financiamiento</td><td>15%</td><td>5.571.871</td><td>190,28%</td></tr>
+        <tr><td>Con inflación, sin financiamiento</td><td>55%</td><td>5.571.871</td><td>291,88%</td></tr>
+        <tr class="highlight-row"><td><strong>Con inflación, con financiamiento</strong></td><td><strong>52%</strong></td><td><strong>6.128.700</strong></td><td><strong>381,98%</strong></td></tr>
       </tbody>
     </table>
   </div>
-  <div class="cards-grid cards-grid--2">
-    <div class="stat-card" style="background:var(--green-dark);color:white">
-      <div class="stat-number" style="color:white;font-size:2rem">$6.128 M</div>
-      <div class="stat-label" style="color:rgba(255,255,255,0.7)">VAN — Valor Actual Neto</div>
+  <div class="two-col" style="margin-top:16px">
+    <div>
+      <!-- TIR comparison chart -->
+      <svg viewBox="0 0 360 160" style="width:100%;border-radius:10px;background:white;box-shadow:0 2px 12px rgba(0,0,0,0.06)">
+        <text x="180" y="20" fill="#3a4a3e" font-size="11" text-anchor="middle" font-family="Outfit" font-weight="600">TIR por escenario</text>
+        <!-- Bars -->
+        <rect x="40" y="38" width="143" height="28" rx="5" fill="#a8d5b0"><animate attributeName="width" from="0" to="143" dur="0.5s" fill="freeze"/></rect>
+        <text x="35" y="57" fill="#3a4a3e" font-size="10" text-anchor="end" font-family="Outfit">Esc. 1</text>
+        <text x="189" y="57" fill="#2C5F2D" font-size="11" font-family="Outfit" font-weight="700">190,28%</text>
+
+        <rect x="40" y="74" width="219" height="28" rx="5" fill="#5fa86b"><animate attributeName="width" from="0" to="219" dur="0.5s" begin="0.15s" fill="freeze"/></rect>
+        <text x="35" y="93" fill="#3a4a3e" font-size="10" text-anchor="end" font-family="Outfit">Esc. 2</text>
+        <text x="265" y="93" fill="#2C5F2D" font-size="11" font-family="Outfit" font-weight="700">291,88%</text>
+
+        <rect x="40" y="110" width="290" height="28" rx="5" fill="#2C5F2D"><animate attributeName="width" from="0" to="290" dur="0.5s" begin="0.3s" fill="freeze"/></rect>
+        <text x="35" y="129" fill="#3a4a3e" font-size="10" text-anchor="end" font-family="Outfit">Esc. 3</text>
+        <text x="336" y="129" fill="#2C5F2D" font-size="12" font-family="Outfit" font-weight="700">381,98%</text>
+        <text x="90" y="152" fill="rgba(0,0,0,0.3)" font-size="9" font-family="Outfit">✓ Escenario elegido</text>
+      </svg>
     </div>
-    <div class="stat-card" style="background:var(--green-dark);color:white">
-      <div class="stat-number" style="color:var(--gold-light);font-size:2rem">381,98%</div>
-      <div class="stat-label" style="color:rgba(255,255,255,0.7)">TIR — Tasa Interna de Retorno</div>
+    <div>
+      <div class="cards-grid" style="grid-template-columns:1fr;gap:12px">
+        <div class="stat-card" style="background:var(--green-dark);color:white">
+          <div class="stat-number" style="color:white;font-size:2.2rem">$6.128 M</div>
+          <div class="stat-label" style="color:rgba(255,255,255,0.7)">VAN — Valor Actual Neto</div>
+        </div>
+        <div class="stat-card" style="background:var(--green-dark);color:white">
+          <div class="stat-number" style="color:var(--gold-light);font-size:2.2rem">381,98%</div>
+          <div class="stat-label" style="color:rgba(255,255,255,0.7)">TIR — Tasa Interna de Retorno</div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -2247,7 +2599,7 @@ tbody tr:nth-child(even) {
   <div class="slide-title">Conclusiones Generales</div>
   <ol class="objective-list">
     <li><span class="obj-num">1</span> Condiciones favorables de implementación técnica y territorial</li>
-    <li><span class="obj-num">2</span> Proyección de ingresos justifica la inversión (VAN $6.128M, TIR 382%)</li>
+    <li><span class="obj-num">2</span> Proyección de ingresos justifica la inversión (VAN $6.128M, TIR 381,98%)</li>
     <li><span class="obj-num">3</span> Aporte al desarrollo local: empleo e industria en Sauce Viejo</li>
     <li><span class="obj-num">4</span> Criterios de calidad en cada etapa (Farmacopea Argentina)</li>
     <li><span class="obj-num">5</span> Valor agregado a recursos forestales locales</li>
@@ -2262,43 +2614,43 @@ tbody tr:nth-child(even) {
   <div class="slide-title">Indicadores Clave del Proyecto</div>
   <div class="cards-grid" style="grid-template-columns: repeat(5, 1fr); gap: 12px;">
     <div class="stat-card">
-      <div class="stat-number" style="font-size:1.6rem">49,50 L/d</div>
+      <div class="stat-number" style="font-size:1.8rem">49,50 L/d</div>
       <div class="stat-label">Producción diaria</div>
     </div>
     <div class="stat-card">
-      <div class="stat-number" style="font-size:1.6rem">148.500</div>
+      <div class="stat-number" style="font-size:1.8rem">148.500</div>
       <div class="stat-label">Botellas / año</div>
     </div>
     <div class="stat-card">
-      <div class="stat-number" style="font-size:1.6rem">$1.033 M</div>
+      <div class="stat-number" style="font-size:1.8rem">$1.033 M</div>
       <div class="stat-label">Inversión total</div>
     </div>
     <div class="stat-card">
-      <div class="stat-number" style="font-size:1.6rem">$33.421</div>
+      <div class="stat-number" style="font-size:1.8rem">$33.421</div>
       <div class="stat-label">Costo unitario</div>
     </div>
     <div class="stat-card">
-      <div class="stat-number" style="font-size:1.6rem">$41.777</div>
+      <div class="stat-number" style="font-size:1.8rem">$41.776</div>
       <div class="stat-label">Precio de venta</div>
     </div>
     <div class="stat-card">
-      <div class="stat-number" style="font-size:1.6rem">73.677</div>
+      <div class="stat-number" style="font-size:1.8rem">73.677</div>
       <div class="stat-label">Pto. equilibrio</div>
     </div>
     <div class="stat-card">
-      <div class="stat-number" style="font-size:1.6rem;color:var(--green-dark)">$6.128 M</div>
+      <div class="stat-number" style="font-size:1.8rem;color:var(--green-dark)">$6.128 M</div>
       <div class="stat-label">VAN</div>
     </div>
     <div class="stat-card">
-      <div class="stat-number" style="font-size:1.6rem;color:var(--green-dark)">382%</div>
+      <div class="stat-number" style="font-size:1.8rem;color:var(--green-dark)">381,98%</div>
       <div class="stat-label">TIR</div>
     </div>
     <div class="stat-card">
-      <div class="stat-number" style="font-size:1.6rem">27</div>
+      <div class="stat-number" style="font-size:1.8rem">27</div>
       <div class="stat-label">Empleados</div>
     </div>
     <div class="stat-card">
-      <div class="stat-number" style="font-size:1.6rem">4.895 m²</div>
+      <div class="stat-number" style="font-size:1.8rem">4.895 m²</div>
       <div class="stat-label">Terreno</div>
     </div>
   </div>
