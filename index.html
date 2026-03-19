@@ -86,16 +86,15 @@ html, body {
 }
 
 .slide--separator {
-  background: linear-gradient(135deg, var(--green-deep) 0%, var(--green-dark) 50%, var(--green-mid) 100%);
-  color: var(--text-light);
+  background: linear-gradient(160deg, var(--cream) 0%, var(--cream-warm) 100%);
+  color: var(--text-dark);
   justify-content: center !important;
   align-items: center;
   text-align: center;
 }
 
 /* ─── Leaf Pattern Overlay ─── */
-.slide--dark::before,
-.slide--separator::before {
+.slide--dark::before {
   content: '';
   position: absolute;
   inset: 0;
@@ -136,12 +135,12 @@ html, body {
   letter-spacing: -0.02em;
 }
 
-.slide--dark .slide-title,
+.slide--dark .slide-title {
+  color: #ffffff;
+}
+
 .slide--separator .slide-title {
-  background: linear-gradient(135deg, #fff 0%, var(--green-pale) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--green-deep);
 }
 
 .slide--light .slide-title,
@@ -194,8 +193,8 @@ html, body {
 }
 
 .slide--dark .card {
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.18);
   backdrop-filter: blur(10px);
 }
 
@@ -242,8 +241,8 @@ html, body {
 }
 
 .slide--dark .stat-card {
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.18);
 }
 
 .stat-number {
@@ -286,7 +285,7 @@ table {
 }
 
 .slide--dark table {
-  background: rgba(255,255,255,0.03);
+  background: rgba(255,255,255,0.05);
 }
 
 thead th {
@@ -305,8 +304,8 @@ thead th {
 }
 
 .slide--dark thead th {
-  background: rgba(255,255,255,0.1);
-  color: #c8ecd0;
+  background: rgba(255,255,255,0.14);
+  color: #ddf0e0;
 }
 
 td {
@@ -362,9 +361,9 @@ tbody tr:nth-child(even) {
 }
 
 .slide--dark .obj-num {
-  background: rgba(168, 213, 176, 0.15);
-  color: var(--green-pale);
-  border: 1px solid rgba(168, 213, 176, 0.3);
+  background: rgba(168, 213, 176, 0.2);
+  color: #c8ecd0;
+  border: 1px solid rgba(168, 213, 176, 0.35);
 }
 
 /* ─── Two Column Layout ─── */
@@ -409,8 +408,8 @@ tbody tr:nth-child(even) {
 }
 
 .slide--dark .flow-step {
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.16);
 }
 
 .flow-step-num {
@@ -445,8 +444,8 @@ tbody tr:nth-child(even) {
 }
 
 .slide--dark .pill--green {
-  background: rgba(168, 213, 176, 0.1);
-  color: var(--green-pale);
+  background: rgba(168, 213, 176, 0.15);
+  color: #c8ecd0;
 }
 
 .pill--gold {
@@ -475,22 +474,20 @@ tbody tr:nth-child(even) {
   font-size: 4.2rem;
   letter-spacing: 0.04em;
   margin-bottom: 14px;
-  background: linear-gradient(135deg, #fff 0%, var(--gold-light) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--green-deep);
 }
 
 .sep-subtitle {
   font-weight: 300;
   font-size: 1.3rem;
-  opacity: 0.6;
+  color: var(--text-mid);
+  opacity: 0.7;
   letter-spacing: 0.08em;
 }
 
 .sep-line {
   width: 80px; height: 2px;
-  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  background: linear-gradient(90deg, transparent, var(--green-dark), transparent);
   margin: 16px auto;
 }
 
@@ -572,8 +569,8 @@ tbody tr:nth-child(even) {
 }
 
 .slide--dark .highlight-box {
-  background: rgba(168, 213, 176, 0.08);
-  border: 1px solid rgba(168, 213, 176, 0.2);
+  background: rgba(168, 213, 176, 0.12);
+  border: 1px solid rgba(168, 213, 176, 0.25);
 }
 
 .highlight-box strong {
@@ -642,6 +639,13 @@ tbody tr:nth-child(even) {
   z-index: 100;
   font-size: 0.78rem;
   color: rgba(255,255,255,0.5);
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.nav-bar.hidden {
+  transform: translateY(100%);
+  opacity: 0;
+  pointer-events: none;
 }
 
 .nav-progress {
@@ -2854,11 +2858,11 @@ tbody tr:nth-child(even) {
 </div>
 
 <!-- ═══════════════════════════════════════ SLIDE: PREGUNTAS ═══════════════════════════════════════ -->
-<div class="slide slide--separator" data-slide="preguntas" style="background:linear-gradient(135deg, var(--green-deep) 0%, #0f2618 50%, var(--green-deep) 100%)">
-  <svg viewBox="0 0 300 300" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:500px;opacity:0.03;pointer-events:none">
-    <circle cx="150" cy="150" r="140" stroke="white" stroke-width="1.5" fill="none"/>
-    <circle cx="150" cy="150" r="100" stroke="white" stroke-width="1" fill="none"/>
-    <circle cx="150" cy="150" r="60" stroke="white" stroke-width="0.8" fill="none"/>
+<div class="slide slide--separator" data-slide="preguntas">
+  <svg viewBox="0 0 300 300" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:500px;opacity:0.04;pointer-events:none">
+    <circle cx="150" cy="150" r="140" stroke="var(--green-dark)" stroke-width="1.5" fill="none"/>
+    <circle cx="150" cy="150" r="100" stroke="var(--green-dark)" stroke-width="1" fill="none"/>
+    <circle cx="150" cy="150" r="60" stroke="var(--green-dark)" stroke-width="0.8" fill="none"/>
   </svg>
   <div class="sep-icon" style="font-size:5rem">❓</div>
   <div class="sep-title" style="font-size:4.5rem">¿Preguntas?</div>
@@ -2948,6 +2952,19 @@ document.addEventListener('touchend', (e) => {
 
 // Initial progress
 document.getElementById('navProgress').style.width = ((1 / total) * 100) + '%';
+
+// Auto-hide nav bar
+const navBar = document.querySelector('.nav-bar');
+let navTimeout;
+function showNav() {
+  navBar.classList.remove('hidden');
+  clearTimeout(navTimeout);
+  navTimeout = setTimeout(() => navBar.classList.add('hidden'), 3000);
+}
+document.addEventListener('mousemove', showNav);
+document.addEventListener('keydown', showNav);
+document.addEventListener('touchstart', showNav);
+showNav();
 </script>
 
 </body>
