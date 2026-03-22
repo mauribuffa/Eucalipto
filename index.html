@@ -1353,7 +1353,7 @@ tbody tr:nth-child(even) {
     <!-- Aceite esencial -->
     <div style="display:flex;flex-direction:column;align-items:center;gap:clamp(10px,1.5vh,16px);">
       <div class="card" style="text-align:center;padding:clamp(12px,2vh,24px);width:100%">
-        <svg viewBox="0 0 220 200" style="width:100%;max-width:200px;margin:0 auto;display:block;">
+        <svg viewBox="0 -10 220 215" style="width:100%;max-width:200px;margin:0 auto;display:block;">
           <style>
             .mol-bond-cr{stroke:var(--green-dark);stroke-width:2;fill:none;stroke-linecap:round}
             .mol-dash-cr{stroke:var(--green-dark);stroke-width:1.6;fill:none;stroke-dasharray:4,3;stroke-linecap:round}
@@ -1587,7 +1587,7 @@ tbody tr:nth-child(even) {
 <div class="slide slide--dark" data-slide="21">
   <div class="accent-bar"></div>
   <div class="section-tag">Localización</div>
-  <div class="slide-title">Microlocalización: Santa Fe de la Vera Cruz</div>
+  <div class="slide-title">Microlocalización: Santa Fe</div>
   <div class="two-col">
     <div>
       <!-- SVG Local Map -->
@@ -1602,47 +1602,46 @@ tbody tr:nth-child(even) {
         <rect x="185" y="10" width="30" height="16" rx="3" fill="rgba(196,163,90,0.8)"/>
         <text x="200" y="22" fill="white" font-size="9" text-anchor="middle" font-family="Outfit" font-weight="700">RN 11</text>
         <!-- Santa Fe city -->
-        <circle cx="230" cy="60" r="20" fill="rgba(168,213,176,0.15)" stroke="rgba(168,213,176,0.3)" stroke-width="1"/>
-        <circle cx="230" cy="60" r="5" fill="#a8d5b0"/>
-        <text x="255" y="58" fill="rgba(255,255,255,0.7)" font-size="13" font-family="Outfit" font-weight="500">Santa Fe</text>
-        <text x="255" y="72" fill="rgba(255,255,255,0.4)" font-size="10" font-family="Outfit">Capital</text>
-        <!-- Distance line -->
-        <line x1="220" y1="78" x2="190" y2="175" stroke="rgba(255,255,255,0.2)" stroke-width="1" stroke-dasharray="4,4"/>
-        <text x="185" y="130" fill="rgba(196,163,90,0.8)" font-size="12" font-family="Outfit" font-weight="600" transform="rotate(-68,185,130)">22 km</text>
-        <!-- Sauce Viejo -->
-        <rect x="100" y="168" width="160" height="70" rx="10" fill="rgba(44,95,45,0.3)" stroke="rgba(95,168,107,0.5)" stroke-width="2">
+        <circle cx="200" cy="100" r="35" fill="rgba(168,213,176,0.1)" stroke="rgba(168,213,176,0.2)" stroke-width="1"/>
+        <circle cx="200" cy="100" r="6" fill="#a8d5b0"/>
+        <text x="240" y="95" fill="rgba(255,255,255,0.7)" font-size="14" font-family="Outfit" font-weight="600">Santa Fe</text>
+        <text x="240" y="110" fill="rgba(255,255,255,0.4)" font-size="10" font-family="Outfit">Capital provincial</text>
+        <!-- PTLC within Santa Fe -->
+        <rect x="100" y="140" width="200" height="75" rx="10" fill="rgba(44,95,45,0.3)" stroke="rgba(95,168,107,0.5)" stroke-width="2">
           <animate attributeName="stroke-opacity" values="0.3;0.7;0.3" dur="3s" repeatCount="indefinite"/>
         </rect>
-        <text x="180" y="195" fill="white" font-size="13" text-anchor="middle" font-family="Outfit" font-weight="700">STA. FE DE LA VERA CRUZ</text>
-        <text x="180" y="213" fill="rgba(255,255,255,0.5)" font-size="10" text-anchor="middle" font-family="Outfit">Parque Tecnológico Litoral Centro</text>
-        <text x="180" y="228" fill="rgba(196,163,90,0.7)" font-size="10" text-anchor="middle" font-family="Outfit">📍 Planta Propuesta</text>
-        <!-- Forestal -->
-        <circle cx="130" cy="265" r="4" fill="#5fa86b"/>
-        <text x="142" y="269" fill="rgba(255,255,255,0.5)" font-size="10" font-family="Outfit">Zoovet S.A.</text>
-        <line x1="135" y1="260" x2="160" y2="240" stroke="rgba(95,168,107,0.3)" stroke-width="1" stroke-dasharray="3,3"/>
+        <text x="200" y="165" fill="white" font-size="13" text-anchor="middle" font-family="Outfit" font-weight="700">PARQUE TECNOLÓGICO</text>
+        <text x="200" y="180" fill="white" font-size="13" text-anchor="middle" font-family="Outfit" font-weight="700">LITORAL CENTRO</text>
+        <text x="200" y="200" fill="rgba(196,163,90,0.8)" font-size="11" text-anchor="middle" font-family="Outfit" font-weight="600">📍 vert · Lotes 30 y 31</text>
+        <!-- Connection line city → PTLC -->
+        <line x1="200" y1="108" x2="200" y2="138" stroke="rgba(255,255,255,0.25)" stroke-width="1" stroke-dasharray="4,4"/>
+        <!-- Zoovet nearby -->
+        <circle cx="140" cy="250" r="4" fill="#5fa86b"/>
+        <text x="152" y="254" fill="rgba(255,255,255,0.5)" font-size="10" font-family="Outfit">Zoovet S.A.</text>
+        <line x1="145" y1="245" x2="165" y2="218" stroke="rgba(95,168,107,0.3)" stroke-width="1" stroke-dasharray="3,3"/>
       </svg>
     </div>
     <div>
       <div class="cards-grid" style="grid-template-columns:1fr 1fr; gap:12px">
         <div class="stat-card">
-          <div class="stat-number">22 km</div>
-          <div class="stat-label">de Santa Fe capital</div>
+          <div class="stat-number">530.000</div>
+          <div class="stat-label">Habitantes</div>
         </div>
         <div class="stat-card">
           <div class="stat-number">280 MW</div>
           <div class="stat-label">Central eléctrica</div>
         </div>
         <div class="stat-card">
-          <div class="stat-number">17.000</div>
-          <div class="stat-label">Habitantes</div>
-        </div>
-        <div class="stat-card">
           <div class="stat-number">RN 11</div>
           <div class="stat-label">Ruta Nacional</div>
         </div>
+        <div class="stat-card">
+          <div class="stat-number">PTLC</div>
+          <div class="stat-label">Parque Tecnológico</div>
+        </div>
       </div>
       <div class="highlight-box mt-16">
-        <strong>✓ Santa Fe de la Vera Cruz seleccionada</strong><br>
+        <strong>✓ Santa Fe seleccionada</strong><br>
         <span class="text-sm opacity-70">Parque Tecnológico Litoral Centro (PTLC). Lotes 30 y 31. Redes eléctricas, agua potable, planta de tratamiento de efluentes.</span>
       </div>
     </div>
@@ -2918,29 +2917,91 @@ tbody tr:nth-child(even) {
   <div class="accent-bar"></div>
   <div class="section-tag">Inversiones y Costos</div>
   <div class="slide-title">Inversión Total</div>
-  <div class="two-col two-col--wide-left">
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start">
+    <!-- Left: Presupuesto de Inversión -->
     <div>
-      <div class="table-wrapper">
-        <table>
-          <thead><tr><th>Rubro</th><th>Detalle</th><th style="text-align:right">Costo (miles $)</th></tr></thead>
-          <tbody>
-            <tr><td>I</td><td>Terreno y edificios</td><td style="text-align:right">289.996,60</td></tr>
-            <tr><td>II</td><td>Equipos y accesorios</td><td style="text-align:right">608.108,23</td></tr>
-            <tr><td>III</td><td>Instalaciones eléctricas</td><td style="text-align:right">3.599,60</td></tr>
-            <tr><td>IV</td><td>Equipamiento oficinas</td><td style="text-align:right">14.745,00</td></tr>
-            <tr><td>V</td><td>Rodados</td><td style="text-align:right">67.720,00</td></tr>
-            <tr><td>VI</td><td>Gastos de proyecto</td><td style="text-align:right">54,10</td></tr>
-            <tr><td>VII</td><td>Montaje</td><td style="text-align:right">35,92</td></tr>
-            <tr class="highlight-row"><td colspan="2"><strong>TOTAL (con 5% protección)</strong></td><td style="text-align:right"><strong>$1.033.472,43k</strong></td></tr>
-          </tbody>
-        </table>
+      <div style="display:flex;align-items:center;gap:14px;margin-bottom:22px">
+        <span style="font-size:2.4rem">💰</span>
+        <div style="font-size:1rem;text-transform:uppercase;letter-spacing:0.12em;color:rgba(255,255,255,0.5);font-weight:600">Presupuesto de Inversión</div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:14px 20px">
+          <div style="display:flex;align-items:center;gap:14px"><span style="color:var(--gold-light);font-weight:700;font-size:1.1rem;width:34px">I</span><span style="font-size:1.15rem">Terreno y edificios</span></div>
+          <span style="font-weight:700;color:var(--gold-light);font-size:1.2rem">289.996,60</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:14px 20px">
+          <div style="display:flex;align-items:center;gap:14px"><span style="color:var(--gold-light);font-weight:700;font-size:1.1rem;width:34px">II</span><span style="font-size:1.15rem">Equipos y accesorios</span></div>
+          <span style="font-weight:700;color:var(--gold-light);font-size:1.2rem">608.108,23</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:14px 20px">
+          <div style="display:flex;align-items:center;gap:14px"><span style="color:var(--gold-light);font-weight:700;font-size:1.1rem;width:34px">III</span><span style="font-size:1.15rem">Instalaciones eléctricas</span></div>
+          <span style="font-weight:700;color:var(--gold-light);font-size:1.2rem">3.599,60</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:14px 20px">
+          <div style="display:flex;align-items:center;gap:14px"><span style="color:var(--gold-light);font-weight:700;font-size:1.1rem;width:34px">IV</span><span style="font-size:1.15rem">Equipamiento oficinas</span></div>
+          <span style="font-weight:700;color:var(--gold-light);font-size:1.2rem">14.745,00</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:14px 20px">
+          <div style="display:flex;align-items:center;gap:14px"><span style="color:var(--gold-light);font-weight:700;font-size:1.1rem;width:34px">V</span><span style="font-size:1.15rem">Rodados</span></div>
+          <span style="font-weight:700;color:var(--gold-light);font-size:1.2rem">67.720,00</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:14px 20px">
+          <div style="display:flex;align-items:center;gap:14px"><span style="color:var(--gold-light);font-weight:700;font-size:1.1rem;width:34px">VI</span><span style="font-size:1.15rem">Gastos de proyecto</span></div>
+          <span style="font-weight:700;color:var(--gold-light);font-size:1.2rem">54,10</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:14px 20px">
+          <div style="display:flex;align-items:center;gap:14px"><span style="color:var(--gold-light);font-weight:700;font-size:1.1rem;width:34px">VII</span><span style="font-size:1.15rem">Montaje</span></div>
+          <span style="font-weight:700;color:var(--gold-light);font-size:1.2rem">35,92</span>
+        </div>
+      </div>
+
+      <!-- Total bar -->
+      <div style="margin-top:16px;background:linear-gradient(135deg,var(--green-medium),var(--green-dark));border-radius:14px;padding:18px 24px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 4px 20px rgba(0,0,0,0.3)">
+        <span style="font-weight:700;font-size:1.2rem;text-transform:uppercase;letter-spacing:0.05em">Total (con 5% protección)</span>
+        <span style="font-weight:800;font-size:1.6rem;color:var(--gold-light)">$1.033.472,43k</span>
       </div>
     </div>
-    <div>
-      <div class="highlight-box">
-        <div class="text-xs" style="text-transform:uppercase;letter-spacing:0.1em;opacity:0.6;margin-bottom:8px">Financiamiento</div>
-        <strong style="font-size:1.1rem">Banco Nación Argentina</strong><br>
-        <span class="text-sm">25% del total · Tasa 40%</span>
+
+    <!-- Right: Financiamiento -->
+    <div style="display:flex;flex-direction:column;gap:24px;padding-top:10px">
+      <div style="display:flex;align-items:center;gap:14px;margin-bottom:4px">
+        <span style="font-size:2.4rem">🏦</span>
+        <div style="font-size:1rem;text-transform:uppercase;letter-spacing:0.12em;color:rgba(255,255,255,0.5);font-weight:600">Financiamiento de la Inversión</div>
+      </div>
+
+      <!-- Préstamo BNA card -->
+      <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:18px;padding:30px;position:relative;overflow:hidden">
+        <div style="position:absolute;top:0;left:0;width:5px;height:100%;background:var(--gold-light);border-radius:5px 0 0 5px"></div>
+        <div style="font-size:1.4rem;font-weight:700;margin-bottom:18px">Banco Nación Argentina</div>
+        <div style="display:flex;align-items:center;gap:16px;margin-bottom:16px">
+          <div style="background:var(--green-medium);color:white;font-weight:800;font-size:1.6rem;width:72px;height:72px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,0.3)">25%</div>
+          <div>
+            <div style="font-size:1rem;color:rgba(255,255,255,0.5)">del total de inversión</div>
+            <div style="font-size:1.5rem;font-weight:700;color:var(--gold-light)">$258.368,11k</div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:14px;margin-top:10px">
+          <span style="color:rgba(255,255,255,0.3);font-size:1.5rem">▸▸▸</span>
+          <div style="background:rgba(255,255,255,0.06);border-radius:12px;padding:14px 20px;flex:1">
+            <div style="font-size:0.95rem;color:rgba(255,255,255,0.5)">Tasa de interés</div>
+            <div style="font-size:1.4rem;font-weight:700;color:white">40% anual</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Capital social card -->
+      <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:18px;padding:28px 30px;position:relative;overflow:hidden">
+        <div style="position:absolute;top:0;left:0;width:5px;height:100%;background:var(--green-medium);border-radius:5px 0 0 5px"></div>
+        <div style="display:flex;align-items:center;gap:16px">
+          <span style="font-size:2rem">💼</span>
+          <div>
+            <div style="font-size:1.3rem;font-weight:700">Capital Social</div>
+            <div style="font-size:1rem;color:rgba(255,255,255,0.5)">75% restante del total</div>
+          </div>
+          <div style="margin-left:auto;font-size:1.5rem;font-weight:700;color:var(--gold-light)">$775.104,32k</div>
+        </div>
       </div>
     </div>
   </div>
@@ -2951,30 +3012,56 @@ tbody tr:nth-child(even) {
   <div class="accent-bar"></div>
   <div class="section-tag">Inversiones y Costos</div>
   <div class="slide-title">Costos Operativos</div>
-  <div class="two-col">
-    <div>
-      <div class="col-header">Componentes del COT</div>
-      <ul class="item-list">
-        <li>Costo materias primas (eucalipto + solventes + glicerina)</li>
-        <li>Envase y embalaje</li>
-        <li>Mano de obra directa e indirecta</li>
-        <li>Energía eléctrica y combustible (gas)</li>
-        <li>Agua, EPP, mantenimiento</li>
-        <li>Seguros y servicios tercerizados</li>
-        <li>Depreciaciones y amortizaciones</li>
-      </ul>
+
+  <!-- Componentes del COT como grid de íconos -->
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-bottom:36px">
+    <div style="background:white;border-radius:16px;padding:24px 18px;text-align:center;box-shadow:0 2px 12px rgba(0,0,0,0.06)">
+      <div style="font-size:2.6rem;margin-bottom:8px">🌿</div>
+      <div style="font-size:1rem;color:var(--text-dark);font-weight:600;line-height:1.3">Materias primas</div>
     </div>
-    <div>
-      <div class="cards-grid" style="grid-template-columns:1fr;gap:16px">
-        <div class="stat-card" style="background:var(--green-dark);color:white">
-          <div class="stat-number" style="color:white">$33.820</div>
-          <div class="stat-label" style="color:rgba(255,255,255,0.7)">Costo unitario / botella</div>
-        </div>
-        <div class="stat-card" style="background:var(--green-dark);color:white">
-          <div class="stat-number" style="color:var(--gold-light)">$42.276</div>
-          <div class="stat-label" style="color:rgba(255,255,255,0.7)">Precio de venta (25% ganancia)</div>
-        </div>
-      </div>
+    <div style="background:white;border-radius:16px;padding:24px 18px;text-align:center;box-shadow:0 2px 12px rgba(0,0,0,0.06)">
+      <div style="font-size:2.6rem;margin-bottom:8px">📦</div>
+      <div style="font-size:1rem;color:var(--text-dark);font-weight:600;line-height:1.3">Envase y embalaje</div>
+    </div>
+    <div style="background:white;border-radius:16px;padding:24px 18px;text-align:center;box-shadow:0 2px 12px rgba(0,0,0,0.06)">
+      <div style="font-size:2.6rem;margin-bottom:8px">👷</div>
+      <div style="font-size:1rem;color:var(--text-dark);font-weight:600;line-height:1.3">Mano de obra</div>
+    </div>
+    <div style="background:white;border-radius:16px;padding:24px 18px;text-align:center;box-shadow:0 2px 12px rgba(0,0,0,0.06)">
+      <div style="font-size:2.6rem;margin-bottom:8px">⚡</div>
+      <div style="font-size:1rem;color:var(--text-dark);font-weight:600;line-height:1.3">Energía y gas</div>
+    </div>
+    <div style="background:white;border-radius:16px;padding:24px 18px;text-align:center;box-shadow:0 2px 12px rgba(0,0,0,0.06)">
+      <div style="font-size:2.6rem;margin-bottom:8px">💧</div>
+      <div style="font-size:1rem;color:var(--text-dark);font-weight:600;line-height:1.3">Agua y EPP</div>
+    </div>
+    <div style="background:white;border-radius:16px;padding:24px 18px;text-align:center;box-shadow:0 2px 12px rgba(0,0,0,0.06)">
+      <div style="font-size:2.6rem;margin-bottom:8px">🛡️</div>
+      <div style="font-size:1rem;color:var(--text-dark);font-weight:600;line-height:1.3">Seguros y servicios</div>
+    </div>
+    <div style="background:white;border-radius:16px;padding:24px 18px;text-align:center;box-shadow:0 2px 12px rgba(0,0,0,0.06)">
+      <div style="font-size:2.6rem;margin-bottom:8px">🔧</div>
+      <div style="font-size:1rem;color:var(--text-dark);font-weight:600;line-height:1.3">Mantenimiento</div>
+    </div>
+    <div style="background:white;border-radius:16px;padding:24px 18px;text-align:center;box-shadow:0 2px 12px rgba(0,0,0,0.06)">
+      <div style="font-size:2.6rem;margin-bottom:8px">📉</div>
+      <div style="font-size:1rem;color:var(--text-dark);font-weight:600;line-height:1.3">Depreciaciones</div>
+    </div>
+  </div>
+
+  <!-- Números clave: Costo vs Precio -->
+  <div style="display:grid;grid-template-columns:1fr auto 1fr;gap:0;align-items:center">
+    <div style="background:var(--green-dark);color:white;border-radius:18px;padding:36px 40px;text-align:center">
+      <div style="font-family:'Playfair Display',serif;font-size:3rem;font-weight:700">$33.820</div>
+      <div style="font-size:1rem;text-transform:uppercase;letter-spacing:0.1em;opacity:0.7;margin-top:6px">Costo unitario / botella</div>
+    </div>
+    <div style="display:flex;flex-direction:column;align-items:center;padding:0 24px;color:var(--green-dark)">
+      <span style="font-size:2rem;letter-spacing:-2px">▸▸▸</span>
+      <span style="font-size:0.9rem;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;margin-top:4px">+25%</span>
+    </div>
+    <div style="background:var(--green-dark);color:white;border-radius:18px;padding:36px 40px;text-align:center;border:2px solid var(--gold-light)">
+      <div style="font-family:'Playfair Display',serif;font-size:3rem;font-weight:700;color:var(--gold-light)">$42.276</div>
+      <div style="font-size:1rem;text-transform:uppercase;letter-spacing:0.1em;opacity:0.7;margin-top:6px">Precio de venta</div>
     </div>
   </div>
 </div>
@@ -3018,23 +3105,23 @@ tbody tr:nth-child(even) {
         <line x1="60" y1="220" x2="430" y2="220" stroke="rgba(196,90,90,0.4)" stroke-width="1.5" stroke-dasharray="6,4"/>
         <text x="435" y="218" fill="rgba(196,90,90,0.6)" font-size="9" font-family="Outfit">CF</text>
         <!-- Total cost line (from CF upward) -->
-        <line x1="60" y1="220" x2="430" y2="80" stroke="#c45a5a" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="60" y1="220" x2="430" y2="99" stroke="#c45a5a" stroke-width="2.5" stroke-linecap="round"/>
         <!-- Revenue line (from 0) -->
         <line x1="60" y1="270" x2="430" y2="50" stroke="#5fa86b" stroke-width="2.5" stroke-linecap="round"/>
         <!-- Profit area (after intersection) -->
-        <path d="M242,148 L430,50 L430,80 L242,148 Z" fill="url(#profitArea)"/>
+        <path d="M249,158 L430,50 L430,99 L249,158 Z" fill="url(#profitArea)"/>
         <!-- Loss area (before intersection) -->
-        <path d="M60,270 L242,148 L60,220 Z" fill="url(#lossArea)"/>
+        <path d="M60,270 L249,158 L60,220 Z" fill="url(#lossArea)"/>
         <!-- Intersection point (break-even) -->
-        <circle cx="242" cy="148" r="8" fill="none" stroke="#c4a35a" stroke-width="2">
+        <circle cx="249" cy="158" r="8" fill="none" stroke="#c4a35a" stroke-width="2">
           <animate attributeName="r" values="8;12;8" dur="2s" repeatCount="indefinite"/>
           <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite"/>
         </circle>
-        <circle cx="242" cy="148" r="4" fill="#c4a35a"/>
+        <circle cx="249" cy="158" r="4" fill="#c4a35a"/>
         <!-- Break-even label -->
-        <rect x="248" y="127" width="100" height="30" rx="6" fill="rgba(196,163,90,0.15)" stroke="rgba(196,163,90,0.4)" stroke-width="1"/>
-        <text x="298" y="140" fill="#e8d5a0" font-size="10" text-anchor="middle" font-family="Outfit" font-weight="600">Punto de Eq.</text>
-        <text x="298" y="152" fill="#c4a35a" font-size="9" text-anchor="middle" font-family="Outfit">73.677 bot</text>
+        <rect x="255" y="137" width="100" height="30" rx="6" fill="rgba(196,163,90,0.15)" stroke="rgba(196,163,90,0.4)" stroke-width="1"/>
+        <text x="305" y="150" fill="#e8d5a0" font-size="10" text-anchor="middle" font-family="Outfit" font-weight="600">Punto de Eq.</text>
+        <text x="305" y="162" fill="#c4a35a" font-size="9" text-anchor="middle" font-family="Outfit">76.564 bot</text>
         <!-- Capacity marker -->
         <line x1="400" y1="35" x2="400" y2="270" stroke="rgba(168,213,176,0.3)" stroke-width="1" stroke-dasharray="4,4"/>
         <text x="400" y="30" fill="rgba(168,213,176,0.6)" font-size="9" text-anchor="middle" font-family="Outfit">Capacidad</text>
@@ -3049,18 +3136,37 @@ tbody tr:nth-child(even) {
       </svg>
     </div>
     <div>
-      <div class="cards-grid" style="grid-template-columns:1fr;gap:16px">
-        <div class="stat-card">
-          <div class="stat-number" style="font-size:3rem">73.677</div>
-          <div class="stat-label">Botellas — Punto de equilibrio</div>
+      <!-- Cálculo del punto de equilibrio -->
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <div style="font-size:1rem;text-transform:uppercase;letter-spacing:0.1em;opacity:0.5;margin-bottom:4px">Cálculo</div>
+
+        <div style="display:flex;align-items:center;gap:12px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:14px 20px">
+          <span style="font-size:1rem;color:rgba(255,255,255,0.5);width:36px;font-weight:600">CF</span>
+          <span style="font-size:1.2rem;font-weight:600">Costos fijos</span>
+          <span style="margin-left:auto;font-size:1.3rem;font-weight:700;color:var(--gold-light)">$1.579.645,49k</span>
         </div>
-        <div class="stat-card">
-          <div class="stat-number">49,6%</div>
-          <div class="stat-label">de la capacidad instalada</div>
+
+        <div style="display:flex;align-items:center;gap:12px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:14px 20px">
+          <span style="font-size:1rem;color:rgba(255,255,255,0.5);width:36px;font-weight:600">PV</span>
+          <span style="font-size:1.2rem;font-weight:600">Precio de venta</span>
+          <span style="margin-left:auto;font-size:1.3rem;font-weight:700;color:var(--gold-light)">$42.275,60</span>
         </div>
-        <div class="stat-card">
-          <div class="stat-number">43,1%</div>
-          <div class="stat-label">Margen de seguridad</div>
+
+        <div style="display:flex;align-items:center;gap:12px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:14px 20px">
+          <span style="font-size:1rem;color:rgba(255,255,255,0.5);width:36px;font-weight:600">CVu</span>
+          <span style="font-size:1.2rem;font-weight:600">Costo variable unit.</span>
+          <span style="margin-left:auto;font-size:1.3rem;font-weight:700;color:var(--gold-light)">$21.643,99</span>
+        </div>
+
+        <!-- Fórmula -->
+        <div style="text-align:center;padding:10px 0;font-size:1.2rem;color:rgba(255,255,255,0.4);font-weight:600;letter-spacing:0.05em">
+          Q = CF / (PV − CVu)
+        </div>
+
+        <!-- Resultado destacado -->
+        <div style="background:linear-gradient(135deg,var(--green-medium),var(--green-dark));border-radius:16px;padding:24px;text-align:center;box-shadow:0 4px 20px rgba(0,0,0,0.3)">
+          <div style="font-family:'Playfair Display',serif;font-size:3.2rem;font-weight:700;color:var(--gold-light)">76.564</div>
+          <div style="font-size:1rem;text-transform:uppercase;letter-spacing:0.1em;opacity:0.7;margin-top:4px">botellas — punto de equilibrio</div>
         </div>
       </div>
     </div>
@@ -3085,21 +3191,21 @@ tbody tr:nth-child(even) {
   <div class="two-col" style="margin-top:16px">
     <div>
       <!-- TIR comparison chart -->
-      <svg viewBox="0 0 360 160" style="width:100%;border-radius:10px;background:white;box-shadow:0 2px 12px rgba(0,0,0,0.06)">
-        <text x="180" y="20" fill="#3a4a3e" font-size="11" text-anchor="middle" font-family="Outfit" font-weight="600">TIR por escenario</text>
+      <svg viewBox="0 0 420 160" style="width:100%;border-radius:10px;background:white;box-shadow:0 2px 12px rgba(0,0,0,0.06)">
+        <text x="210" y="20" fill="#3a4a3e" font-size="11" text-anchor="middle" font-family="Outfit" font-weight="600">TIR por escenario</text>
         <!-- Bars -->
-        <rect x="40" y="38" width="143" height="28" rx="5" fill="#a8d5b0"><animate attributeName="width" from="0" to="143" dur="0.5s" fill="freeze"/></rect>
-        <text x="35" y="57" fill="#3a4a3e" font-size="10" text-anchor="end" font-family="Outfit">Esc. 1</text>
-        <text x="189" y="57" fill="#2C5F2D" font-size="11" font-family="Outfit" font-weight="700">190,28%</text>
+        <rect x="45" y="38" width="125" height="28" rx="5" fill="#a8d5b0"><animate attributeName="width" from="0" to="125" dur="0.5s" fill="freeze"/></rect>
+        <text x="40" y="57" fill="#3a4a3e" font-size="10" text-anchor="end" font-family="Outfit">Esc. 1</text>
+        <text x="178" y="57" fill="#2C5F2D" font-size="12" font-family="Outfit" font-weight="700">190,28%</text>
 
-        <rect x="40" y="74" width="219" height="28" rx="5" fill="#5fa86b"><animate attributeName="width" from="0" to="219" dur="0.5s" begin="0.15s" fill="freeze"/></rect>
-        <text x="35" y="93" fill="#3a4a3e" font-size="10" text-anchor="end" font-family="Outfit">Esc. 2</text>
-        <text x="265" y="93" fill="#2C5F2D" font-size="11" font-family="Outfit" font-weight="700">291,88%</text>
+        <rect x="45" y="74" width="192" height="28" rx="5" fill="#5fa86b"><animate attributeName="width" from="0" to="192" dur="0.5s" begin="0.15s" fill="freeze"/></rect>
+        <text x="40" y="93" fill="#3a4a3e" font-size="10" text-anchor="end" font-family="Outfit">Esc. 2</text>
+        <text x="245" y="93" fill="#2C5F2D" font-size="12" font-family="Outfit" font-weight="700">291,88%</text>
 
-        <rect x="40" y="110" width="290" height="28" rx="5" fill="#2C5F2D"><animate attributeName="width" from="0" to="290" dur="0.5s" begin="0.3s" fill="freeze"/></rect>
-        <text x="35" y="129" fill="#3a4a3e" font-size="10" text-anchor="end" font-family="Outfit">Esc. 3</text>
-        <text x="336" y="129" fill="#2C5F2D" font-size="12" font-family="Outfit" font-weight="700">381,98%</text>
-        <text x="90" y="152" fill="rgba(0,0,0,0.3)" font-size="9" font-family="Outfit">✓ Escenario elegido</text>
+        <rect x="45" y="110" width="251" height="28" rx="5" fill="#2C5F2D"><animate attributeName="width" from="0" to="251" dur="0.5s" begin="0.3s" fill="freeze"/></rect>
+        <text x="40" y="129" fill="#3a4a3e" font-size="10" text-anchor="end" font-family="Outfit">Esc. 3</text>
+        <text x="304" y="129" fill="#2C5F2D" font-size="12" font-family="Outfit" font-weight="700">381,98%</text>
+        <text x="100" y="152" fill="rgba(0,0,0,0.3)" font-size="9" font-family="Outfit">✓ Escenario elegido</text>
       </svg>
     </div>
     <div>
@@ -3162,91 +3268,33 @@ tbody tr:nth-child(even) {
 <!-- ═══════════════════════════════════════ SLIDE 50: CONCLUSIONES ═══════════════════════════════════════ -->
 <div class="slide slide--dark" data-slide="45">
   <div class="accent-bar"></div>
-  <!-- Decorative circles -->
-  <svg viewBox="0 0 200 200" style="position:absolute;right:80px;bottom:100px;width:250px;opacity:0.03;pointer-events:none">
-    <circle cx="100" cy="100" r="90" stroke="white" stroke-width="2" fill="none"/>
-    <circle cx="100" cy="100" r="60" stroke="white" stroke-width="1.5" fill="none"/>
-    <circle cx="100" cy="100" r="30" stroke="white" stroke-width="1" fill="none"/>
-  </svg>
   <div class="section-tag">Conclusiones</div>
   <div class="slide-title">Conclusiones Generales</div>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px 32px;width:100%">
-    <div class="card" style="display:flex;align-items:flex-start;gap:16px;padding:20px 24px">
-      <span class="obj-num" style="margin-top:2px">1</span>
-      <div style="font-size:1.2rem">Condiciones favorables de <strong>implementación técnica y territorial</strong></div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px 36px;width:100%">
+    <div class="card" style="display:flex;align-items:center;gap:20px;padding:28px 30px">
+      <span class="obj-num" style="flex-shrink:0">1</span>
+      <div style="font-size:1.4rem"><strong>Implementación técnica y territorial</strong> favorable</div>
     </div>
-    <div class="card" style="display:flex;align-items:flex-start;gap:16px;padding:20px 24px">
-      <span class="obj-num" style="margin-top:2px">2</span>
-      <div style="font-size:1.2rem">Proyección de ingresos justifica la inversión (<strong>VAN $6.163M, TIR 381,98%</strong>)</div>
+    <div class="card" style="display:flex;align-items:center;gap:20px;padding:28px 30px">
+      <span class="obj-num" style="flex-shrink:0">2</span>
+      <div style="font-size:1.4rem">Inversión justificada: <strong>VAN $6.163M · TIR 381,98%</strong></div>
     </div>
-    <div class="card" style="display:flex;align-items:flex-start;gap:16px;padding:20px 24px">
-      <span class="obj-num" style="margin-top:2px">3</span>
-      <div style="font-size:1.2rem">Aporte al <strong>desarrollo local</strong>: empleo e industria en Santa Fe de la Vera Cruz</div>
+    <div class="card" style="display:flex;align-items:center;gap:20px;padding:28px 30px">
+      <span class="obj-num" style="flex-shrink:0">3</span>
+      <div style="font-size:1.4rem"><strong>Desarrollo local</strong>: empleo e industria en Santa Fe</div>
     </div>
-    <div class="card" style="display:flex;align-items:flex-start;gap:16px;padding:20px 24px">
-      <span class="obj-num" style="margin-top:2px">4</span>
-      <div style="font-size:1.2rem">Criterios de <strong>calidad</strong> en cada etapa (Farmacopea Argentina)</div>
+    <div class="card" style="display:flex;align-items:center;gap:20px;padding:28px 30px">
+      <span class="obj-num" style="flex-shrink:0">4</span>
+      <div style="font-size:1.4rem"><strong>Calidad</strong> en cada etapa (Farmacopea Argentina)</div>
     </div>
-    <div class="card" style="display:flex;align-items:flex-start;gap:16px;padding:20px 24px">
-      <span class="obj-num" style="margin-top:2px">5</span>
-      <div style="font-size:1.2rem"><strong>Valor agregado</strong> a recursos forestales locales</div>
+    <div class="card" style="display:flex;align-items:center;gap:20px;padding:28px 30px">
+      <span class="obj-num" style="flex-shrink:0">5</span>
+      <div style="font-size:1.4rem"><strong>Valor agregado</strong> a recursos forestales locales</div>
     </div>
-    <div class="card" style="display:flex;align-items:flex-start;gap:16px;padding:20px 24px">
-      <span class="obj-num" style="margin-top:2px">6</span>
-      <div style="font-size:1.2rem">Alternativa <strong>sostenible y competitiva</strong> en el mercado</div>
+    <div class="card" style="display:flex;align-items:center;gap:20px;padding:28px 30px">
+      <span class="obj-num" style="flex-shrink:0">6</span>
+      <div style="font-size:1.4rem">Alternativa <strong>sostenible y competitiva</strong></div>
     </div>
-  </div>
-</div>
-
-<!-- ═══════════════════════════════════════ SLIDE 51: DASHBOARD ═══════════════════════════════════════ -->
-<div class="slide slide--cream" data-slide="46">
-  <div class="accent-bar"></div>
-  <div class="section-tag">Resumen</div>
-  <div class="slide-title">Indicadores Clave del Proyecto</div>
-  <div class="cards-grid" style="grid-template-columns: repeat(5, 1fr); gap: 12px;">
-    <div class="stat-card">
-      <div class="stat-number" style="font-size:1.8rem">49,50 L/d</div>
-      <div class="stat-label">Producción diaria</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-number" style="font-size:1.8rem">148.500</div>
-      <div class="stat-label">Botellas / año</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-number" style="font-size:1.8rem">$1.033 M</div>
-      <div class="stat-label">Inversión total</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-number" style="font-size:1.8rem">$33.820</div>
-      <div class="stat-label">Costo unitario</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-number" style="font-size:1.8rem">$42.276</div>
-      <div class="stat-label">Precio de venta</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-number" style="font-size:1.8rem">73.677</div>
-      <div class="stat-label">Pto. equilibrio</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-number" style="font-size:1.8rem;color:var(--green-dark)">$6.163 M</div>
-      <div class="stat-label">VAN</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-number" style="font-size:1.8rem;color:var(--green-dark)">381,98%</div>
-      <div class="stat-label">TIR</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-number" style="font-size:1.8rem">27</div>
-      <div class="stat-label">Empleados</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-number" style="font-size:1.8rem">4.895 m²</div>
-      <div class="stat-label">Terreno</div>
-    </div>
-  </div>
-  <div class="highlight-box mt-16" style="text-align:center">
-    Universidad Tecnológica Nacional — Facultad Regional San Francisco
   </div>
 </div>
 
