@@ -3563,8 +3563,6 @@ goToSlide = function(n) {
   const slideEl = slides[n - 1];
   if (!animatedSlides[n]) {
     animatedSlides[n] = true;
-    // Animated counters
-    if (slideEl) animateCounters(slideEl);
     // Title entrance
     const title = slideEl?.querySelector('.slide-title, .sep-title');
     if (title) gsap.from(title, { y: 30, opacity: 0, duration: 0.6, ease: 'power3.out', delay: 0.1 });
@@ -3698,37 +3696,6 @@ function animateBalance() {
 }
 
 // ═══════════════════ ANIMATED COUNTERS ═══════════════════
-function animateCounters(slideEl) {
-  slideEl.querySelectorAll('.stat-number').forEach(el => {
-    if (el.dataset.animated) return;
-    el.dataset.animated = '1';
-    const text = el.textContent.trim();
-    const match = text.match(/([\d.,]+)/);
-    if (!match) return;
-    const numStr = match[1];
-    const num = parseFloat(numStr.replace(/\./g, '').replace(',', '.'));
-    if (isNaN(num)) return;
-    const prefix = text.substring(0, text.indexOf(numStr));
-    const suffix = text.substring(text.indexOf(numStr) + numStr.length);
-    const hasComma = numStr.includes(',');
-    gsap.to({ val: 0 }, {
-      val: num,
-      duration: 1.2,
-      ease: 'power2.out',
-      onUpdate: function() {
-        let v = this.targets()[0].val;
-        let formatted;
-        if (hasComma) {
-          const decLen = numStr.split(',')[1]?.length || 0;
-          formatted = v.toFixed(decLen).replace('.', ',');
-        } else {
-          formatted = Math.round(v).toLocaleString('es-AR');
-        }
-        el.textContent = prefix + formatted + suffix;
-      }
-    });
-  });
-}
 </script>
 
 </body>
