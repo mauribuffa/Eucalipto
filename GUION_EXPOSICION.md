@@ -95,7 +95,7 @@
 
 ---
 
-## Diapositiva 9 — Proyeccion de la Demanda *(~1.5 min)*
+## Diapositiva 8 — Proyeccion de la Demanda *(~1.5 min)*
 
 > Para proyectar la demanda utilizamos datos del INDEC referidos a la industria farmaceutica, ya que los repelentes naturales se encuadran dentro de esa categoria.
 >
@@ -105,7 +105,7 @@
 
 ---
 
-## Diapositiva 10 — Proyeccion de la Oferta *(~1 min)*
+## Diapositiva 9 — Proyeccion de la Oferta *(~1 min)*
 
 > De manera similar, proyectamos la oferta. El ajuste por regresion se realizo con tres variables, y la que mejor se correlaciono fue la **inflacion**, con un coeficiente de 0,928.
 >
@@ -113,7 +113,7 @@
 
 ---
 
-## Diapositiva 11 — Cuantificacion DPI y Produccion *(~1.5 min)*
+## Diapositiva 10 — Cuantificacion DPI y Produccion *(~1.5 min)*
 
 > Aqui esta el corazon del dimensionamiento de nuestra planta.
 >
@@ -125,13 +125,13 @@
 
 ---
 
-## Diapositiva 13 — Separador: Materias Primas *(transicion, ~10 seg)*
+## Diapositiva 11 — Separador: Materias Primas *(transicion, ~10 seg)*
 
 > Veamos ahora las **materias primas** que intervienen en nuestro proceso.
 
 ---
 
-## Diapositiva 14 — Eucalipto Camaldulensis *(~2 min)*
+## Diapositiva 12 — Eucalipto Camaldulensis *(~2 min)*
 
 > La materia prima principal es el **Eucalyptus camaldulensis**, un arbol que puede alcanzar hasta **30 metros de altura**, de la familia Myrtaceae, ampliamente distribuido en las provincias de Buenos Aires, Santa Fe y Jujuy.
 >
@@ -143,7 +143,7 @@
 
 ---
 
-## Diapositiva 16 — Solventes y Vehiculos *(~1 min)*
+## Diapositiva 13 — Solventes y Vehiculos *(~1 min)*
 
 > Ademas del eucalipto, utilizamos tres insumos clave:
 >
@@ -155,7 +155,7 @@
 
 ---
 
-## Diapositiva 17 — Caracteristicas del Producto *(~1.5 min)*
+## Diapositiva 14 — Caracteristicas del Producto *(~1.5 min)*
 
 > Nuestro producto se llama **"vert"** — un repelente natural en formato **spray atomizador**, envasado en botella de **PET virgen de 100 mL**, reciclable.
 >
@@ -169,41 +169,13 @@
 
 ---
 
-## Diapositiva 19 — Separador: Localizacion *(transicion, ~10 seg)*
-
-> Pasemos ahora a la **localizacion** de la planta.
-
----
-
-## Diapositiva 20 — Macrolocalizacion: Santa Fe *(~1.5 min)*
-
-> Para la macrolocalizacion comparamos dos provincias: **Santa Fe y Buenos Aires**, evaluando factores como disponibilidad de materia prima, mano de obra, transporte, parques industriales y energia.
->
-> Santa Fe presento ventajas claras: **alta disponibilidad de materia prima** gracias a las plantaciones de eucalipto en la region, excelente conectividad vial a traves de las **rutas nacionales 11 y 19**, y parques industriales disponibles con infraestructura preparada.
->
-> Buenos Aires, si bien tiene mano de obra y energia disponible, presenta saturacion en transporte y en parques industriales.
->
-> Por lo tanto, **seleccionamos la provincia de Santa Fe**.
-
----
-
-## Diapositiva 21 — Microlocalizacion: Santa Fe *(~1.5 min)*
-
-> Dentro de Santa Fe, evaluamos las ciudades de Sauce Viejo y **Santa Fe de la Vera Cruz**, que resulto seleccionada.
->
-> La ciudad cuenta con **530.000 habitantes**, una **central electrica de 280 MW**, acceso directo por **ruta nacional 11**, y lo mas importante: el **Parque Tecnologico Litoral Centro (PTLC)**.
->
-> Nuestra planta se ubicaria en los **lotes 30 y 31 del PTLC**, que cuenta con redes electricas, agua potable y planta de tratamiento de efluentes. Ademas, la cercania con **Zoovet S.A.**, una empresa del rubro, favorece posibles sinergias.
-
----
-
-## Diapositiva 22 — Separador: Proceso Productivo *(transicion, ~10 seg)*
+## Diapositiva 15 — Separador: Proceso Productivo *(transicion, ~10 seg)*
 
 > Entramos ahora al **proceso productivo**, que consta de 9 etapas.
 
 ---
 
-## Diapositiva 23 — Metodos de Obtencion del Aceite Esencial *(~1.5 min)*
+## Diapositiva 16 — Metodos de Obtencion del Aceite Esencial *(~1.5 min)*
 
 > Antes de describir el proceso, evaluamos tres metodos de obtencion del aceite esencial:
 >
@@ -215,7 +187,7 @@
 
 ---
 
-## Diapositiva 24 — Etapas del Proceso — Flujo Completo *(~2 min)*
+## Diapositiva 17 — Etapas del Proceso — Flujo Completo *(~2 min)*
 
 > Este es el flujo completo de nuestro proceso en 9 etapas:
 >
@@ -233,7 +205,7 @@
 
 ---
 
-## Diapositiva 25 — Recepcion y Separacion Manual *(~1 min)*
+## Diapositiva 18 — Recepcion y Separacion Manual *(~1 min)*
 
 > En detalle: las materias primas ingresan en formatos especificos — el eucalipto en **fardos de 25 kg**, el etanol e isopropanol en **bidones de 20 L**, y la glicerina en **bidones de 5 L**. Todo se almacena con sistema FIFO.
 >
@@ -241,7 +213,7 @@
 
 ---
 
-## Diapositiva 26 — Control de Calidad: Materias Primas *(~1 min)*
+## Diapositiva 19 — Control de Calidad: Materias Primas *(~1 min)*
 
 > Cada materia prima tiene su protocolo de control de calidad:
 >
@@ -252,7 +224,7 @@
 
 ---
 
-## Diapositiva 27 — Lixiviacion: Parametros *(~1.5 min)*
+## Diapositiva 20 — Lixiviacion: Parametros *(~1.5 min)*
 
 > La lixiviacion es la etapa critica del proceso. El sistema integrado consta de tres equipos:
 >
@@ -264,7 +236,7 @@
 
 ---
 
-## Diapositiva 28 — Arrastre con Vapor y Condensacion *(~1 min)*
+## Diapositiva 21 — Arrastre con Vapor y Condensacion *(~1 min)*
 
 > En el arrastre con vapor se inyectan **3,50 kg/h de vapor**. El 78% de ese vapor concentra el aceite, y se recupera el **90% del aceite esencial** presente.
 >
@@ -274,7 +246,7 @@
 
 ---
 
-## Diapositiva 29 — Control de Calidad: Aceite Esencial *(~1.5 min)*
+## Diapositiva 22 — Control de Calidad: Aceite Esencial *(~1.5 min)*
 
 > El aceite esencial obtenido se somete a tres tipos de analisis:
 >
@@ -286,7 +258,7 @@
 
 ---
 
-## Diapositiva 30 — Decantacion y Mezclado *(~1 min)*
+## Diapositiva 23 — Decantacion y Mezclado *(~1 min)*
 
 > En la decantacion se separa por gravedad el aceite esencial del agua residual. Se obtienen **1,38 kg/h de aceite esencial** y **2,88 kg/h de agua residual**, con un 10% de perdidas. El decantador tiene un diametro de 0,11 m y un largo de 0,34 m.
 >
@@ -294,7 +266,7 @@
 
 ---
 
-## Diapositiva 31 — Envasado y Almacenamiento *(~1 min)*
+## Diapositiva 24 — Envasado y Almacenamiento *(~1 min)*
 
 > El envasado se realiza con una maquina automatica **ZT-Pack CBZ-4**, que tiene capacidad para llenar **495 botellas por dia** — 247 por turno — con una potencia de 3 kW. Cada botella es de PET de 100 mL con atomizador spray.
 >
@@ -302,7 +274,7 @@
 
 ---
 
-## Diapositiva 32 — Control de Calidad: Producto Final *(~1 min)*
+## Diapositiva 25 — Control de Calidad: Producto Final *(~1 min)*
 
 > Cada lote de producto final se controla antes de ser liberado:
 >
@@ -314,38 +286,7 @@
 
 ---
 
-## Diapositiva 33 — Balance de Masa General *(~1.5 min)*
-
-> Este diagrama resume todo el proceso. A la izquierda las **entradas**: eucalipto (100 kg/h), etanol 96% (392,89 kg/h), vapor (3,50 kg/h), isopropanol y glicerina (1,46 kg/h).
->
-> Atraviesan las 9 etapas del proceso y a la derecha tenemos las **salidas**:
-> - **Producto principal**: repelente natural, 2,84 kg/h, equivalente a 495 botellas diarias.
-> - **Residuos solidos**: 21 kg/h de ramas mas 0,94 kg/h de otros solidos.
-> - **Residuos liquidos**: 354,24 kg/h de solvente recuperable y 2,88 kg/h de agua.
->
-> Es importante destacar que el solvente se recupera y recircula, lo que reduce el consumo y el impacto ambiental.
-
----
-
-## Diapositiva 36 — Regimen Laboral *(~1 min)*
-
-> La planta opera con una **estructura lineo-asesora-funcional** y un total de **20 empleados**.
->
-> El area de **produccion y calidad** trabaja en doble jornada: dos turnos de 0:00 a 8:00 y de 8:00 a 16:00, con rotacion semanal, de lunes a viernes. Se contemplan horas extras los sabados si es necesario.
->
-> El area de **administracion** trabaja en horario corrido: de 8:00 a 17:00 de lunes a jueves, y de 8:00 a 16:00 los viernes.
-
----
-
-## Diapositiva 37 — Planificacion y Edificacion *(~1 min)*
-
-> La planta se distribuye en una **zona cubierta de 1.127 m²**, donde el sector de produccion ocupa 539 m², seguido por oficinas, almacen, laboratorio, mantenimiento, expedicion y banios.
->
-> El **terreno total es de 4.895 m²**, dentro de los lotes 30 y 31 del Parque Tecnologico Litoral Centro. En la imagen pueden ver el plano de distribucion con la disposicion optimizada de cada sector.
-
----
-
-## Diapositiva 38 — Servicios Auxiliares *(~1.5 min)*
+## Diapositiva 26 — Servicios Auxiliares *(~1.5 min)*
 
 > La planta requiere los siguientes servicios auxiliares:
 >
@@ -359,13 +300,72 @@
 
 ---
 
-## Diapositiva 39 — Separador: Inversiones y Costos *(transicion, ~10 seg)*
+## Diapositiva 27 — Balance de Masa General *(~1.5 min)*
+
+> Este diagrama resume todo el proceso. A la izquierda las **entradas**: eucalipto (100 kg/h), etanol 96% (392,89 kg/h), vapor (3,50 kg/h), isopropanol y glicerina (1,46 kg/h).
+>
+> Atraviesan las 9 etapas del proceso y a la derecha tenemos las **salidas**:
+> - **Producto principal**: repelente natural, 2,84 kg/h, equivalente a 495 botellas diarias.
+> - **Residuos solidos**: 21 kg/h de ramas mas 0,94 kg/h de otros solidos.
+> - **Residuos liquidos**: 354,24 kg/h de solvente recuperable y 2,88 kg/h de agua.
+>
+> Es importante destacar que el solvente se recupera y recircula, lo que reduce el consumo y el impacto ambiental.
+
+---
+
+## Diapositiva 28 — Separador: Localizacion *(transicion, ~10 seg)*
+
+> Pasemos ahora a la **localizacion** de la planta.
+
+---
+
+## Diapositiva 29 — Macrolocalizacion: Santa Fe *(~1.5 min)*
+
+> Para la macrolocalizacion comparamos dos provincias: **Santa Fe y Buenos Aires**, evaluando factores como disponibilidad de materia prima, mano de obra, transporte, parques industriales y energia.
+>
+> Santa Fe presento ventajas claras: **alta disponibilidad de materia prima** gracias a las plantaciones de eucalipto en la region, excelente conectividad vial a traves de las **rutas nacionales 11 y 19**, y parques industriales disponibles con infraestructura preparada.
+>
+> Buenos Aires, si bien tiene mano de obra y energia disponible, presenta saturacion en transporte y en parques industriales.
+>
+> Por lo tanto, **seleccionamos la provincia de Santa Fe**.
+
+---
+
+## Diapositiva 30 — Microlocalizacion: Santa Fe *(~1.5 min)*
+
+> Dentro de Santa Fe, evaluamos las ciudades de Sauce Viejo y **Santa Fe de la Vera Cruz**, que resulto seleccionada.
+>
+> La ciudad cuenta con **530.000 habitantes**, una **central electrica de 280 MW**, acceso directo por **ruta nacional 11**, y lo mas importante: el **Parque Tecnologico Litoral Centro (PTLC)**.
+>
+> Nuestra planta se ubicaria en los **lotes 30 y 31 del PTLC**, que cuenta con redes electricas, agua potable y planta de tratamiento de efluentes. Ademas, la cercania con **Zoovet S.A.**, una empresa del rubro, favorece posibles sinergias.
+
+---
+
+## Diapositiva 31 — Planificacion y Edificacion *(~1 min)*
+
+> La planta se distribuye en una **zona cubierta de 1.127 m²**, donde el sector de produccion ocupa 539 m², seguido por oficinas, almacen, laboratorio, mantenimiento, expedicion y banios.
+>
+> El **terreno total es de 4.895 m²**, dentro de los lotes 30 y 31 del Parque Tecnologico Litoral Centro. En la imagen pueden ver el plano de distribucion con la disposicion optimizada de cada sector.
+
+---
+
+## Diapositiva 32 — Regimen Laboral *(~1 min)*
+
+> La planta opera con una **estructura lineo-asesora-funcional** y un total de **20 empleados**.
+>
+> El area de **produccion y calidad** trabaja en doble jornada: dos turnos de 0:00 a 8:00 y de 8:00 a 16:00, con rotacion semanal, de lunes a viernes. Se contemplan horas extras los sabados si es necesario.
+>
+> El area de **administracion** trabaja en horario corrido: de 8:00 a 17:00 de lunes a jueves, y de 8:00 a 16:00 los viernes.
+
+---
+
+## Diapositiva 33 — Separador: Inversiones y Costos *(transicion, ~10 seg)*
 
 > Pasamos a la parte **economica** del proyecto.
 
 ---
 
-## Diapositiva 40 — Inversion Total *(~2 min)*
+## Diapositiva 34 — Inversion Total *(~2 min)*
 
 > La inversion total del proyecto, con un 5% de proteccion, asciende a **$1.033.472,43 miles**.
 >
@@ -381,7 +381,7 @@
 
 ---
 
-## Diapositiva 41 — Costos Operativos *(~1.5 min)*
+## Diapositiva 35 — Costos Operativos *(~1.5 min)*
 
 > Los costos operativos incluyen materias primas, envase y embalaje, mano de obra, energia y gas, agua y EPP, seguros, mantenimiento y depreciaciones.
 >
@@ -391,7 +391,7 @@
 
 ---
 
-## Diapositiva 42 — Punto de Equilibrio *(~1.5 min)*
+## Diapositiva 36 — Punto de Equilibrio *(~1.5 min)*
 
 > El punto de equilibrio es el volumen de produccion donde los ingresos igualan a los costos totales.
 >
@@ -401,7 +401,7 @@
 
 ---
 
-## Diapositiva 43 — VAN y TIR *(~2 min)*
+## Diapositiva 37 — VAN y TIR *(~2 min)*
 
 > Evaluamos el proyecto en tres escenarios:
 >
@@ -415,7 +415,7 @@
 
 ---
 
-## Diapositiva 44 — Factibilidad del Proyecto *(~1 min)*
+## Diapositiva 38 — Factibilidad del Proyecto *(~1 min)*
 
 > Para resumir la evaluacion:
 >
@@ -429,7 +429,7 @@
 
 ---
 
-## Diapositiva 45 — Conclusiones Generales *(~2 min)*
+## Diapositiva 39 — Conclusiones Generales *(~2 min)*
 
 > Para cerrar, nuestras conclusiones generales:
 >
@@ -449,7 +449,7 @@
 
 ---
 
-## Diapositiva 47 — Gracias *(~30 seg)*
+## Diapositiva 40 — Gracias *(~30 seg)*
 
 > Con esto concluimos nuestra presentacion. Agradecemos profundamente a nuestra directora, la Ing. Sposetti, y a nuestra tutora, la Ing. Dra. Taverna, por su guia constante. Tambien a nuestras familias y a todos los que nos acompaniaron en este camino.
 >

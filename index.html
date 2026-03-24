@@ -866,7 +866,7 @@ tbody tr:nth-child(even) {
   <div class="accent-bar"></div>
   <div class="section-tag">Bloque 1 · Portada y Contexto</div>
   <div class="slide-title">Objetivos del Proyecto</div>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px 32px;width:100%">
+  <div style="display:grid;grid-template-columns:1fr;gap:10px;width:100%">
     <div style="display:flex;align-items:center;gap:16px;padding:14px 20px;background:rgba(255,255,255,0.6);border-radius:10px;border:1px solid rgba(44,95,45,0.08)">
       <span class="obj-num">1</span><span style="font-size:1.2rem">Describir la materia prima y el producto final</span>
     </div>
@@ -1000,7 +1000,7 @@ tbody tr:nth-child(even) {
       </div>
       <div class="stat-card">
         <div class="stat-number" style="font-size:clamp(1.4rem,3vw,2.2rem)">6,85%</div>
-        <div class="stat-label">CAGR proyectado 2021–2026</div>
+        <div class="stat-label">Tasa de crecimiento anual compuesta 2021–2026</div>
       </div>
       <div class="stat-card">
         <div class="stat-number" style="font-size:clamp(1.4rem,3vw,2.2rem)">+Info</div>
@@ -1037,8 +1037,8 @@ tbody tr:nth-child(even) {
   <div class="accent-bar"></div>
   <div class="section-tag">Estudio de Mercado</div>
   <div class="slide-title">Proyección de la Demanda</div>
-  <div class="two-col" style="align-items:stretch">
-    <div style="display:flex">
+  <div style="display:flex;justify-content:center;align-items:center;flex:1;margin-top:1cm">
+    <div style="width:70%;max-width:900px">
       <!-- SVG Bar Chart - Demand -->
       <svg viewBox="0 0 480 280" preserveAspectRatio="xMidYMid meet" style="width:100%;border-radius:12px;background:rgba(255,255,255,0.03)">
         <!-- Grid lines -->
@@ -1083,22 +1083,6 @@ tbody tr:nth-child(even) {
         <text x="236" y="278" fill="rgba(255,255,255,0.6)" font-size="10" font-family="Outfit">Pesimista</text>
       </svg>
     </div>
-    <div>
-      <div class="col-header">Demanda Potencial Insatisfecha (miles de L)</div>
-      <div class="table-wrapper">
-        <table>
-          <thead><tr><th>Año</th><th>Optimista</th><th>Pesimista</th></tr></thead>
-          <tbody>
-            <tr><td>2023</td><td class="highlight-cell green-text">91,85</td><td>72,16</td></tr>
-            <tr><td>2024</td><td class="highlight-cell green-text">100,39</td><td>80,69</td></tr>
-            <tr><td>2025</td><td class="highlight-cell green-text">108,93</td><td>89,23</td></tr>
-            <tr><td>2026</td><td class="highlight-cell green-text">117,46</td><td>97,76</td></tr>
-            <tr><td>2027</td><td class="highlight-cell green-text">125,99</td><td>128,03</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="mt-8 text-xs opacity-60">Fuente: INDEC</div>
-    </div>
   </div>
 </div>
 
@@ -1107,8 +1091,8 @@ tbody tr:nth-child(even) {
   <div class="accent-bar"></div>
   <div class="section-tag">Estudio de Mercado</div>
   <div class="slide-title">Proyección de la Oferta</div>
-  <div class="two-col" style="align-items:stretch">
-    <div style="display:flex">
+  <div style="display:flex;justify-content:center;align-items:center;flex:1;margin-top:1cm">
+    <div style="width:70%;max-width:900px">
       <!-- SVG Line Chart - Supply -->
       <svg viewBox="0 0 480 280" preserveAspectRatio="xMidYMid meet" style="width:100%;border-radius:12px;background:white;box-shadow:0 2px 16px rgba(0,0,0,0.06)">
         <defs>
@@ -1168,21 +1152,6 @@ tbody tr:nth-child(even) {
         <text x="245" y="278" fill="rgba(0,0,0,0.5)" font-size="10" font-family="Outfit">Pesimista</text>
       </svg>
     </div>
-    <div>
-      <div class="col-header">Datos de Oferta (miles de L)</div>
-      <div class="table-wrapper">
-        <table>
-          <thead><tr><th>Año</th><th>Optimista</th><th>Pesimista</th></tr></thead>
-          <tbody>
-            <tr><td>2023</td><td class="highlight-cell green-text">534,70</td><td>408,84</td></tr>
-            <tr><td>2024</td><td class="highlight-cell green-text">582,81</td><td>456,95</td></tr>
-            <tr><td>2025</td><td class="highlight-cell green-text">630,92</td><td>505,07</td></tr>
-            <tr><td>2026</td><td class="highlight-cell green-text">679,03</td><td>553,18</td></tr>
-            <tr><td>2027</td><td class="highlight-cell green-text">727,15</td><td>601,29</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
   </div>
 </div>
 
@@ -1193,23 +1162,23 @@ tbody tr:nth-child(even) {
   <div class="slide-title">Cuantificación DPI y Producción</div>
   <div style="margin-top:4vh;display:flex;flex-direction:column;align-items:center;gap:4vh;width:100%">
     <div class="flow-horizontal">
-      <div class="flow-step"><span class="flow-step-num">1</span> DPI promedio: 99 mil L/año</div>
+      <div class="flow-step"><span class="flow-step-num">1</span> DPI promedio: 99 mil L/a</div>
       <span class="flow-arrow">→</span>
       <div class="flow-step"><span class="flow-step-num">2</span> Absorción: 15%</div>
       <span class="flow-arrow">→</span>
-      <div class="flow-step"><span class="flow-step-num">3</span> Producción: 49,50 L/día</div>
+      <div class="flow-step"><span class="flow-step-num">3</span> Producción: 49,50 L/d</div>
     </div>
     <div class="cards-grid cards-grid--3">
       <div class="stat-card">
         <div class="stat-number">148.500</div>
-        <div class="stat-label">Botellas / año (100 mL)</div>
+        <div class="stat-label">Botellas/a (100 mL)</div>
       </div>
       <div class="stat-card">
         <div class="stat-number">495</div>
-        <div class="stat-label">Botellas / día</div>
+        <div class="stat-label">Botellas/d</div>
       </div>
       <div class="stat-card">
-        <div class="stat-number">2 × 8h</div>
+        <div class="stat-number" style="font-size:clamp(1.8rem,3.5vw,3.2rem);letter-spacing:0.02em">2 × 8 h</div>
         <div class="stat-label">Turnos de trabajo</div>
       </div>
     </div>
@@ -1228,7 +1197,7 @@ tbody tr:nth-child(even) {
 <div class="slide slide--cream" data-slide="14">
   <div class="accent-bar"></div>
   <div class="section-tag">Materias Primas</div>
-  <div class="slide-title">Eucalipto Camaldulensis</div>
+  <div class="slide-title">Eucalipto <em style="font-style:italic">(Eucalyptus camaldulensis)</em></div>
   <div style="display:grid;grid-template-columns:auto 1fr 1fr;gap:clamp(16px,3vw,40px);width:100%;align-items:center;margin-top:2vh;">
     <!-- Tree SVG -->
     <div style="display:flex;justify-content:center;align-items:center;">
@@ -1366,209 +1335,6 @@ tbody tr:nth-child(even) {
       <div class="mt-8" style="display:flex;gap:6px">
         <span class="tag tag--gold">Aditivo</span>
         <span class="tag tag--gold">Humectante</span>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ═══════════════════════════════════════ SLIDE 18: PRODUCTO + ENVASE ═══════════════════════════════════════ -->
-<div class="slide slide--cream" data-slide="17">
-  <div class="accent-bar"></div>
-  <div class="section-tag">Producto Elaborado</div>
-  <div class="slide-title">Características del Producto</div>
-  <div style="display:grid;grid-template-columns:auto 1fr;gap:clamp(32px,5vw,64px);width:100%;align-items:center;margin-top:3vh;">
-    <!-- Bottle SVG hero -->
-    <div style="display:flex;justify-content:center;align-items:center">
-      <svg viewBox="0 0 160 380" style="width:clamp(140px,14vw,200px);filter:drop-shadow(0 12px 40px rgba(0,0,0,0.12))">
-        <rect x="55" y="8" width="50" height="18" rx="4" fill="#e0e0e0" stroke="#bbb" stroke-width="1"/>
-        <rect x="100" y="10" width="30" height="10" rx="3" fill="#ccc" stroke="#aaa" stroke-width="1"/>
-        <circle cx="132" cy="15" r="3" fill="#999"/>
-        <rect x="70" y="26" width="20" height="20" rx="2" fill="#d4d4d4" stroke="#bbb" stroke-width="1"/>
-        <rect x="48" y="46" width="64" height="12" rx="3" fill="#ddd" stroke="#bbb" stroke-width="1"/>
-        <path d="M48,58 L48,320 Q48,340 68,340 L92,340 Q112,340 112,320 L112,58 Z" fill="rgba(255,255,255,0.92)" stroke="#ddd" stroke-width="1.5"/>
-        <rect x="52" y="100" width="56" height="180" rx="6" fill="rgba(44,95,45,0.12)" stroke="rgba(44,95,45,0.25)" stroke-width="1"/>
-        <text x="80" y="125" fill="#1a2a1e" font-size="11" text-anchor="middle" font-family="Outfit" font-weight="700">vert</text>
-        <text x="80" y="137" fill="#3a4a3e" font-size="5.5" text-anchor="middle" font-family="Outfit" font-weight="400">Repelente natural</text>
-        <g transform="translate(80,172)">
-          <path d="M-6,-18 Q-18,-10 -14,4 Q-10,14 0,16 Q2,6 -2,-4 Q-4,-12 -6,-18 Z" fill="#6bb877" opacity="0.9"/>
-          <line x1="-6" y1="-14" x2="-2" y2="12" stroke="rgba(0,0,0,0.15)" stroke-width="0.5"/>
-          <path d="M6,-18 Q18,-10 14,4 Q10,14 0,16 Q-2,6 2,-4 Q4,-12 6,-18 Z" fill="#2C5F2D" opacity="0.9"/>
-          <line x1="6" y1="-14" x2="2" y2="12" stroke="rgba(255,255,255,0.15)" stroke-width="0.5"/>
-          <line x1="-2" y1="-22" x2="-2" y2="-26" stroke="#1a2a1e" stroke-width="1.2" stroke-linecap="round"/>
-          <line x1="3" y1="-24" x2="5" y2="-28" stroke="#1a2a1e" stroke-width="1" stroke-linecap="round"/>
-          <line x1="-7" y1="-22" x2="-9" y2="-26" stroke="#1a2a1e" stroke-width="1" stroke-linecap="round"/>
-        </g>
-        <text x="80" y="232" fill="rgba(44,95,45,0.6)" font-size="5" text-anchor="middle" font-family="Outfit" font-weight="600">CONT. 100 mL</text>
-        <text x="80" y="310" fill="rgba(44,95,45,0.3)" font-size="12" text-anchor="middle">♻</text>
-        <path d="M50,200 L50,318 Q50,338 68,338 L92,338 Q110,338 110,318 L110,200 Z" fill="rgba(95,168,107,0.08)"/>
-        <circle cx="145" cy="8" r="2" fill="rgba(168,213,176,0.3)"><animate attributeName="cy" values="8;-5" dur="1.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.4;0" dur="1.5s" repeatCount="indefinite"/></circle>
-        <circle cx="150" cy="12" r="1.5" fill="rgba(168,213,176,0.25)"><animate attributeName="cy" values="12;0" dur="1.8s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.3;0" dur="1.8s" repeatCount="indefinite"/></circle>
-        <circle cx="140" cy="5" r="1" fill="rgba(168,213,176,0.2)"><animate attributeName="cy" values="5;-8" dur="2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.3;0" dur="2s" repeatCount="indefinite"/></circle>
-      </svg>
-    </div>
-    <!-- Cards grid -->
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(12px,2vw,20px);">
-      <div class="card" style="text-align:center;padding:clamp(18px,3vh,32px)">
-        <span style="font-size:clamp(2.2rem,4vw,3.5rem);line-height:1">🧴</span>
-        <div class="card-title" style="font-size:clamp(1.1rem,1.8vw,1.5rem);margin-top:1.5vh">Atomizador Spray</div>
-        <div class="card-text" style="opacity:0.6;font-size:clamp(0.85rem,1.1vw,1rem)">PET virgen · 100 mL · Reciclable</div>
-      </div>
-      <div class="card" style="text-align:center;padding:clamp(18px,3vh,32px)">
-        <span style="font-size:clamp(2.2rem,4vw,3.5rem);line-height:1">🧬</span>
-        <div class="card-title" style="font-size:clamp(1.1rem,1.8vw,1.5rem);margin-top:1.5vh">Acción Repelente</div>
-        <div class="card-text" style="opacity:0.6;font-size:clamp(0.85rem,1.1vw,1rem)">Eucamalol + 4-isopropilbencil alcohol</div>
-      </div>
-      <div class="card" style="text-align:center;padding:clamp(18px,3vh,32px)">
-        <span style="font-size:clamp(2.2rem,4vw,3.5rem);line-height:1">⚗️</span>
-        <div class="card-title" style="font-size:clamp(1.1rem,1.8vw,1.5rem);margin-top:1.5vh">pH 4,50</div>
-        <div class="card-text" style="opacity:0.6;font-size:clamp(0.85rem,1.1vw,1rem)">Densidad 0,92 g/cm³ · Líquido verde</div>
-      </div>
-      <div class="card" style="text-align:center;padding:clamp(18px,3vh,32px)">
-        <span style="font-size:clamp(2.2rem,4vw,3.5rem);line-height:1">📦</span>
-        <div class="card-title" style="font-size:clamp(1.1rem,1.8vw,1.5rem);margin-top:1.5vh">Embalaje</div>
-        <div class="card-text" style="opacity:0.6;font-size:clamp(0.85rem,1.1vw,1rem)">Cartón corrugado · Pallet retornable</div>
-      </div>
-      <div class="highlight-box" style="grid-column:1/-1;text-align:center;margin-top:0.5vh;">
-        <strong>Composición:</strong> Aceite esencial de eucalipto · Etanol 96% · Isopropanol · Glicerina
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ═══════════════════════════════════════ SLIDE 20: SEP LOCALIZACION ═══════════════════════════════════════ -->
-<div class="slide slide--separator" data-slide="19">
-  <div class="sep-icon">📍</div>
-  <div class="sep-title">Localización</div>
-  <div class="sep-line"></div>
-  <div class="sep-subtitle">Selección macro y micro de la planta</div>
-</div>
-
-<!-- ═══════════════════════════════════════ SLIDE 21: MACRO ═══════════════════════════════════════ -->
-<div class="slide slide--cream" data-slide="20">
-  <div class="accent-bar"></div>
-  <div class="section-tag">Localización</div>
-  <div class="slide-title">Macrolocalización: Santa Fe</div>
-  <div class="two-col">
-    <div>
-      <div class="col-header">Factores Ponderados</div>
-      <div class="table-wrapper">
-        <table>
-          <thead><tr><th>Factor</th><th>Santa Fe</th><th>Buenos Aires</th></tr></thead>
-          <tbody>
-            <tr><td>Materia prima</td><td class="highlight-cell green-text">Alta</td><td>Media</td></tr>
-            <tr><td>Mano de obra</td><td>Disponible</td><td>Disponible</td></tr>
-            <tr><td>Transporte</td><td class="highlight-cell green-text">RN 11, RN 19</td><td>Saturado</td></tr>
-            <tr><td>Parques industriales</td><td class="highlight-cell green-text">Disponibles</td><td>Saturados</td></tr>
-            <tr><td>Energía</td><td>Disponible</td><td>Disponible</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="highlight-box mt-16">
-        <strong style="font-size:1.1rem">✓ Santa Fe seleccionada</strong><br>
-        <span class="text-sm">Producción local de eucalipto, infraestructura vial, 2 aeropuertos.</span>
-      </div>
-    </div>
-    <div>
-      <!-- Simplified map diagram - not a geographic SVG, just a clean schematic -->
-      <div style="display:flex;flex-direction:column;align-items:center;gap:20px">
-        <!-- Schematic map card -->
-        <div style="background:white;border-radius:16px;padding:32px;box-shadow:0 4px 20px rgba(0,0,0,0.06);width:100%;max-width:420px">
-          <div style="text-align:center;margin-bottom:16px;font-size:0.9rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-mid);opacity:0.6;font-weight:600">República Argentina</div>
-          <!-- Visual hierarchy: provinces as stacked blocks -->
-          <div style="display:flex;flex-direction:column;gap:8px">
-            <!-- North -->
-            <div style="background:#e8f0e9;border-radius:8px;padding:12px 18px;text-align:center;color:var(--text-mid);font-size:0.95rem;opacity:0.5">Norte argentino</div>
-            <!-- Center row: Córdoba + Santa Fe + Entre Ríos -->
-            <div style="display:flex;gap:8px">
-              <div style="background:#e8f0e9;border-radius:8px;padding:14px 12px;flex:1;text-align:center;color:var(--text-mid);font-size:0.95rem;opacity:0.5">Córdoba</div>
-              <div style="background:var(--green-dark);border-radius:8px;padding:14px 12px;flex:1.3;text-align:center;color:white;font-size:1.1rem;font-weight:700;position:relative;box-shadow:0 2px 12px rgba(44,95,45,0.3)">
-                SANTA FE
-                <div style="font-size:0.75rem;font-weight:400;opacity:0.8;margin-top:2px">📍 Santa Fe de la Vera Cruz</div>
-              </div>
-              <div style="background:#e8f0e9;border-radius:8px;padding:14px 12px;flex:0.8;text-align:center;color:var(--text-mid);font-size:0.9rem;opacity:0.5">E. Ríos</div>
-            </div>
-            <!-- Buenos Aires -->
-            <div style="background:#d4ecd8;border-radius:8px;padding:14px 18px;text-align:center;color:var(--green-dark);font-size:1rem;opacity:0.6">Buenos Aires</div>
-            <!-- Patagonia -->
-            <div style="background:#e8f0e9;border-radius:8px;padding:12px 18px;text-align:center;color:var(--text-mid);font-size:0.95rem;opacity:0.4">Patagonia</div>
-          </div>
-        </div>
-        <!-- Key info below map -->
-        <div style="display:flex;gap:16px;width:100%;max-width:420px">
-          <div style="flex:1;background:white;border-radius:10px;padding:16px;text-align:center;box-shadow:0 2px 10px rgba(0,0,0,0.04)">
-            <div style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-mid);opacity:0.6;font-weight:600;margin-bottom:4px">Rutas</div>
-            <div style="font-size:1.1rem;font-weight:700;color:var(--green-dark)">RN 11 · RN 19</div>
-          </div>
-          <div style="flex:1;background:white;border-radius:10px;padding:16px;text-align:center;box-shadow:0 2px 10px rgba(0,0,0,0.04)">
-            <div style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-mid);opacity:0.6;font-weight:600;margin-bottom:4px">Aeropuertos</div>
-            <div style="font-size:1.1rem;font-weight:700;color:var(--green-dark)">2</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ═══════════════════════════════════════ SLIDE 22: MICRO ═══════════════════════════════════════ -->
-<div class="slide slide--dark" data-slide="21">
-  <div class="accent-bar"></div>
-  <div class="section-tag">Localización</div>
-  <div class="slide-title">Microlocalización: Santa Fe</div>
-  <div class="two-col">
-    <div>
-      <!-- SVG Local Map -->
-      <svg viewBox="0 0 400 300" style="width:100%;border-radius:12px;background:rgba(255,255,255,0.03);overflow:hidden">
-        <!-- River Paraná -->
-        <path d="M320,0 Q310,50 315,100 Q320,150 310,200 Q305,250 310,300" fill="none" stroke="rgba(90,138,196,0.3)" stroke-width="30"/>
-        <path d="M320,0 Q310,50 315,100 Q320,150 310,200 Q305,250 310,300" fill="none" stroke="rgba(90,138,196,0.15)" stroke-width="50"/>
-        <text x="330" y="150" fill="rgba(90,138,196,0.5)" font-size="10" font-family="Outfit" transform="rotate(-85,330,150)">Río Paraná</text>
-        <!-- RN 11 route -->
-        <line x1="200" y1="0" x2="200" y2="300" stroke="rgba(196,163,90,0.4)" stroke-width="4"/>
-        <line x1="200" y1="0" x2="200" y2="300" stroke="rgba(196,163,90,0.6)" stroke-width="2" stroke-dasharray="12,6"/>
-        <rect x="185" y="10" width="30" height="16" rx="3" fill="rgba(196,163,90,0.8)"/>
-        <text x="200" y="22" fill="white" font-size="9" text-anchor="middle" font-family="Outfit" font-weight="700">RN 11</text>
-        <!-- Santa Fe city -->
-        <circle cx="200" cy="100" r="35" fill="rgba(168,213,176,0.1)" stroke="rgba(168,213,176,0.2)" stroke-width="1"/>
-        <circle cx="200" cy="100" r="6" fill="#a8d5b0"/>
-        <text x="240" y="95" fill="rgba(255,255,255,0.7)" font-size="14" font-family="Outfit" font-weight="600">Santa Fe</text>
-        <text x="240" y="110" fill="rgba(255,255,255,0.4)" font-size="10" font-family="Outfit">Capital provincial</text>
-        <!-- PTLC within Santa Fe -->
-        <rect x="100" y="140" width="200" height="75" rx="10" fill="rgba(44,95,45,0.3)" stroke="rgba(95,168,107,0.5)" stroke-width="2">
-          <animate attributeName="stroke-opacity" values="0.3;0.7;0.3" dur="3s" repeatCount="indefinite"/>
-        </rect>
-        <text x="200" y="165" fill="white" font-size="13" text-anchor="middle" font-family="Outfit" font-weight="700">PARQUE TECNOLÓGICO</text>
-        <text x="200" y="180" fill="white" font-size="13" text-anchor="middle" font-family="Outfit" font-weight="700">LITORAL CENTRO</text>
-        <text x="200" y="200" fill="rgba(196,163,90,0.8)" font-size="11" text-anchor="middle" font-family="Outfit" font-weight="600">📍 vert · Lotes 30 y 31</text>
-        <!-- Connection line city → PTLC -->
-        <line x1="200" y1="108" x2="200" y2="138" stroke="rgba(255,255,255,0.25)" stroke-width="1" stroke-dasharray="4,4"/>
-        <!-- Zoovet nearby -->
-        <circle cx="140" cy="250" r="4" fill="#5fa86b"/>
-        <text x="152" y="254" fill="rgba(255,255,255,0.5)" font-size="10" font-family="Outfit">Zoovet S.A.</text>
-        <line x1="145" y1="245" x2="165" y2="218" stroke="rgba(95,168,107,0.3)" stroke-width="1" stroke-dasharray="3,3"/>
-      </svg>
-    </div>
-    <div>
-      <div class="cards-grid" style="grid-template-columns:1fr 1fr; gap:12px">
-        <div class="stat-card">
-          <div class="stat-number">530.000</div>
-          <div class="stat-label">Habitantes</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number">280 MW</div>
-          <div class="stat-label">Central eléctrica</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number">RN 11</div>
-          <div class="stat-label">Ruta Nacional</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number">PTLC</div>
-          <div class="stat-label">Parque Tecnológico</div>
-        </div>
-      </div>
-      <div class="highlight-box mt-16">
-        <strong>✓ Santa Fe seleccionada</strong><br>
-        <span class="text-sm opacity-70">Parque Tecnológico Litoral Centro (PTLC). Lotes 30 y 31. Redes eléctricas, agua potable, planta de tratamiento de efluentes.</span>
       </div>
     </div>
   </div>
@@ -1719,6 +1485,7 @@ tbody tr:nth-child(even) {
       <text x="280" y="305" fill="rgba(196,163,90,0.5)" font-size="9" text-anchor="middle" font-family="Outfit">148.500 bot/año</text>
     </g>
   </svg>
+  <div style="position:absolute;bottom:calc(3vh + 3cm);right:4vw;font-size:0.75rem;color:rgba(255,255,255,0.4);font-family:'Outfit',sans-serif">AE: Aceite Esencial</div>
 </div>
 
 <!-- ═══════════════════════════════════════ SLIDE 26: RECEPCION ═══════════════════════════════════════ -->
@@ -1795,12 +1562,12 @@ tbody tr:nth-child(even) {
     <div class="card">
       <span class="card-icon">🌿</span>
       <div class="card-title">Eucalipto</div>
-      <div class="card-text">Organolépticos, morfológicos, fisicoquímicos (aceites ≥ 20 mL/g, secado ≤ 10%, cenizas ≤ 6%), microbiológicos.</div>
+      <div class="card-text">Organolépticos, morfológicos, fisicoquímicos (aceites ≥ 20 mL/kg, secado ≤ 10%, cenizas ≤ 6%), microbiológicos.</div>
     </div>
     <div class="card">
       <span class="card-icon">🧪</span>
       <div class="card-title">Etanol</div>
-      <div class="card-text">Color, olor, densidad, acidez. Verificación de concentración 96%.</div>
+      <div class="card-text">Color, olor, densidad, acidez. Verificación de concentración 96% v/v.</div>
     </div>
     <div class="card">
       <span class="card-icon">⚗️</span>
@@ -1810,7 +1577,7 @@ tbody tr:nth-child(even) {
     <div class="card">
       <span class="card-icon">🫧</span>
       <div class="card-title">Glicerina</div>
-      <div class="card-text">Color, densidad ≥ 1,25, agua ≤ 5%, residuo de ignición ≤ 0,01%.</div>
+      <div class="card-text">Color, densidad ≥ 1,25 g/mL, agua ≤ 5%, residuo de ignición ≤ 0,01%.</div>
     </div>
   </div>
 </div>
@@ -1826,16 +1593,16 @@ tbody tr:nth-child(even) {
       <div class="col-header">Sistema Integrado</div>
       <div class="cards-grid" style="grid-template-columns:1fr; gap:12px">
         <div class="card" style="padding:16px 22px">
-          <div class="card-title" style="font-size:1.15rem">Percolador</div>
-          <div class="card-text" style="font-size:1.05rem">V = 0,62 m³ · D = 0,92 m<br><span class="text-sm opacity-70">Tanque de extracción sólido-líquido con agitación</span></div>
+          <div class="card-title" style="font-size:1.3rem">Percolador</div>
+          <div class="card-text" style="font-size:1.15rem">Tanque de extracción sólido-líquido con agitación</div>
         </div>
         <div class="card" style="padding:16px 22px">
-          <div class="card-title" style="font-size:1.15rem">Evaporador</div>
-          <div class="card-text" style="font-size:1.05rem">A = 0,31 m²<br><span class="text-sm opacity-70">Concentración de la miscela por evaporación del solvente</span></div>
+          <div class="card-title" style="font-size:1.3rem">Evaporador</div>
+          <div class="card-text" style="font-size:1.15rem">Concentración de la miscela por evaporación del solvente</div>
         </div>
         <div class="card" style="padding:16px 22px">
-          <div class="card-title" style="font-size:1.15rem">Condensador</div>
-          <div class="card-text" style="font-size:1.05rem">A = 0,49 m²<br><span class="text-sm opacity-70">Recuperación del solvente evaporado por enfriamiento</span></div>
+          <div class="card-title" style="font-size:1.3rem">Condensador</div>
+          <div class="card-text" style="font-size:1.15rem">Recuperación del solvente evaporado por enfriamiento</div>
         </div>
       </div>
     </div>
@@ -1923,14 +1690,14 @@ tbody tr:nth-child(even) {
       </svg>
     </div>
   </div>
-  <!-- Bottom: Parameters table (smaller font) -->
-  <div style="margin-top:16px;width:100%;">
-    <div class="col-header" style="font-size:0.95rem;">Parámetros Operativos</div>
+  <!-- Bottom: Parameters table -->
+  <div style="margin-top:20px;width:100%;">
+    <div class="col-header" style="font-size:1.15rem;">Parámetros Operativos</div>
     <div class="table-wrapper">
-      <table style="font-size:0.85rem;">
+      <table style="font-size:1.05rem;">
         <tbody>
-          <tr><td>Solvente</td><td>Etanol 96%</td><td>Relación S/L</td><td>1:5</td><td>Tiempo</td><td>4 horas</td><td>T° medio líquido</td><td>80 °C</td></tr>
-          <tr><td>Vapor calentamiento</td><td>148 °C</td><td>ΔT</td><td>68 °C</td><td>Agua enfriamiento</td><td>20–45 °C</td><td>T° condensación</td><td>85 °C</td></tr>
+          <tr><td>Solvente</td><td>Etanol 96% v/v</td><td>Relación S/L</td><td>1:5</td><td>Tiempo</td><td>4 h</td><td>T° medio líquido</td><td>80 °C</td></tr>
+          <tr><td>T° vapor calentamiento</td><td>148 °C</td><td>ΔT</td><td>68 °C</td><td>T° agua enfriamiento</td><td>20–45 °C</td><td>T° condensación</td><td>85 °C</td></tr>
         </tbody>
       </table>
     </div>
@@ -1957,8 +1724,8 @@ tbody tr:nth-child(even) {
       <ul class="item-list mb-16">
         <li>Cambio de estado sin pérdida: F₆ = F₇ = 4,26 kg/h</li>
         <li>Destilador: D = 0,14 m, H = 0,13 m</li>
-        <li>T. calentamiento: 10,50 min</li>
-        <li>T. extracción: 30,43 min</li>
+        <li>Tiempo calentamiento: 10,50 min</li>
+        <li>Tiempo extracción: 30,43 min</li>
         <li>Potencia: 3,21 kW</li>
       </ul>
     </div>
@@ -2037,7 +1804,7 @@ tbody tr:nth-child(even) {
         <text x="120" y="315" text-anchor="middle" fill="#3a4a3e" font-family="Outfit" font-size="10" font-weight="600">DESTILADOR</text>
         <text x="267" y="290" text-anchor="middle" fill="#3a4a3e" font-family="Outfit" font-size="10" font-weight="600">CONDENSADOR</text>
       </svg>
-      <div class="highlight-box" style="max-width:380px;">
+      <div class="highlight-box" style="max-width:620px;margin-top:5cm;">
         <strong>Rendimiento global:</strong> del total de aceite esencial presente en las hojas, se recupera el 90% tras el arrastre con vapor. La condensación opera sin pérdidas de masa.
       </div>
     </div>
@@ -2129,21 +1896,22 @@ tbody tr:nth-child(even) {
       </ul>
       <div class="text-xs opacity-60">Decantador: D=0,11m · L=0,34m · V=3,53×10⁻³ m³</div>
       <div class="col-header" style="margin-top:2cm;">Mezclado</div>
-      <div class="flow-horizontal" style="flex-direction:column; align-items:stretch">
-        <div style="display:flex;gap:6px">
+      <div class="flow-horizontal" style="flex-direction:column; align-items:center">
+        <div style="display:flex;gap:6px;justify-content:center">
           <span class="pill pill--green">Aceite 1,38 kg/h</span>
           <span class="pill pill--green">Isopropanol 1,44 kg/h</span>
           <span class="pill pill--green">Glicerina 0,02 kg/h</span>
         </div>
         <span class="flow-arrow" style="text-align:center;display:block">↓</span>
-        <div class="highlight-box" style="text-align:center">
+        <div class="highlight-box" style="text-align:center;width:100%">
           <strong style="font-size:1.3rem">2,84 kg/h</strong> repelente
         </div>
       </div>
-      <div class="text-xs opacity-60 mt-8">Tanque V=0,0038m³ · D=0,17m · T. mezcla: 4,74 s</div>
+      <div class="text-xs opacity-60 mt-8">Tanque V=0,0038m³ · D=0,17m · Tiempo mezcla: 4,74 s</div>
     </div>
     <div style="display:flex;justify-content:center;align-items:center;grid-column:span 2;">
       <svg viewBox="0 0 300 360" width="440" height="510" style="filter:drop-shadow(0 2px 10px rgba(0,0,0,0.08));">
+       <g transform="translate(35, 0)">
         <!-- Decantador (top left) - horizontal cylinder -->
         <g>
           <!-- Horizontal tank body -->
@@ -2205,6 +1973,7 @@ tbody tr:nth-child(even) {
           <!-- Label -->
           <text x="182" y="125" text-anchor="middle" fill="#3a4a3e" font-family="Outfit" font-size="10" font-weight="600">MEZCLADOR</text>
         </g>
+       </g>
       </svg>
     </div>
   </div>
@@ -2399,223 +2168,66 @@ tbody tr:nth-child(even) {
   </div>
 </div>
 
-<!-- ═══════════════════════════════════════ SLIDE: BALANCE ═══════════════════════════════════════ -->
-<div class="slide slide--cream" data-slide="33">
+<!-- ═══════════════════════════════════════ SLIDE 18: PRODUCTO + ENVASE ═══════════════════════════════════════ -->
+<div class="slide slide--cream" data-slide="17">
   <div class="accent-bar"></div>
-  <div class="section-tag">Proceso Productivo</div>
-  <div class="slide-title">Balance de Masa General</div>
-  <!-- Balance diagram: inputs → process → outputs -->
-  <div style="display:flex;justify-content:center;align-items:center;width:100%;flex:1;">
-    <svg viewBox="0 0 900 340" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" style="max-height:70vh;">
-      <!-- LEFT: Inputs -->
-      <g>
-        <!-- Eucalipto -->
-        <rect x="70" y="20" width="200" height="50" rx="25" fill="rgba(44,95,45,0.08)" stroke="#3d7a4a" stroke-width="1.8"/>
-        <text x="170" y="42" text-anchor="middle" fill="#2C5F2D" font-family="Outfit" font-size="12" font-weight="600">EUCALIPTO</text>
-        <text x="170" y="58" text-anchor="middle" fill="#3d7a4a" font-family="Outfit" font-size="10">100 kg/h</text>
-        <!-- Etanol -->
-        <rect x="70" y="90" width="200" height="50" rx="25" fill="rgba(44,95,45,0.08)" stroke="#3d7a4a" stroke-width="1.8"/>
-        <text x="170" y="112" text-anchor="middle" fill="#2C5F2D" font-family="Outfit" font-size="12" font-weight="600">ETANOL 96%</text>
-        <text x="170" y="128" text-anchor="middle" fill="#3d7a4a" font-family="Outfit" font-size="10">392,89 kg/h</text>
-        <!-- Vapor -->
-        <rect x="70" y="160" width="200" height="50" rx="25" fill="rgba(44,95,45,0.08)" stroke="#3d7a4a" stroke-width="1.8"/>
-        <text x="170" y="182" text-anchor="middle" fill="#2C5F2D" font-family="Outfit" font-size="12" font-weight="600">VAPOR</text>
-        <text x="170" y="198" text-anchor="middle" fill="#3d7a4a" font-family="Outfit" font-size="10">3,50 kg/h</text>
-        <!-- Isopropanol -->
-        <rect x="70" y="230" width="200" height="50" rx="25" fill="rgba(44,95,45,0.08)" stroke="#3d7a4a" stroke-width="1.8"/>
-        <text x="170" y="252" text-anchor="middle" fill="#2C5F2D" font-family="Outfit" font-size="12" font-weight="600">ISOPROPANOL + GLICERINA</text>
-        <text x="170" y="268" text-anchor="middle" fill="#3d7a4a" font-family="Outfit" font-size="10">1,46 kg/h</text>
-      </g>
-
-      <!-- LEFT ARROWS -->
-      <g>
-        <polygon points="285,45 315,45 315,38 335,50 315,62 315,55 285,55" fill="#3d7a4a" opacity="0.5"/>
-        <polygon points="285,115 315,115 315,108 335,120 315,132 315,125 285,125" fill="#3d7a4a" opacity="0.5"/>
-        <polygon points="285,185 315,185 315,178 335,190 315,202 315,195 285,195" fill="#3d7a4a" opacity="0.5"/>
-        <polygon points="285,255 315,255 315,248 335,260 315,272 315,265 285,265" fill="#3d7a4a" opacity="0.5"/>
-      </g>
-
-      <!-- CENTER: Process block -->
-      <g>
-        <rect x="350" y="70" width="200" height="180" rx="16" fill="#2C5F2D" stroke="#1a3a2a" stroke-width="2"/>
-        <text x="450" y="145" text-anchor="middle" fill="white" font-family="Outfit" font-size="16" font-weight="700">BALANCE DE</text>
-        <text x="450" y="170" text-anchor="middle" fill="white" font-family="Outfit" font-size="16" font-weight="700">MASA GENERAL</text>
-        <text x="450" y="195" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-family="Outfit" font-size="10">9 etapas de proceso</text>
-      </g>
-
-      <!-- RIGHT ARROWS -->
-      <g>
-        <polygon points="565,95 595,95 595,88 615,100 595,112 595,105 565,105" fill="#3d7a4a" opacity="0.5"/>
-        <polygon points="565,160 595,160 595,153 615,165 595,177 595,170 565,170" fill="#3d7a4a" opacity="0.5"/>
-        <polygon points="565,225 595,225 595,218 615,230 595,242 595,235 565,235" fill="#3d7a4a" opacity="0.5"/>
-      </g>
-
-      <!-- RIGHT: Outputs -->
-      <g>
-        <!-- Repelente (main product) -->
-        <rect x="630" y="75" width="250" height="50" rx="25" fill="rgba(44,95,45,0.15)" stroke="#2C5F2D" stroke-width="2"/>
-        <text x="755" y="97" text-anchor="middle" fill="#2C5F2D" font-family="Outfit" font-size="12" font-weight="700">REPELENTE NATURAL</text>
-        <text x="755" y="114" text-anchor="middle" fill="#3d7a4a" font-family="Outfit" font-size="10">2,84 kg/h → 495 botellas/día</text>
-        <!-- Residuos sólidos -->
-        <rect x="630" y="145" width="250" height="50" rx="25" fill="rgba(92,74,58,0.06)" stroke="#8a7565" stroke-width="1.5"/>
-        <text x="755" y="167" text-anchor="middle" fill="#5c4a3a" font-family="Outfit" font-size="12" font-weight="600">RESIDUOS SÓLIDOS</text>
-        <text x="755" y="183" text-anchor="middle" fill="#8a7565" font-family="Outfit" font-size="10">21 kg/h ramas + 0,94 kg/h</text>
-        <!-- Residuos líquidos -->
-        <rect x="630" y="215" width="250" height="50" rx="25" fill="rgba(92,74,58,0.06)" stroke="#8a7565" stroke-width="1.5"/>
-        <text x="755" y="237" text-anchor="middle" fill="#5c4a3a" font-family="Outfit" font-size="12" font-weight="600">RESIDUOS LÍQUIDOS</text>
-        <text x="755" y="253" text-anchor="middle" fill="#8a7565" font-family="Outfit" font-size="10">354,24 kg/h solvente + 2,88 kg/h agua</text>
-      </g>
-    </svg>
-  </div>
-</div>
-
-
-<!-- ═══════════════════════════════════════ SLIDE 40: ORGANIZACION ═══════════════════════════════════════ -->
-<div class="slide slide--dark" data-slide="36">
-  <div class="accent-bar"></div>
-  <div class="section-tag">Organización</div>
-  <div class="slide-title">Régimen Laboral</div>
-  <style>
-    .rl-layout{display:flex;align-items:center;gap:60px;width:100%;margin-top:50px}
-    .rl-left{flex:0 0 30%;display:flex;flex-direction:column;align-items:center;gap:20px}
-    .rl-right{flex:1;display:flex;flex-direction:column;gap:40px}
-    .rl-org-icon{position:relative;width:280px;height:250px}
-    .rl-org-icon .rl-node{position:absolute;width:38px;height:30px;border:2.5px solid var(--green-pale);border-radius:6px;background:rgba(255,255,255,.08)}
-    .rl-org-icon .rl-line{position:absolute;background:var(--green-pale)}
-    .rl-shift-row{display:flex;align-items:center;gap:20px}
-    .rl-pill{background:var(--green-mid);color:white;border-radius:30px;padding:14px 32px;font-size:1.2rem;font-weight:600;text-align:center;white-space:nowrap}
-    .rl-arrow{display:flex;align-items:center;gap:0}
-    .rl-arrow-line{width:50px;height:2px;border-top:3px dotted var(--green-pale)}
-    .rl-arrow-head{width:0;height:0;border-top:7px solid transparent;border-bottom:7px solid transparent;border-left:10px solid var(--green-pale)}
-    .rl-circle{width:120px;height:120px;border-radius:50%;background:var(--green-dark);border:2px solid var(--green-pale);display:flex;align-items:center;justify-content:center;text-align:center;color:white;font-weight:700;font-size:1rem;padding:12px;line-height:1.3}
-    .rl-bracket{display:flex;flex-direction:column;align-items:center;gap:8px}
-    .rl-bracket-top{width:280px;height:20px;border:2px solid var(--green-pale);border-bottom:none;border-radius:12px 12px 0 0}
-    .rl-sub-label{background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.25);border-radius:20px;padding:8px 24px;font-size:1rem;color:var(--green-pale);text-align:center;margin-top:4px}
-    .rl-struct-label{background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.25);border-radius:20px;padding:12px 24px;font-size:1.05rem;color:var(--green-pale);text-align:center;max-width:280px}
-  </style>
-  <div class="rl-layout">
-    <!-- Izquierda: Icono organigrama -->
-    <div class="rl-left">
-      <div class="rl-org-icon">
-        <!-- Top node -->
-        <div class="rl-node" style="left:118px;top:0;width:44px;height:34px"></div>
-        <!-- Vertical line from top -->
-        <div class="rl-line" style="left:140px;top:34px;width:2px;height:24px"></div>
-        <!-- Horizontal bar -->
-        <div class="rl-line" style="left:40px;top:58px;width:200px;height:2px"></div>
-        <!-- 3 vertical lines down -->
-        <div class="rl-line" style="left:40px;top:58px;width:2px;height:28px"></div>
-        <div class="rl-line" style="left:140px;top:58px;width:2px;height:28px"></div>
-        <div class="rl-line" style="left:238px;top:58px;width:2px;height:28px"></div>
-        <!-- 3 mid nodes -->
-        <div class="rl-node" style="left:21px;top:86px"></div>
-        <div class="rl-node" style="left:121px;top:86px"></div>
-        <div class="rl-node" style="left:219px;top:86px"></div>
-        <!-- Lines from mid nodes -->
-        <div class="rl-line" style="left:40px;top:116px;width:2px;height:22px"></div>
-        <div class="rl-line" style="left:140px;top:116px;width:2px;height:22px"></div>
-        <div class="rl-line" style="left:238px;top:116px;width:2px;height:22px"></div>
-        <!-- Horizontal bars for bottom level -->
-        <div class="rl-line" style="left:12px;top:138px;width:58px;height:2px"></div>
-        <div class="rl-line" style="left:112px;top:138px;width:58px;height:2px"></div>
-        <div class="rl-line" style="left:210px;top:138px;width:58px;height:2px"></div>
-        <!-- Bottom nodes (2 per group) -->
-        <div class="rl-node" style="left:0px;top:140px;width:30px;height:24px"></div>
-        <div class="rl-node" style="left:50px;top:140px;width:30px;height:24px"></div>
-        <div class="rl-node" style="left:100px;top:140px;width:30px;height:24px"></div>
-        <div class="rl-node" style="left:150px;top:140px;width:30px;height:24px"></div>
-        <div class="rl-node" style="left:200px;top:140px;width:30px;height:24px"></div>
-        <div class="rl-node" style="left:250px;top:140px;width:30px;height:24px"></div>
-        <!-- Lines down from bottom nodes -->
-        <div class="rl-line" style="left:15px;top:164px;width:2px;height:18px"></div>
-        <div class="rl-line" style="left:65px;top:164px;width:2px;height:18px"></div>
-        <div class="rl-line" style="left:115px;top:164px;width:2px;height:18px"></div>
-        <div class="rl-line" style="left:165px;top:164px;width:2px;height:18px"></div>
-        <div class="rl-line" style="left:215px;top:164px;width:2px;height:18px"></div>
-        <div class="rl-line" style="left:265px;top:164px;width:2px;height:18px"></div>
-        <!-- Tiny bottom nodes -->
-        <div class="rl-node" style="left:3px;top:182px;width:26px;height:20px"></div>
-        <div class="rl-node" style="left:53px;top:182px;width:26px;height:20px"></div>
-        <div class="rl-node" style="left:103px;top:182px;width:26px;height:20px"></div>
-        <div class="rl-node" style="left:153px;top:182px;width:26px;height:20px"></div>
-        <div class="rl-node" style="left:203px;top:182px;width:26px;height:20px"></div>
-        <div class="rl-node" style="left:253px;top:182px;width:26px;height:20px"></div>
-      </div>
-      <div class="rl-struct-label">ESTRUCTURA LÍNEO–ASESORA–FUNCIONAL</div>
+  <div class="section-tag">Producto Elaborado</div>
+  <div class="slide-title">Características del Producto</div>
+  <div style="display:grid;grid-template-columns:auto 1fr;gap:clamp(32px,5vw,64px);width:100%;align-items:center;margin-top:3vh;">
+    <!-- Bottle SVG hero -->
+    <div style="display:flex;justify-content:center;align-items:center">
+      <svg viewBox="0 0 160 380" style="width:clamp(140px,14vw,200px);filter:drop-shadow(0 12px 40px rgba(0,0,0,0.12))">
+        <rect x="55" y="8" width="50" height="18" rx="4" fill="#e0e0e0" stroke="#bbb" stroke-width="1"/>
+        <rect x="100" y="10" width="30" height="10" rx="3" fill="#ccc" stroke="#aaa" stroke-width="1"/>
+        <circle cx="132" cy="15" r="3" fill="#999"/>
+        <rect x="70" y="26" width="20" height="20" rx="2" fill="#d4d4d4" stroke="#bbb" stroke-width="1"/>
+        <rect x="48" y="46" width="64" height="12" rx="3" fill="#ddd" stroke="#bbb" stroke-width="1"/>
+        <path d="M48,58 L48,320 Q48,340 68,340 L92,340 Q112,340 112,320 L112,58 Z" fill="rgba(255,255,255,0.92)" stroke="#ddd" stroke-width="1.5"/>
+        <rect x="52" y="100" width="56" height="180" rx="6" fill="rgba(44,95,45,0.12)" stroke="rgba(44,95,45,0.25)" stroke-width="1"/>
+        <text x="80" y="125" fill="#1a2a1e" font-size="11" text-anchor="middle" font-family="Outfit" font-weight="700">vert</text>
+        <text x="80" y="137" fill="#3a4a3e" font-size="5.5" text-anchor="middle" font-family="Outfit" font-weight="400">Repelente natural</text>
+        <g transform="translate(80,172)">
+          <path d="M-6,-18 Q-18,-10 -14,4 Q-10,14 0,16 Q2,6 -2,-4 Q-4,-12 -6,-18 Z" fill="#6bb877" opacity="0.9"/>
+          <line x1="-6" y1="-14" x2="-2" y2="12" stroke="rgba(0,0,0,0.15)" stroke-width="0.5"/>
+          <path d="M6,-18 Q18,-10 14,4 Q10,14 0,16 Q-2,6 2,-4 Q4,-12 6,-18 Z" fill="#2C5F2D" opacity="0.9"/>
+          <line x1="6" y1="-14" x2="2" y2="12" stroke="rgba(255,255,255,0.15)" stroke-width="0.5"/>
+          <line x1="-2" y1="-22" x2="-2" y2="-26" stroke="#1a2a1e" stroke-width="1.2" stroke-linecap="round"/>
+          <line x1="3" y1="-24" x2="5" y2="-28" stroke="#1a2a1e" stroke-width="1" stroke-linecap="round"/>
+          <line x1="-7" y1="-22" x2="-9" y2="-26" stroke="#1a2a1e" stroke-width="1" stroke-linecap="round"/>
+        </g>
+        <text x="80" y="232" fill="rgba(44,95,45,0.6)" font-size="5" text-anchor="middle" font-family="Outfit" font-weight="600">CONT. 100 mL</text>
+        <text x="80" y="310" fill="rgba(44,95,45,0.3)" font-size="12" text-anchor="middle">♻</text>
+        <path d="M50,200 L50,318 Q50,338 68,338 L92,338 Q110,338 110,318 L110,200 Z" fill="rgba(95,168,107,0.08)"/>
+        <circle cx="145" cy="8" r="2" fill="rgba(168,213,176,0.3)"><animate attributeName="cy" values="8;-5" dur="1.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.4;0" dur="1.5s" repeatCount="indefinite"/></circle>
+        <circle cx="150" cy="12" r="1.5" fill="rgba(168,213,176,0.25)"><animate attributeName="cy" values="12;0" dur="1.8s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.3;0" dur="1.8s" repeatCount="indefinite"/></circle>
+        <circle cx="140" cy="5" r="1" fill="rgba(168,213,176,0.2)"><animate attributeName="cy" values="5;-8" dur="2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.3;0" dur="2s" repeatCount="indefinite"/></circle>
+      </svg>
     </div>
-    <!-- Derecha: Turnos -->
-    <div class="rl-right">
-      <!-- Producción y Calidad -->
-      <div class="rl-bracket">
-        <div class="rl-bracket-top"></div>
-        <div style="display:flex;align-items:center;gap:16px">
-          <div class="rl-pill">0:00 A 8:00</div>
-          <div class="rl-pill">8:00 A 16:00</div>
-          <div class="rl-arrow">
-            <div class="rl-arrow-line"></div>
-            <div class="rl-arrow-head"></div>
-          </div>
-          <div class="rl-circle">PRODUCCIÓN Y CALIDAD</div>
-        </div>
-        <div class="rl-sub-label">DOBLE JORNADA · ROTACIÓN SEMANAL · L A V</div>
-        <div style="font-size:.85rem;color:var(--green-pale);opacity:.7;text-align:center;margin-top:4px">Horas extras los sábados si es necesario</div>
+    <!-- Cards grid -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(12px,2vw,20px);">
+      <div class="card" style="text-align:center;padding:clamp(18px,3vh,32px)">
+        <span style="font-size:clamp(2.2rem,4vw,3.5rem);line-height:1">🧴</span>
+        <div class="card-title" style="font-size:clamp(1.1rem,1.8vw,1.5rem);margin-top:1.5vh">Atomizador Spray</div>
+        <div class="card-text" style="opacity:0.6;font-size:clamp(0.85rem,1.1vw,1rem)">PET virgen · 100 mL · Reciclable</div>
       </div>
-      <!-- Administración -->
-      <div class="rl-bracket" style="gap:8px">
-        <div style="display:flex;align-items:center;gap:16px;justify-content:center">
-          <div style="display:flex;flex-direction:column;gap:8px;align-items:center">
-            <div style="display:flex;gap:12px">
-              <div class="rl-pill">8:00 A 17:00</div>
-              <span style="color:var(--green-pale);font-size:.95rem;align-self:center">L a J</span>
-            </div>
-            <div style="display:flex;gap:12px">
-              <div class="rl-pill">8:00 A 16:00</div>
-              <span style="color:var(--green-pale);font-size:.95rem;align-self:center">Viernes</span>
-            </div>
-          </div>
-          <div class="rl-arrow">
-            <div class="rl-arrow-line"></div>
-            <div class="rl-arrow-head"></div>
-          </div>
-          <div class="rl-circle">ADMINISTRACIÓN</div>
-        </div>
-        <div class="rl-sub-label">HORARIO CORRIDO · RESPONSABLES Y ADMINISTRATIVOS</div>
+      <div class="card" style="text-align:center;padding:clamp(18px,3vh,32px)">
+        <span style="font-size:clamp(2.2rem,4vw,3.5rem);line-height:1">🧬</span>
+        <div class="card-title" style="font-size:clamp(1.1rem,1.8vw,1.5rem);margin-top:1.5vh">Acción Repelente</div>
+        <div class="card-text" style="opacity:0.6;font-size:clamp(0.85rem,1.1vw,1rem)">Eucamalol + 4-isopropilbencil alcohol</div>
       </div>
-      <!-- Total -->
-      <div style="text-align:center;color:var(--green-pale);font-size:1.05rem;font-weight:600;margin-top:4px">20 empleados en total</div>
-    </div>
-  </div>
-</div>
-
-<!-- ═══════════════════════════════════════ SLIDE 41: EDIFICACION ═══════════════════════════════════════ -->
-<div class="slide slide--cream" data-slide="37">
-  <div class="accent-bar"></div>
-  <div class="section-tag">Organización</div>
-  <div class="slide-title">Planificación y Edificación</div>
-  <div style="display:flex;align-items:stretch;gap:40px;width:100%">
-    <div style="flex:0 0 35%">
-      <div class="col-header">Zona Cubierta — 1.127,27 m²</div>
-      <div class="table-wrapper">
-        <table>
-          <thead><tr><th>Sector</th><th>m²</th></tr></thead>
-          <tbody>
-            <tr><td>Producción</td><td>539,00</td></tr>
-            <tr><td>Almacén MP</td><td>91,30</td></tr>
-            <tr><td>Oficinas</td><td>119,31</td></tr>
-            <tr><td>Laboratorio</td><td>36,07</td></tr>
-            <tr><td>Mantenimiento</td><td>52,49</td></tr>
-            <tr><td>Expedición</td><td>94,62</td></tr>
-            <tr><td>Baños</td><td>99,20</td></tr>
-          </tbody>
-        </table>
+      <div class="card" style="text-align:center;padding:clamp(18px,3vh,32px)">
+        <span style="font-size:clamp(2.2rem,4vw,3.5rem);line-height:1">⚗️</span>
+        <div class="card-title" style="font-size:clamp(1.1rem,1.8vw,1.5rem);margin-top:1.5vh">pH 4,50</div>
+        <div class="card-text" style="opacity:0.6;font-size:clamp(0.85rem,1.1vw,1rem)">Densidad 0,92 g/cm³ · Líquido verde</div>
       </div>
-      <div class="stat-card" style="background:var(--green-dark);color:white;margin-top:16px">
-        <div class="stat-number" style="color:white;font-size:1.8rem">4.895 m²</div>
-        <div class="stat-label" style="color:rgba(255,255,255,0.7)">Terreno total</div>
+      <div class="card" style="text-align:center;padding:clamp(18px,3vh,32px)">
+        <span style="font-size:clamp(2.2rem,4vw,3.5rem);line-height:1">📦</span>
+        <div class="card-title" style="font-size:clamp(1.1rem,1.8vw,1.5rem);margin-top:1.5vh">Embalaje</div>
+        <div class="card-text" style="opacity:0.6;font-size:clamp(0.85rem,1.1vw,1rem)">Cartón corrugado · Pallet retornable</div>
       </div>
-    </div>
-    <div style="flex:1;display:flex;align-items:center;justify-content:center">
-      <img src="plano_final.jpg" alt="Plano de distribución del edificio" style="width:100%;max-height:70vh;object-fit:contain;border-radius:10px;box-shadow:0 4px 20px rgba(0,0,0,0.1)">
+      <div class="highlight-box" style="grid-column:1/-1;text-align:center;margin-top:0.5vh;">
+        <strong>Composición:</strong> Aceite esencial de eucalipto · Etanol 96% · Isopropanol · Glicerina
+      </div>
     </div>
   </div>
 </div>
@@ -2714,6 +2326,366 @@ tbody tr:nth-child(even) {
           <span class="pill" style="background:#FF5722;color:white;font-size:1.15rem;padding:10px 22px">Eléctrica</span>
         </div>
       </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════ SLIDE: BALANCE ═══════════════════════════════════════ -->
+<div class="slide slide--cream" data-slide="33">
+  <div class="accent-bar"></div>
+  <div class="section-tag">Proceso Productivo</div>
+  <div class="slide-title">Balance de Masa General</div>
+  <!-- Balance diagram: inputs → process → outputs -->
+  <div style="display:flex;justify-content:center;align-items:center;width:100%;flex:1;">
+    <svg viewBox="0 0 900 340" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" style="max-height:70vh;">
+      <!-- LEFT: Inputs -->
+      <g>
+        <!-- Eucalipto -->
+        <rect x="70" y="20" width="200" height="50" rx="25" fill="rgba(44,95,45,0.08)" stroke="#3d7a4a" stroke-width="1.8"/>
+        <text x="170" y="42" text-anchor="middle" fill="#2C5F2D" font-family="Outfit" font-size="12" font-weight="600">EUCALIPTO</text>
+        <text x="170" y="58" text-anchor="middle" fill="#3d7a4a" font-family="Outfit" font-size="10">100 kg/h</text>
+        <!-- Etanol -->
+        <rect x="70" y="90" width="200" height="50" rx="25" fill="rgba(44,95,45,0.08)" stroke="#3d7a4a" stroke-width="1.8"/>
+        <text x="170" y="112" text-anchor="middle" fill="#2C5F2D" font-family="Outfit" font-size="12" font-weight="600">ETANOL 96%</text>
+        <text x="170" y="128" text-anchor="middle" fill="#3d7a4a" font-family="Outfit" font-size="10">392,89 kg/h</text>
+        <!-- Vapor -->
+        <rect x="70" y="160" width="200" height="50" rx="25" fill="rgba(44,95,45,0.08)" stroke="#3d7a4a" stroke-width="1.8"/>
+        <text x="170" y="182" text-anchor="middle" fill="#2C5F2D" font-family="Outfit" font-size="12" font-weight="600">VAPOR</text>
+        <text x="170" y="198" text-anchor="middle" fill="#3d7a4a" font-family="Outfit" font-size="10">3,50 kg/h</text>
+        <!-- Isopropanol -->
+        <rect x="70" y="230" width="200" height="50" rx="25" fill="rgba(44,95,45,0.08)" stroke="#3d7a4a" stroke-width="1.8"/>
+        <text x="170" y="252" text-anchor="middle" fill="#2C5F2D" font-family="Outfit" font-size="12" font-weight="600">ISOPROPANOL + GLICERINA</text>
+        <text x="170" y="268" text-anchor="middle" fill="#3d7a4a" font-family="Outfit" font-size="10">1,46 kg/h</text>
+      </g>
+
+      <!-- LEFT ARROWS -->
+      <g>
+        <polygon points="285,45 315,45 315,38 335,50 315,62 315,55 285,55" fill="#3d7a4a" opacity="0.5"/>
+        <polygon points="285,115 315,115 315,108 335,120 315,132 315,125 285,125" fill="#3d7a4a" opacity="0.5"/>
+        <polygon points="285,185 315,185 315,178 335,190 315,202 315,195 285,195" fill="#3d7a4a" opacity="0.5"/>
+        <polygon points="285,255 315,255 315,248 335,260 315,272 315,265 285,265" fill="#3d7a4a" opacity="0.5"/>
+      </g>
+
+      <!-- CENTER: Process block -->
+      <g>
+        <rect x="350" y="70" width="200" height="180" rx="16" fill="#2C5F2D" stroke="#1a3a2a" stroke-width="2"/>
+        <text x="450" y="145" text-anchor="middle" fill="white" font-family="Outfit" font-size="16" font-weight="700">BALANCE DE</text>
+        <text x="450" y="170" text-anchor="middle" fill="white" font-family="Outfit" font-size="16" font-weight="700">MASA GENERAL</text>
+        <text x="450" y="195" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-family="Outfit" font-size="10">9 etapas de proceso</text>
+      </g>
+
+      <!-- RIGHT ARROWS -->
+      <g>
+        <polygon points="565,95 595,95 595,88 615,100 595,112 595,105 565,105" fill="#3d7a4a" opacity="0.5"/>
+        <polygon points="565,160 595,160 595,153 615,165 595,177 595,170 565,170" fill="#3d7a4a" opacity="0.5"/>
+        <polygon points="565,225 595,225 595,218 615,230 595,242 595,235 565,235" fill="#3d7a4a" opacity="0.5"/>
+      </g>
+
+      <!-- RIGHT: Outputs -->
+      <g>
+        <!-- Repelente (main product) -->
+        <rect x="630" y="75" width="250" height="50" rx="25" fill="rgba(44,95,45,0.15)" stroke="#2C5F2D" stroke-width="2"/>
+        <text x="755" y="97" text-anchor="middle" fill="#2C5F2D" font-family="Outfit" font-size="12" font-weight="700">REPELENTE NATURAL</text>
+        <text x="755" y="114" text-anchor="middle" fill="#3d7a4a" font-family="Outfit" font-size="10">2,84 kg/h → 495 botellas/d</text>
+        <!-- Residuos sólidos -->
+        <rect x="630" y="145" width="250" height="50" rx="25" fill="rgba(92,74,58,0.06)" stroke="#8a7565" stroke-width="1.5"/>
+        <text x="755" y="167" text-anchor="middle" fill="#5c4a3a" font-family="Outfit" font-size="12" font-weight="600">RESIDUOS SÓLIDOS</text>
+        <text x="755" y="183" text-anchor="middle" fill="#8a7565" font-family="Outfit" font-size="10">21 kg/h ramas + 0,94 kg/h</text>
+        <!-- Residuos líquidos -->
+        <rect x="630" y="215" width="250" height="50" rx="25" fill="rgba(92,74,58,0.06)" stroke="#8a7565" stroke-width="1.5"/>
+        <text x="755" y="237" text-anchor="middle" fill="#5c4a3a" font-family="Outfit" font-size="12" font-weight="600">RESIDUOS LÍQUIDOS</text>
+        <text x="755" y="253" text-anchor="middle" fill="#8a7565" font-family="Outfit" font-size="10">354,24 kg/h solvente + 2,88 kg/h agua</text>
+      </g>
+    </svg>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════ SLIDE 20: SEP LOCALIZACION ═══════════════════════════════════════ -->
+<div class="slide slide--separator" data-slide="19">
+  <div class="sep-icon">📍</div>
+  <div class="sep-title">Localización</div>
+  <div class="sep-line"></div>
+  <div class="sep-subtitle">Selección macro y micro de la planta</div>
+</div>
+
+<!-- ═══════════════════════════════════════ SLIDE 21: MACRO ═══════════════════════════════════════ -->
+<div class="slide slide--cream" data-slide="20">
+  <div class="accent-bar"></div>
+  <div class="section-tag">Localización</div>
+  <div class="slide-title">Macrolocalización: Santa Fe</div>
+  <div class="two-col">
+    <div>
+      <div class="col-header">Factores Ponderados</div>
+      <div class="table-wrapper">
+        <table>
+          <thead><tr><th>Factor</th><th>Santa Fe</th><th>Buenos Aires</th></tr></thead>
+          <tbody>
+            <tr><td>Materia prima</td><td class="highlight-cell green-text">Alta</td><td>Media</td></tr>
+            <tr><td>Mano de obra</td><td>Disponible</td><td>Disponible</td></tr>
+            <tr><td>Transporte</td><td class="highlight-cell green-text">RN 11, RN 19</td><td>Saturado</td></tr>
+            <tr><td>Parques industriales</td><td class="highlight-cell green-text">Disponibles</td><td>Saturados</td></tr>
+            <tr><td>Energía</td><td>Disponible</td><td>Disponible</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="highlight-box mt-16">
+        <strong style="font-size:1.1rem">✓ Santa Fe seleccionada</strong><br>
+        <span class="text-sm">Producción local de eucalipto, infraestructura vial, 2 aeropuertos.</span>
+      </div>
+    </div>
+    <div>
+      <!-- Simplified map diagram - not a geographic SVG, just a clean schematic -->
+      <div style="display:flex;flex-direction:column;align-items:center;gap:20px">
+        <!-- Schematic map card -->
+        <div style="background:white;border-radius:16px;padding:32px;box-shadow:0 4px 20px rgba(0,0,0,0.06);width:100%;max-width:420px">
+          <div style="text-align:center;margin-bottom:16px;font-size:0.9rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-mid);opacity:0.6;font-weight:600">República Argentina</div>
+          <!-- Visual hierarchy: provinces as stacked blocks -->
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <!-- North -->
+            <div style="background:#e8f0e9;border-radius:8px;padding:12px 18px;text-align:center;color:var(--text-mid);font-size:0.95rem;opacity:0.5">Norte argentino</div>
+            <!-- Center row: Córdoba + Santa Fe + Entre Ríos -->
+            <div style="display:flex;gap:8px">
+              <div style="background:#e8f0e9;border-radius:8px;padding:14px 12px;flex:1;text-align:center;color:var(--text-mid);font-size:0.95rem;opacity:0.5">Córdoba</div>
+              <div style="background:var(--green-dark);border-radius:8px;padding:14px 12px;flex:1.3;text-align:center;color:white;font-size:1.1rem;font-weight:700;position:relative;box-shadow:0 2px 12px rgba(44,95,45,0.3)">
+                SANTA FE
+                <div style="font-size:0.75rem;font-weight:400;opacity:0.8;margin-top:2px">📍 Santa Fe de la Vera Cruz</div>
+              </div>
+              <div style="background:#e8f0e9;border-radius:8px;padding:14px 12px;flex:0.8;text-align:center;color:var(--text-mid);font-size:0.9rem;opacity:0.5">E. Ríos</div>
+            </div>
+            <!-- Buenos Aires -->
+            <div style="background:#d4ecd8;border-radius:8px;padding:14px 18px;text-align:center;color:var(--green-dark);font-size:1rem;opacity:0.6">Buenos Aires</div>
+            <!-- Patagonia -->
+            <div style="background:#e8f0e9;border-radius:8px;padding:12px 18px;text-align:center;color:var(--text-mid);font-size:0.95rem;opacity:0.4">Patagonia</div>
+          </div>
+        </div>
+        <!-- Key info below map -->
+        <div style="display:flex;gap:16px;width:100%;max-width:420px">
+          <div style="flex:1;background:white;border-radius:10px;padding:16px;text-align:center;box-shadow:0 2px 10px rgba(0,0,0,0.04)">
+            <div style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-mid);opacity:0.6;font-weight:600;margin-bottom:4px">Rutas</div>
+            <div style="font-size:1.1rem;font-weight:700;color:var(--green-dark)">RN 11 · RN 19</div>
+          </div>
+          <div style="flex:1;background:white;border-radius:10px;padding:16px;text-align:center;box-shadow:0 2px 10px rgba(0,0,0,0.04)">
+            <div style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-mid);opacity:0.6;font-weight:600;margin-bottom:4px">Aeropuertos</div>
+            <div style="font-size:1.1rem;font-weight:700;color:var(--green-dark)">2</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════ SLIDE 22: MICRO ═══════════════════════════════════════ -->
+<div class="slide slide--dark" data-slide="21">
+  <div class="accent-bar"></div>
+  <div class="section-tag">Localización</div>
+  <div class="slide-title">Microlocalización: Santa Fe</div>
+  <div class="two-col">
+    <div>
+      <!-- SVG Local Map -->
+      <svg viewBox="0 0 400 300" style="width:100%;border-radius:12px;background:rgba(255,255,255,0.03);overflow:hidden">
+        <!-- River Paraná -->
+        <path d="M320,0 Q310,50 315,100 Q320,150 310,200 Q305,250 310,300" fill="none" stroke="rgba(90,138,196,0.3)" stroke-width="30"/>
+        <path d="M320,0 Q310,50 315,100 Q320,150 310,200 Q305,250 310,300" fill="none" stroke="rgba(90,138,196,0.15)" stroke-width="50"/>
+        <text x="330" y="150" fill="rgba(90,138,196,0.5)" font-size="10" font-family="Outfit" transform="rotate(-85,330,150)">Río Paraná</text>
+        <!-- RN 11 route -->
+        <line x1="200" y1="0" x2="200" y2="300" stroke="rgba(196,163,90,0.4)" stroke-width="4"/>
+        <line x1="200" y1="0" x2="200" y2="300" stroke="rgba(196,163,90,0.6)" stroke-width="2" stroke-dasharray="12,6"/>
+        <rect x="185" y="10" width="30" height="16" rx="3" fill="rgba(196,163,90,0.8)"/>
+        <text x="200" y="22" fill="white" font-size="9" text-anchor="middle" font-family="Outfit" font-weight="700">RN 11</text>
+        <!-- Santa Fe city -->
+        <circle cx="200" cy="100" r="35" fill="rgba(168,213,176,0.1)" stroke="rgba(168,213,176,0.2)" stroke-width="1"/>
+        <circle cx="200" cy="100" r="6" fill="#a8d5b0"/>
+        <text x="240" y="95" fill="rgba(255,255,255,0.7)" font-size="14" font-family="Outfit" font-weight="600">Santa Fe</text>
+        <text x="240" y="110" fill="rgba(255,255,255,0.4)" font-size="10" font-family="Outfit">Capital provincial</text>
+        <!-- PTLC within Santa Fe -->
+        <rect x="100" y="140" width="200" height="75" rx="10" fill="rgba(44,95,45,0.3)" stroke="rgba(95,168,107,0.5)" stroke-width="2">
+          <animate attributeName="stroke-opacity" values="0.3;0.7;0.3" dur="3s" repeatCount="indefinite"/>
+        </rect>
+        <text x="200" y="165" fill="white" font-size="13" text-anchor="middle" font-family="Outfit" font-weight="700">PARQUE TECNOLÓGICO</text>
+        <text x="200" y="180" fill="white" font-size="13" text-anchor="middle" font-family="Outfit" font-weight="700">LITORAL CENTRO</text>
+        <text x="200" y="200" fill="rgba(196,163,90,0.8)" font-size="11" text-anchor="middle" font-family="Outfit" font-weight="600">📍 vert · Lotes 30 y 31</text>
+        <!-- Connection line city → PTLC -->
+        <line x1="200" y1="108" x2="200" y2="138" stroke="rgba(255,255,255,0.25)" stroke-width="1" stroke-dasharray="4,4"/>
+        <!-- Zoovet nearby -->
+        <circle cx="140" cy="250" r="4" fill="#5fa86b"/>
+        <text x="152" y="254" fill="rgba(255,255,255,0.5)" font-size="10" font-family="Outfit">Zoovet S.A.</text>
+        <line x1="145" y1="245" x2="165" y2="218" stroke="rgba(95,168,107,0.3)" stroke-width="1" stroke-dasharray="3,3"/>
+      </svg>
+    </div>
+    <div>
+      <div class="cards-grid" style="grid-template-columns:1fr 1fr; gap:12px">
+        <div class="stat-card">
+          <div class="stat-number">530.000</div>
+          <div class="stat-label">Habitantes</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">280 MW</div>
+          <div class="stat-label">Central eléctrica</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">RN 11</div>
+          <div class="stat-label">Ruta Nacional</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">PTLC</div>
+          <div class="stat-label">Parque Tecnológico</div>
+        </div>
+      </div>
+      <div class="highlight-box mt-16">
+        <strong>✓ Santa Fe seleccionada</strong><br>
+        <span class="text-sm opacity-70">Parque Tecnológico Litoral Centro (PTLC). Lotes 30 y 31. Redes eléctricas, agua potable, planta de tratamiento de efluentes.</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════ SLIDE 41: EDIFICACION ═══════════════════════════════════════ -->
+<div class="slide slide--cream" data-slide="37">
+  <div class="accent-bar"></div>
+  <div class="section-tag">Organización</div>
+  <div class="slide-title">Planificación y Edificación</div>
+  <div style="display:flex;align-items:stretch;gap:40px;width:100%">
+    <div style="flex:0 0 35%">
+      <div class="col-header">Zona Cubierta — 1.127,27 m²</div>
+      <div class="table-wrapper">
+        <table>
+          <thead><tr><th>Sector</th><th>m²</th></tr></thead>
+          <tbody>
+            <tr><td>Producción</td><td>539,00</td></tr>
+            <tr><td>Almacén MP</td><td>91,30</td></tr>
+            <tr><td>Oficinas</td><td>119,31</td></tr>
+            <tr><td>Laboratorio</td><td>36,07</td></tr>
+            <tr><td>Mantenimiento</td><td>52,49</td></tr>
+            <tr><td>Expedición</td><td>94,62</td></tr>
+            <tr><td>Baños</td><td>99,20</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="stat-card" style="background:var(--green-dark);color:white;margin-top:16px">
+        <div class="stat-number" style="color:white;font-size:1.8rem">4.895 m²</div>
+        <div class="stat-label" style="color:rgba(255,255,255,0.7)">Terreno total</div>
+      </div>
+    </div>
+    <div style="flex:1;display:flex;align-items:center;justify-content:center">
+      <img src="plano_final.jpg" alt="Plano de distribución del edificio" style="width:100%;max-height:70vh;object-fit:contain;border-radius:10px;box-shadow:0 4px 20px rgba(0,0,0,0.1)">
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════ SLIDE 40: ORGANIZACION ═══════════════════════════════════════ -->
+<div class="slide slide--dark" data-slide="36">
+  <div class="accent-bar"></div>
+  <div class="section-tag">Organización</div>
+  <div class="slide-title">Régimen Laboral</div>
+  <style>
+    .rl-layout{display:flex;align-items:center;gap:5vw;width:100%;margin-top:1vh}
+    .rl-left{flex:0 0 35%;display:flex;flex-direction:column;align-items:center;gap:28px}
+    .rl-right{flex:1;display:flex;flex-direction:column;gap:5vh}
+    .rl-org-icon{position:relative;width:380px;height:290px}
+    .rl-org-icon .rl-node{position:absolute;width:50px;height:40px;border:3px solid var(--green-pale);border-radius:8px;background:rgba(255,255,255,.08)}
+    .rl-org-icon .rl-line{position:absolute;background:var(--green-pale)}
+    .rl-pill{background:var(--green-mid);color:white;border-radius:30px;padding:1.6vh 2.5vw;font-size:clamp(1.1rem,1.5vw,1.4rem);font-weight:600;text-align:center;white-space:nowrap}
+    .rl-arrow{display:flex;align-items:center;gap:0}
+    .rl-arrow-line{width:4vw;height:2px;border-top:3px dotted var(--green-pale)}
+    .rl-arrow-head{width:0;height:0;border-top:8px solid transparent;border-bottom:8px solid transparent;border-left:12px solid var(--green-pale)}
+    .rl-circle{width:150px;height:150px;border-radius:50%;background:var(--green-dark);border:3px solid var(--green-pale);display:flex;align-items:center;justify-content:center;text-align:center;color:white;font-weight:700;font-size:clamp(1rem,1.2vw,1.2rem);padding:16px;line-height:1.3}
+    .rl-bracket{display:flex;flex-direction:column;align-items:center;gap:12px}
+    .rl-bracket-top{width:340px;height:24px;border:2.5px solid var(--green-pale);border-bottom:none;border-radius:14px 14px 0 0}
+    .rl-sub-label{background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.25);border-radius:24px;padding:10px 28px;font-size:clamp(0.95rem,1.1vw,1.1rem);color:var(--green-pale);text-align:center;margin-top:4px}
+    .rl-struct-label{background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.25);border-radius:24px;padding:14px 32px;font-size:clamp(1rem,1.2vw,1.15rem);color:var(--green-pale);text-align:center;max-width:380px}
+    .rl-total{text-align:center;color:var(--green-pale);font-size:clamp(1.1rem,1.3vw,1.3rem);font-weight:700;margin-top:1vh}
+  </style>
+  <div class="rl-layout">
+    <!-- Izquierda: Icono organigrama -->
+    <div class="rl-left">
+      <div class="rl-org-icon">
+        <!-- Top node (director) -->
+        <div class="rl-node" style="left:158px;top:0;width:60px;height:44px"></div>
+        <!-- Vertical line from top -->
+        <div class="rl-line" style="left:188px;top:44px;width:3px;height:30px"></div>
+        <!-- Horizontal bar -->
+        <div class="rl-line" style="left:50px;top:74px;width:280px;height:3px"></div>
+        <!-- 3 vertical lines down -->
+        <div class="rl-line" style="left:50px;top:74px;width:3px;height:34px"></div>
+        <div class="rl-line" style="left:188px;top:74px;width:3px;height:34px"></div>
+        <div class="rl-line" style="left:327px;top:74px;width:3px;height:34px"></div>
+        <!-- 3 mid nodes -->
+        <div class="rl-node" style="left:25px;top:108px"></div>
+        <div class="rl-node" style="left:163px;top:108px"></div>
+        <div class="rl-node" style="left:302px;top:108px"></div>
+        <!-- Lines from mid nodes -->
+        <div class="rl-line" style="left:50px;top:148px;width:3px;height:28px"></div>
+        <div class="rl-line" style="left:188px;top:148px;width:3px;height:28px"></div>
+        <div class="rl-line" style="left:327px;top:148px;width:3px;height:28px"></div>
+        <!-- Horizontal bars for bottom level -->
+        <div class="rl-line" style="left:12px;top:176px;width:80px;height:3px"></div>
+        <div class="rl-line" style="left:150px;top:176px;width:80px;height:3px"></div>
+        <div class="rl-line" style="left:290px;top:176px;width:80px;height:3px"></div>
+        <!-- Bottom nodes (2 per group) -->
+        <div class="rl-node" style="left:0px;top:180px;width:40px;height:32px"></div>
+        <div class="rl-node" style="left:64px;top:180px;width:40px;height:32px"></div>
+        <div class="rl-node" style="left:138px;top:180px;width:40px;height:32px"></div>
+        <div class="rl-node" style="left:202px;top:180px;width:40px;height:32px"></div>
+        <div class="rl-node" style="left:278px;top:180px;width:40px;height:32px"></div>
+        <div class="rl-node" style="left:342px;top:180px;width:40px;height:32px"></div>
+        <!-- Lines down from bottom nodes -->
+        <div class="rl-line" style="left:19px;top:212px;width:3px;height:22px"></div>
+        <div class="rl-line" style="left:83px;top:212px;width:3px;height:22px"></div>
+        <div class="rl-line" style="left:157px;top:212px;width:3px;height:22px"></div>
+        <div class="rl-line" style="left:221px;top:212px;width:3px;height:22px"></div>
+        <div class="rl-line" style="left:297px;top:212px;width:3px;height:22px"></div>
+        <div class="rl-line" style="left:361px;top:212px;width:3px;height:22px"></div>
+        <!-- Tiny bottom nodes -->
+        <div class="rl-node" style="left:4px;top:234px;width:34px;height:28px"></div>
+        <div class="rl-node" style="left:68px;top:234px;width:34px;height:28px"></div>
+        <div class="rl-node" style="left:142px;top:234px;width:34px;height:28px"></div>
+        <div class="rl-node" style="left:206px;top:234px;width:34px;height:28px"></div>
+        <div class="rl-node" style="left:282px;top:234px;width:34px;height:28px"></div>
+        <div class="rl-node" style="left:346px;top:234px;width:34px;height:28px"></div>
+      </div>
+      <div class="rl-struct-label">ESTRUCTURA LÍNEO–ASESORA–FUNCIONAL</div>
+    </div>
+    <!-- Derecha: Turnos -->
+    <div class="rl-right">
+      <!-- Producción y Calidad -->
+      <div class="rl-bracket">
+        <div class="rl-bracket-top"></div>
+        <div style="display:flex;align-items:center;gap:20px">
+          <div class="rl-pill">0:00 A 8:00</div>
+          <div class="rl-pill">8:00 A 16:00</div>
+          <div class="rl-arrow">
+            <div class="rl-arrow-line"></div>
+            <div class="rl-arrow-head"></div>
+          </div>
+          <div class="rl-circle">PRODUCCIÓN Y CALIDAD</div>
+        </div>
+        <div class="rl-sub-label">DOBLE JORNADA · ROTACIÓN SEMANAL · L A V</div>
+        <div style="font-size:clamp(0.85rem,1vw,1rem);color:var(--green-pale);opacity:.7;text-align:center;margin-top:4px">Horas extras los sábados si es necesario</div>
+      </div>
+      <!-- Administración -->
+      <div class="rl-bracket" style="gap:10px">
+        <div style="display:flex;align-items:center;gap:20px;justify-content:center">
+          <div style="display:flex;flex-direction:column;gap:10px;align-items:center">
+            <div style="display:flex;gap:14px;align-items:center">
+              <div class="rl-pill">8:00 A 17:00</div>
+              <span style="color:var(--green-pale);font-size:clamp(0.95rem,1.1vw,1.1rem);align-self:center">L a J</span>
+            </div>
+            <div style="display:flex;gap:14px;align-items:center">
+              <div class="rl-pill">8:00 A 16:00</div>
+              <span style="color:var(--green-pale);font-size:clamp(0.95rem,1.1vw,1.1rem);align-self:center">Viernes</span>
+            </div>
+          </div>
+          <div class="rl-arrow">
+            <div class="rl-arrow-line"></div>
+            <div class="rl-arrow-head"></div>
+          </div>
+          <div class="rl-circle">ADMINISTRACIÓN</div>
+        </div>
+        <div class="rl-sub-label">HORARIO CORRIDO · RESPONSABLES Y ADMINISTRATIVOS</div>
+      </div>
+      <!-- Total -->
+      <div class="rl-total">20 empleados en total</div>
     </div>
   </div>
 </div>
