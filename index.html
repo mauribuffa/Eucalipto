@@ -54,8 +54,8 @@ html, body {
   padding: 5vh 8vw 5vh;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  transform: translateX(30px);
+  transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateX(40px) scale(0.98);
   will-change: opacity, transform;
   overflow-y: auto;
 }
@@ -63,12 +63,12 @@ html, body {
 .slide.active {
   opacity: 1;
   visibility: visible;
-  transform: translateX(0);
+  transform: translateX(0) scale(1);
 }
 
 .slide.exit {
   opacity: 0;
-  transform: translateX(-40px);
+  transform: translateX(-50px) scale(0.98);
 }
 
 /* ─── Slide Themes ─── */
@@ -204,13 +204,26 @@ html, body {
 }
 
 .slide--dark .card {
-  background: rgba(255,255,255,0.12);
-  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
   backdrop-filter: blur(10px);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+}
+
+.slide--dark .card:hover {
+  border-color: rgba(168, 213, 176, 0.3);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25), 0 0 20px rgba(93,168,107,0.08);
+}
+
+.slide--cream .card:hover,
+.slide--light .card:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+  border-color: rgba(44, 95, 45, 0.18);
 }
 
 .card-icon {
@@ -475,14 +488,42 @@ tbody tr:nth-child(even) {
 /* ─── Separator Slide Styles ─── */
 .sep-icon {
   font-size: 5rem;
-  margin-bottom: 24px;
+  margin-bottom: 32px;
   filter: drop-shadow(0 4px 20px rgba(0,0,0,0.3));
+  position: relative;
+}
+
+.sep-icon::before {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 120px; height: 120px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 1.5px solid rgba(44, 95, 45, 0.12);
+  animation: sepRingPulse 3s ease-in-out infinite;
+}
+
+.sep-icon::after {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 160px; height: 160px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 1px solid rgba(44, 95, 45, 0.06);
+  animation: sepRingPulse 3s ease-in-out infinite 0.5s;
+}
+
+@keyframes sepRingPulse {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+  50% { transform: translate(-50%, -50%) scale(1.1); opacity: 0.5; }
 }
 
 .sep-title {
   font-family: 'Cormorant Garamond', serif;
   font-weight: 700;
-  font-size: clamp(2.5rem, 4.5vw, 4.2rem);
+  font-size: clamp(3rem, 5.5vw, 5rem);
   letter-spacing: 0.04em;
   margin-bottom: 1.5vh;
   color: var(--green-deep);
@@ -490,16 +531,16 @@ tbody tr:nth-child(even) {
 
 .sep-subtitle {
   font-weight: 300;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   color: var(--text-mid);
   opacity: 0.7;
   letter-spacing: 0.08em;
 }
 
 .sep-line {
-  width: 80px; height: 2px;
+  width: 100px; height: 2px;
   background: linear-gradient(90deg, transparent, var(--green-dark), transparent);
-  margin: 16px auto;
+  margin: 20px auto;
 }
 
 /* ─── Portada ─── */
@@ -516,21 +557,26 @@ tbody tr:nth-child(even) {
 
 .portada-leaf {
   font-size: 5.5rem;
-  margin-bottom: 24px;
+  margin-bottom: 28px;
   filter: drop-shadow(0 8px 30px rgba(93,168,107,0.3));
+  position: relative;
+  z-index: 1;
 }
 
 .portada-title {
   font-family: 'Cormorant Garamond', serif;
   font-weight: 700;
-  font-size: clamp(2.5rem, 4.5vw, 4.2rem);
-  line-height: 1.12;
-  max-width: 950px;
-  margin: 0 auto 12px;
-  background: linear-gradient(135deg, #fff 30%, var(--green-pale) 100%);
+  font-size: clamp(2.8rem, 5vw, 4.8rem);
+  line-height: 1.1;
+  max-width: 1000px;
+  margin: 0 auto 16px;
+  background: linear-gradient(135deg, #fff 20%, var(--gold-light) 60%, var(--green-pale) 100%);
+  background-size: 200% 200%;
+  animation: shimmerGold 5s ease-in-out infinite;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  filter: drop-shadow(0 2px 20px rgba(196,163,90,0.15));
 }
 
 .portada-sub {
@@ -620,8 +666,11 @@ tbody tr:nth-child(even) {
   align-items: center;
   text-align: center;
   background:
-    radial-gradient(ellipse 500px 400px at 50% 50%, rgba(44, 95, 45, 0.25) 0%, transparent 70%),
+    radial-gradient(ellipse 600px 500px at 50% 45%, rgba(44, 95, 45, 0.3) 0%, transparent 70%),
+    radial-gradient(ellipse 300px 300px at 20% 80%, rgba(196, 163, 90, 0.06) 0%, transparent 70%),
+    radial-gradient(ellipse 300px 300px at 80% 20%, rgba(168, 213, 176, 0.05) 0%, transparent 70%),
     linear-gradient(160deg, #0a1e14 0%, var(--green-deep) 50%, #0f2618 100%);
+  overflow: hidden;
 }
 
 .gracias::after {
@@ -633,23 +682,67 @@ tbody tr:nth-child(even) {
     radial-gradient(1px 1px at 30% 60%, rgba(168,213,176,0.3) 50%, transparent 50%),
     radial-gradient(2px 2px at 50% 30%, rgba(196,163,90,0.3) 50%, transparent 50%),
     radial-gradient(1px 1px at 70% 70%, rgba(168,213,176,0.25) 50%, transparent 50%),
-    radial-gradient(1.5px 1.5px at 90% 40%, rgba(196,163,90,0.3) 50%, transparent 50%);
+    radial-gradient(1.5px 1.5px at 90% 40%, rgba(196,163,90,0.3) 50%, transparent 50%),
+    radial-gradient(1px 1px at 25% 85%, rgba(196,163,90,0.35) 50%, transparent 50%),
+    radial-gradient(1.5px 1.5px at 75% 10%, rgba(168,213,176,0.3) 50%, transparent 50%),
+    radial-gradient(2px 2px at 85% 75%, rgba(196,163,90,0.25) 50%, transparent 50%),
+    radial-gradient(1px 1px at 40% 45%, rgba(168,213,176,0.2) 50%, transparent 50%),
+    radial-gradient(1.5px 1.5px at 60% 90%, rgba(196,163,90,0.3) 50%, transparent 50%);
   background-size: 100% 200%;
-  animation: particleDrift 25s linear infinite;
+  animation: particleDrift 20s linear infinite;
   pointer-events: none;
   z-index: 0;
-  opacity: 0.6;
+  opacity: 0.8;
 }
 
 .gracias-title {
   font-family: 'Cormorant Garamond', serif;
   font-weight: 700;
-  font-size: 7rem;
+  font-size: clamp(5rem, 12vw, 9rem);
   letter-spacing: 0.06em;
-  background: linear-gradient(135deg, #fff 0%, var(--gold-light) 60%, var(--green-pale) 100%);
+  background: linear-gradient(135deg, #fff 0%, var(--gold-light) 50%, var(--green-pale) 100%);
+  background-size: 200% 200%;
+  animation: shimmerGold 4s ease-in-out infinite;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  filter: drop-shadow(0 4px 30px rgba(196,163,90,0.3));
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes shimmerGold {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.gracias .portada-leaf {
+  position: relative;
+  z-index: 1;
+}
+
+.gracias .portada-meta {
+  position: relative;
+  z-index: 1;
+}
+
+.gracias .sep-line {
+  position: relative;
+  z-index: 1;
+}
+
+/* Floating leaves for Gracias */
+.gracias-leaf {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  opacity: 0;
+  z-index: 0;
+  color: rgba(168, 213, 176, 0.3);
+}
+
+.gracias-leaf--gold {
+  color: rgba(196, 163, 90, 0.25);
 }
 
 /* ─── Side accent bar ─── */
@@ -759,7 +852,7 @@ tbody tr:nth-child(even) {
 .icon--lg { width: 2.6rem; height: 2.6rem; }
 .icon--xl { width: clamp(3rem, 6vw, 5rem); height: clamp(3rem, 6vw, 5rem); }
 .icon--hero { width: 5.5rem; height: 5.5rem; }
-.icon--sep { width: 5rem; height: 5rem; filter: drop-shadow(0 4px 20px rgba(0,0,0,0.15)); }
+.icon--sep { width: 6.5rem; height: 6.5rem; filter: drop-shadow(0 4px 20px rgba(0,0,0,0.15)); }
 .slide--dark .icon { color: var(--green-pale); }
 .slide--cream .icon, .slide--light .icon { color: var(--green-dark); }
 .slide--separator .icon { color: var(--green-deep); }
@@ -868,8 +961,8 @@ tbody tr:nth-child(even) {
 
 /* ─── Animations ─── */
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: translateY(24px) scale(0.97); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
 }
 
 .slide.active .card,
@@ -1142,22 +1235,27 @@ tbody tr:nth-child(even) {
 <div class="slide slide--cream" data-slide="2">
   <div class="accent-bar"></div>
   <div class="section-tag">Bloque 1 · Portada y Contexto</div>
-  <div class="slide-title">Objetivos del Proyecto</div>
-  <div style="display:grid;grid-template-columns:1fr;gap:10px;width:100%">
-    <div style="display:flex;align-items:center;gap:16px;padding:14px 20px;background:rgba(255,255,255,0.6);border-radius:10px;border:1px solid rgba(44,95,45,0.08)">
-      <span class="obj-num">1</span><span style="font-size:1.2rem">Describir la materia prima y el producto final</span>
+  <div class="slide-title" style="font-size:clamp(2.4rem,4.5vw,4rem);margin-bottom:4vh">Objetivos del Proyecto</div>
+  <div style="display:grid;grid-template-columns:1fr;gap:1.8vh;width:100%;max-width:900px">
+    <div class="card" style="display:flex;align-items:center;gap:24px;padding:2.8vh 2.5vw;background:rgba(255,255,255,0.7);border:1px solid rgba(44,95,45,0.1);border-radius:14px;box-shadow:0 4px 20px rgba(0,0,0,0.04)">
+      <span class="obj-num" style="width:52px;height:52px;min-width:52px;font-size:1.15rem">1</span>
+      <span style="font-size:1.5rem;font-weight:400"><strong style="color:var(--green-dark)">Describir</strong> la materia prima y el producto final</span>
     </div>
-    <div style="display:flex;align-items:center;gap:16px;padding:14px 20px;background:rgba(255,255,255,0.6);border-radius:10px;border:1px solid rgba(44,95,45,0.08)">
-      <span class="obj-num">2</span><span style="font-size:1.2rem">Detallar etapas del proceso productivo</span>
+    <div class="card" style="display:flex;align-items:center;gap:24px;padding:2.8vh 2.5vw;background:rgba(255,255,255,0.7);border:1px solid rgba(44,95,45,0.1);border-radius:14px;box-shadow:0 4px 20px rgba(0,0,0,0.04)">
+      <span class="obj-num" style="width:52px;height:52px;min-width:52px;font-size:1.15rem">2</span>
+      <span style="font-size:1.5rem;font-weight:400"><strong style="color:var(--green-dark)">Detallar</strong> etapas del proceso productivo</span>
     </div>
-    <div style="display:flex;align-items:center;gap:16px;padding:14px 20px;background:rgba(255,255,255,0.6);border-radius:10px;border:1px solid rgba(44,95,45,0.08)">
-      <span class="obj-num">3</span><span style="font-size:1.2rem">Garantizar calidad mediante análisis</span>
+    <div class="card" style="display:flex;align-items:center;gap:24px;padding:2.8vh 2.5vw;background:rgba(255,255,255,0.7);border:1px solid rgba(44,95,45,0.1);border-radius:14px;box-shadow:0 4px 20px rgba(0,0,0,0.04)">
+      <span class="obj-num" style="width:52px;height:52px;min-width:52px;font-size:1.15rem">3</span>
+      <span style="font-size:1.5rem;font-weight:400"><strong style="color:var(--green-dark)">Garantizar</strong> calidad mediante análisis</span>
     </div>
-    <div style="display:flex;align-items:center;gap:16px;padding:14px 20px;background:rgba(255,255,255,0.6);border-radius:10px;border:1px solid rgba(44,95,45,0.08)">
-      <span class="obj-num">4</span><span style="font-size:1.2rem">Definir localización de la planta</span>
+    <div class="card" style="display:flex;align-items:center;gap:24px;padding:2.8vh 2.5vw;background:rgba(255,255,255,0.7);border:1px solid rgba(44,95,45,0.1);border-radius:14px;box-shadow:0 4px 20px rgba(0,0,0,0.04)">
+      <span class="obj-num" style="width:52px;height:52px;min-width:52px;font-size:1.15rem">4</span>
+      <span style="font-size:1.5rem;font-weight:400"><strong style="color:var(--green-dark)">Definir</strong> localización de la planta</span>
     </div>
-    <div style="display:flex;align-items:center;gap:16px;padding:14px 20px;background:rgba(255,255,255,0.6);border-radius:10px;border:1px solid rgba(44,95,45,0.08)">
-      <span class="obj-num">5</span><span style="font-size:1.2rem">Estimar costo unitario, precio de venta y factibilidad</span>
+    <div class="card" style="display:flex;align-items:center;gap:24px;padding:2.8vh 2.5vw;background:rgba(255,255,255,0.7);border:1px solid rgba(44,95,45,0.1);border-radius:14px;box-shadow:0 4px 20px rgba(0,0,0,0.04)">
+      <span class="obj-num" style="width:52px;height:52px;min-width:52px;font-size:1.15rem">5</span>
+      <span style="font-size:1.5rem;font-weight:400"><strong style="color:var(--green-dark)">Estimar</strong> costo unitario, precio de venta y factibilidad</span>
     </div>
   </div>
 </div>
@@ -1195,22 +1293,22 @@ tbody tr:nth-child(even) {
 <div class="slide slide--dark" data-slide="4">
   <div class="accent-bar"></div>
   <div class="section-tag">Contexto</div>
-  <div class="slide-title">¿Por qué un Repelente Natural?</div>
-  <div class="cards-grid cards-grid--3" style="align-items:stretch;margin-top:4vh">
-    <div class="card" style="display:flex;flex-direction:column;align-items:center;text-align:center;padding:clamp(24px,4vh,48px) clamp(16px,2vw,32px)">
-      <span style="font-size:clamp(3rem,6vw,5rem);line-height:1;margin-bottom:2vh"><svg class="icon icon--xl"><use href="#ico-mosquito"/></svg></span>
-      <div class="card-title" style="font-size:clamp(1.4rem,2.5vw,2rem);margin-bottom:1.5vh">Amenaza Sanitaria</div>
-      <div class="card-text" style="font-size:clamp(0.95rem,1.3vw,1.15rem);opacity:0.7">Dengue · Malaria · Zika</div>
+  <div class="slide-title" style="font-size:clamp(2.6rem,5vw,4.2rem);margin-bottom:6vh;align-self:flex-start">¿Por qué un Repelente Natural?</div>
+  <div class="cards-grid cards-grid--3" style="align-items:stretch;flex:0;gap:2.5vw">
+    <div class="card" style="display:flex;flex-direction:column;align-items:center;text-align:center;padding:clamp(44px,6vh,80px) clamp(24px,3vw,48px);justify-content:center;min-height:30vh">
+      <span style="font-size:clamp(4rem,8vw,6rem);line-height:1;margin-bottom:3.5vh"><svg class="icon" style="width:clamp(4rem,8vw,6rem);height:clamp(4rem,8vw,6rem)"><use href="#ico-mosquito"/></svg></span>
+      <div class="card-title" style="font-size:clamp(1.7rem,3vw,2.4rem);margin-bottom:2vh">Amenaza Sanitaria</div>
+      <div class="card-text" style="font-size:clamp(1.1rem,1.5vw,1.35rem);opacity:0.7">Dengue · Malaria · Zika</div>
     </div>
-    <div class="card" style="display:flex;flex-direction:column;align-items:center;text-align:center;padding:clamp(24px,4vh,48px) clamp(16px,2vw,32px)">
-      <span style="font-size:clamp(3rem,6vw,5rem);line-height:1;margin-bottom:2vh"><svg class="icon icon--xl"><use href="#ico-dna"/></svg></span>
-      <div class="card-title" style="font-size:clamp(1.4rem,2.5vw,2rem);margin-bottom:1.5vh">Compuestos Activos</div>
-      <div class="card-text" style="font-size:clamp(0.95rem,1.3vw,1.15rem);opacity:0.7">Eucamalol + 4-isopropilbencil alcohol</div>
+    <div class="card" style="display:flex;flex-direction:column;align-items:center;text-align:center;padding:clamp(44px,6vh,80px) clamp(24px,3vw,48px);justify-content:center;min-height:30vh">
+      <span style="font-size:clamp(4rem,8vw,6rem);line-height:1;margin-bottom:3.5vh"><svg class="icon" style="width:clamp(4rem,8vw,6rem);height:clamp(4rem,8vw,6rem)"><use href="#ico-dna"/></svg></span>
+      <div class="card-title" style="font-size:clamp(1.7rem,3vw,2.4rem);margin-bottom:2vh">Compuestos Activos</div>
+      <div class="card-text" style="font-size:clamp(1.1rem,1.5vw,1.35rem);opacity:0.7">Eucamalol + 4-isopropilbencil alcohol</div>
     </div>
-    <div class="card" style="display:flex;flex-direction:column;align-items:center;text-align:center;padding:clamp(24px,4vh,48px) clamp(16px,2vw,32px)">
-      <span style="font-size:clamp(3rem,6vw,5rem);line-height:1;margin-bottom:2vh"><svg class="icon icon--xl"><use href="#ico-sprout"/></svg></span>
-      <div class="card-title" style="font-size:clamp(1.4rem,2.5vw,2rem);margin-bottom:1.5vh">Biodegradable</div>
-      <div class="card-text" style="font-size:clamp(0.95rem,1.3vw,1.15rem);opacity:0.7">Sin acumulación en el ambiente</div>
+    <div class="card" style="display:flex;flex-direction:column;align-items:center;text-align:center;padding:clamp(44px,6vh,80px) clamp(24px,3vw,48px);justify-content:center;min-height:30vh">
+      <span style="font-size:clamp(4rem,8vw,6rem);line-height:1;margin-bottom:3.5vh"><svg class="icon" style="width:clamp(4rem,8vw,6rem);height:clamp(4rem,8vw,6rem)"><use href="#ico-sprout"/></svg></span>
+      <div class="card-title" style="font-size:clamp(1.7rem,3vw,2.4rem);margin-bottom:2vh">Biodegradable</div>
+      <div class="card-text" style="font-size:clamp(1.1rem,1.5vw,1.35rem);opacity:0.7">Sin acumulación en el ambiente</div>
     </div>
   </div>
 </div>
@@ -1308,7 +1406,7 @@ tbody tr:nth-child(even) {
 
 
 <div class="slide slide--separator" data-slide="6">
-  <div class="sep-icon"><svg class="icon icon--sep"><use href="#ico-barchart"/></svg></div>
+  <div class="sep-icon"><svg class="icon icon--sep" style="width:7rem;height:7rem"><use href="#ico-barchart"/></svg></div>
   <div class="sep-title">Estudio de Mercado</div>
   <div class="sep-line"></div>
   <div class="sep-subtitle">Análisis de oferta, demanda y comercialización</div>
@@ -1514,7 +1612,7 @@ tbody tr:nth-child(even) {
 
 
 <div class="slide slide--separator" data-slide="13">
-  <div class="sep-icon"><svg class="icon icon--sep"><use href="#ico-leaf"/></svg></div>
+  <div class="sep-icon"><svg class="icon icon--sep" style="width:7rem;height:7rem"><use href="#ico-leaf"/></svg></div>
   <div class="sep-title">Materias Primas</div>
   <div class="sep-line"></div>
   <div class="sep-subtitle">Eucalipto, solventes y aditivos</div>
@@ -1669,7 +1767,7 @@ tbody tr:nth-child(even) {
 
 
 <div class="slide slide--separator" data-slide="22">
-  <div class="sep-icon"><svg class="icon icon--sep"><use href="#ico-gear"/></svg></div>
+  <div class="sep-icon"><svg class="icon icon--sep" style="width:7rem;height:7rem"><use href="#ico-gear"/></svg></div>
   <div class="sep-title">Proceso Productivo</div>
   <div class="sep-line"></div>
   <div class="sep-subtitle">9 etapas de producción</div>
@@ -2738,7 +2836,7 @@ tbody tr:nth-child(even) {
 
 
 <div class="slide slide--separator" data-slide="19">
-  <div class="sep-icon"><svg class="icon icon--sep"><use href="#ico-pin"/></svg></div>
+  <div class="sep-icon"><svg class="icon icon--sep" style="width:7rem;height:7rem"><use href="#ico-pin"/></svg></div>
   <div class="sep-title">Localización</div>
   <div class="sep-line"></div>
   <div class="sep-subtitle">Selección macro y micro de la planta</div>
@@ -3027,7 +3125,7 @@ tbody tr:nth-child(even) {
 
 
 <div class="slide slide--separator" data-slide="39">
-  <div class="sep-icon"><svg class="icon icon--sep"><use href="#ico-money"/></svg></div>
+  <div class="sep-icon"><svg class="icon icon--sep" style="width:7rem;height:7rem"><use href="#ico-money"/></svg></div>
   <div class="sep-title">Inversiones y Costos</div>
   <div class="sep-line"></div>
   <div class="sep-subtitle">Análisis económico del proyecto</div>
@@ -3375,8 +3473,10 @@ tbody tr:nth-child(even) {
       </div>
     </div>
     <div style="display:flex;flex-direction:column;justify-content:center;align-items:center;gap:30px">
-      <div class="pill pill--viable" style="font-size:2rem;padding:26px 56px;border-radius:18px">
-        ✓ PROYECTO VIABLE
+      <div class="viable-badge" style="position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,rgba(93,168,107,0.25) 0%,rgba(44,95,45,0.5) 70%);border:3px solid rgba(168,213,176,0.4);box-shadow:0 0 60px rgba(93,168,107,0.3),0 0 120px rgba(93,168,107,0.1)">
+        <svg class="icon" style="width:3rem;height:3rem;color:var(--green-pale);margin-bottom:8px"><use href="#ico-check"/></svg>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;color:white;letter-spacing:0.04em">PROYECTO</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:700;color:var(--gold-light);letter-spacing:0.06em">VIABLE</div>
       </div>
       <div style="text-align:center;opacity:0.6;font-size:1.3rem">
         Precio mínimo rentable:<br>
@@ -3390,46 +3490,58 @@ tbody tr:nth-child(even) {
 <div class="slide slide--dark" data-slide="45">
   <div class="accent-bar"></div>
   <div class="section-tag">Conclusiones</div>
-  <div class="slide-title">Conclusiones Generales</div>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px 36px;width:100%">
-    <div class="card" style="display:flex;align-items:center;gap:20px;padding:28px 30px">
-      <span class="obj-num" style="flex-shrink:0">1</span>
-      <div style="font-size:1.4rem"><strong>Implementación técnica y territorial</strong> favorable</div>
+  <div class="slide-title" style="font-size:clamp(2.4rem,4.5vw,4rem);margin-bottom:4vh">Conclusiones Generales</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:2.5vh 3vw;width:100%">
+    <div class="card" style="display:flex;align-items:center;gap:24px;padding:3.5vh 2.5vw">
+      <span class="obj-num" style="flex-shrink:0;width:50px;height:50px;min-width:50px;font-size:1.1rem">1</span>
+      <div style="font-size:1.5rem"><strong>Implementación técnica y territorial</strong> favorable</div>
     </div>
-    <div class="card" style="display:flex;align-items:center;gap:20px;padding:28px 30px">
-      <span class="obj-num" style="flex-shrink:0">2</span>
-      <div style="font-size:1.4rem">Inversión justificada: <strong>VAN $6.163M · TIR 381,98%</strong></div>
+    <div class="card" style="display:flex;align-items:center;gap:24px;padding:3.5vh 2.5vw">
+      <span class="obj-num" style="flex-shrink:0;width:50px;height:50px;min-width:50px;font-size:1.1rem">2</span>
+      <div style="font-size:1.5rem">Inversión justificada: <strong style="color:var(--gold-light)">VAN $6.163M · TIR 381,98%</strong></div>
     </div>
-    <div class="card" style="display:flex;align-items:center;gap:20px;padding:28px 30px">
-      <span class="obj-num" style="flex-shrink:0">3</span>
-      <div style="font-size:1.4rem"><strong>Desarrollo local</strong>: empleo e industria en Santa Fe</div>
+    <div class="card" style="display:flex;align-items:center;gap:24px;padding:3.5vh 2.5vw">
+      <span class="obj-num" style="flex-shrink:0;width:50px;height:50px;min-width:50px;font-size:1.1rem">3</span>
+      <div style="font-size:1.5rem"><strong>Desarrollo local</strong>: empleo e industria en Santa Fe</div>
     </div>
-    <div class="card" style="display:flex;align-items:center;gap:20px;padding:28px 30px">
-      <span class="obj-num" style="flex-shrink:0">4</span>
-      <div style="font-size:1.4rem"><strong>Calidad</strong> en cada etapa (Farmacopea Argentina)</div>
+    <div class="card" style="display:flex;align-items:center;gap:24px;padding:3.5vh 2.5vw">
+      <span class="obj-num" style="flex-shrink:0;width:50px;height:50px;min-width:50px;font-size:1.1rem">4</span>
+      <div style="font-size:1.5rem"><strong>Calidad</strong> en cada etapa (Farmacopea Argentina)</div>
     </div>
-    <div class="card" style="display:flex;align-items:center;gap:20px;padding:28px 30px">
-      <span class="obj-num" style="flex-shrink:0">5</span>
-      <div style="font-size:1.4rem"><strong>Valor agregado</strong> a recursos forestales locales</div>
+    <div class="card" style="display:flex;align-items:center;gap:24px;padding:3.5vh 2.5vw">
+      <span class="obj-num" style="flex-shrink:0;width:50px;height:50px;min-width:50px;font-size:1.1rem">5</span>
+      <div style="font-size:1.5rem"><strong>Valor agregado</strong> a recursos forestales locales</div>
     </div>
-    <div class="card" style="display:flex;align-items:center;gap:20px;padding:28px 30px">
-      <span class="obj-num" style="flex-shrink:0">6</span>
-      <div style="font-size:1.4rem">Alternativa <strong>sostenible y competitiva</strong></div>
+    <div class="card" style="display:flex;align-items:center;gap:24px;padding:3.5vh 2.5vw">
+      <span class="obj-num" style="flex-shrink:0;width:50px;height:50px;min-width:50px;font-size:1.1rem">6</span>
+      <div style="font-size:1.5rem">Alternativa <strong>sostenible y competitiva</strong></div>
     </div>
   </div>
 </div>
 
 
 <div class="slide gracias" data-slide="47">
-  <div class="portada-leaf"><svg class="icon icon--hero" style="color:var(--green-pale)"><use href="#ico-branch"/></svg></div>
+  <!-- Floating leaf particles -->
+  <svg class="gracias-leaf" style="left:8%;top:15%"><use href="#ico-leaf"/></svg>
+  <svg class="gracias-leaf gracias-leaf--gold" style="left:85%;top:20%"><use href="#ico-leaf"/></svg>
+  <svg class="gracias-leaf" style="left:15%;top:75%"><use href="#ico-leaf"/></svg>
+  <svg class="gracias-leaf gracias-leaf--gold" style="left:90%;top:70%"><use href="#ico-leaf"/></svg>
+  <svg class="gracias-leaf" style="left:50%;top:10%"><use href="#ico-leaf"/></svg>
+  <svg class="gracias-leaf gracias-leaf--gold" style="left:30%;top:85%"><use href="#ico-leaf"/></svg>
+  <svg class="gracias-leaf" style="left:70%;top:80%"><use href="#ico-leaf"/></svg>
+  <svg class="gracias-leaf gracias-leaf--gold" style="left:5%;top:50%"><use href="#ico-leaf"/></svg>
+  <svg class="gracias-leaf" style="left:95%;top:45%"><use href="#ico-leaf"/></svg>
+  <svg class="gracias-leaf gracias-leaf--gold" style="left:45%;top:90%"><use href="#ico-leaf"/></svg>
+
+  <div class="portada-leaf" style="margin-bottom:32px"><svg class="icon icon--hero" style="color:var(--green-pale);width:6.5rem;height:6.5rem"><use href="#ico-branch"/></svg></div>
   <div class="gracias-title">Gracias</div>
-  <div class="sep-line"></div>
-  <div class="portada-meta" style="margin-top:24px">
-    <div class="portada-authors">Bresso, Romina &nbsp;·&nbsp; Macagno, Micaela</div>
-    <div class="portada-divider"></div>
-    <div style="font-style:italic;opacity:0.6">Proyecto Final · Ingeniería Química</div>
-    <div>Universidad Tecnológica Nacional — Facultad Regional San Francisco</div>
-    <div style="opacity:0.4">2026</div>
+  <div class="sep-line" style="width:120px;margin:24px auto"></div>
+  <div class="portada-meta" style="margin-top:28px;gap:14px">
+    <div class="portada-authors" style="font-size:1.4rem;letter-spacing:0.15em">Bresso, Romina &nbsp;·&nbsp; Macagno, Micaela</div>
+    <div class="portada-divider" style="width:80px"></div>
+    <div style="font-style:italic;opacity:0.6;font-size:1.1rem">Proyecto Final · Ingeniería Química</div>
+    <div style="font-size:1.05rem">Universidad Tecnológica Nacional — Facultad Regional San Francisco</div>
+    <div style="opacity:0.4;font-size:1rem">2026</div>
   </div>
 </div>
 
@@ -3776,7 +3888,168 @@ function animateBalance() {
 }
 
 // ═══════════════════ ANIMATED COUNTERS ═══════════════════
-</script>
+
+// Counter animation for stat numbers
+function animateCounters(slideEl) {
+  slideEl.querySelectorAll('.stat-number').forEach(el => {
+    const text = el.textContent.trim();
+    // Match patterns like "$6.163 M", "381,98%", "76.564"
+    const match = text.match(/^([^\d]*)([\d.,]+)\s*(.*)$/);
+    if (!match) return;
+    const prefix = match[1];
+    const numStr = match[2];
+    const suffix = match[3];
+    const hasComma = numStr.includes(',');
+    const targetNum = parseFloat(numStr.replace(/\./g, '').replace(',', '.'));
+    if (isNaN(targetNum)) return;
+
+    const obj = { val: 0 };
+    gsap.to(obj, {
+      val: targetNum,
+      duration: 1.5,
+      delay: 0.3,
+      ease: 'power2.out',
+      onUpdate: function() {
+        let formatted;
+        if (hasComma) {
+          formatted = obj.val.toFixed(2).replace('.', ',');
+          // Add dots for thousands
+          const parts = formatted.split(',');
+          parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+          formatted = parts.join(',');
+        } else {
+          formatted = Math.round(obj.val).toLocaleString('es-AR');
+        }
+        el.textContent = prefix + formatted + (suffix ? ' ' + suffix : '');
+      }
+    });
+  });
+}
+
+// ═══════════════════ GRACIAS ANIMATION ═══════════════════
+
+function animateGracias() {
+  const slide = document.querySelector('.gracias');
+  if (!slide) return;
+
+  // Floating leaves
+  slide.querySelectorAll('.gracias-leaf').forEach((leaf, i) => {
+    const startY = parseFloat(leaf.style.top) || 50;
+    gsap.set(leaf, { opacity: 0, scale: 0.5, rotation: Math.random() * 90 - 45 });
+    gsap.to(leaf, {
+      opacity: 0.6 + Math.random() * 0.3,
+      scale: 0.8 + Math.random() * 0.6,
+      duration: 1,
+      delay: 0.3 + i * 0.15,
+      ease: 'power2.out'
+    });
+    // Continuous float
+    gsap.to(leaf, {
+      y: '-=' + (20 + Math.random() * 30),
+      x: '+=' + (Math.random() * 20 - 10),
+      rotation: '+=' + (Math.random() * 40 - 20),
+      duration: 3 + Math.random() * 2,
+      ease: 'sine.inOut',
+      yoyo: true,
+      repeat: -1,
+      delay: i * 0.3
+    });
+  });
+
+  // Title dramatic entrance
+  const title = slide.querySelector('.gracias-title');
+  if (title) {
+    gsap.from(title, {
+      scale: 0.7, opacity: 0, y: 40,
+      duration: 1.2, ease: 'power3.out', delay: 0.2
+    });
+  }
+
+  // Branch icon
+  const branch = slide.querySelector('.portada-leaf');
+  if (branch) {
+    gsap.from(branch, {
+      scale: 0, rotation: -180, opacity: 0,
+      duration: 1, ease: 'back.out(1.5)', delay: 0
+    });
+  }
+
+  // Meta info
+  const meta = slide.querySelector('.portada-meta');
+  if (meta) {
+    gsap.from(meta, { y: 30, opacity: 0, duration: 0.8, delay: 0.8, ease: 'power2.out' });
+  }
+
+  // Sep line
+  const line = slide.querySelector('.sep-line');
+  if (line) {
+    gsap.from(line, { scaleX: 0, duration: 0.6, delay: 0.6, ease: 'power2.inOut' });
+  }
+}
+
+// ═══════════════════ FACTIBILIDAD ANIMATION ═══════════════
+
+function animateViableBadge(slideEl) {
+  const badge = slideEl.querySelector('.viable-badge');
+  if (!badge) return;
+
+  gsap.from(badge, {
+    scale: 0, rotation: -10, opacity: 0,
+    duration: 1, delay: 0.5, ease: 'back.out(1.4)'
+  });
+
+  // Pulsing glow
+  gsap.to(badge, {
+    boxShadow: '0 0 80px rgba(93,168,107,0.5), 0 0 160px rgba(93,168,107,0.2)',
+    duration: 2,
+    delay: 1.5,
+    ease: 'sine.inOut',
+    yoyo: true,
+    repeat: -1
+  });
+}
+
+// ═══════════════════ ENHANCED SLIDE HOOK ═══════════════════
+
+// Override goToSlide to add more animations
+const enhancedGoToSlide = goToSlide;
+goToSlide = function(n) {
+  enhancedGoToSlide(n);
+  const slides = document.querySelectorAll('.slide');
+  const slideEl = slides[n - 1];
+  if (!slideEl) return;
+  const dataSlide = slideEl.getAttribute('data-slide');
+
+  // Animate counters on slides with stat numbers
+  if (!slideEl._countersAnimated) {
+    slideEl._countersAnimated = true;
+    if (slideEl.querySelectorAll('.stat-number').length > 0) {
+      animateCounters(slideEl);
+    }
+  }
+
+  // Gracias slide
+  if (dataSlide === '47' && !slideEl._graciasDone) {
+    slideEl._graciasDone = true;
+    animateGracias();
+  }
+
+  // Factibilidad badge
+  if (dataSlide === '44' && !slideEl._viableDone) {
+    slideEl._viableDone = true;
+    animateViableBadge(slideEl);
+  }
+
+  // Two-col content stagger
+  if (!slideEl._twocolDone) {
+    slideEl._twocolDone = true;
+    const twoColItems = slideEl.querySelectorAll('.two-col > div');
+    if (twoColItems.length >= 2) {
+      gsap.from(twoColItems[0], { x: -30, opacity: 0, duration: 0.6, delay: 0.15, ease: 'power2.out' });
+      gsap.from(twoColItems[1], { x: 30, opacity: 0, duration: 0.6, delay: 0.25, ease: 'power2.out' });
+    }
+  }
+};
 </script>
 
 </body>
