@@ -206,6 +206,7 @@ goToSlide = function(n) {
     // Specific slide animations
     if (n === 1) animateSlide1();
     const dataSlide = slideEl?.getAttribute('data-slide');
+    if (dataSlide === '5') animateTrendChart();
     if (dataSlide === '14') animateSlide14();
     if (dataSlide === '17') animateSlide17();
     if (dataSlide === '9') animateChartDemanda();
@@ -322,5 +323,38 @@ function animateBalance() {
   }
 }
 
+// Slide 5: Trend chart — clip-path reveal, dots pop, label fades in
+function animateTrendChart() {
+  const clipRect = document.getElementById('trend-clip-rect');
+  if (!clipRect) return;
+
+  const tl = gsap.timeline();
+
+  // Reveal chart area via clip-path width
+  tl.to(clipRect, {
+    attr: { width: 330 },
+    duration: 1.5,
+    ease: 'power2.inOut'
+  });
+
+  // Dots pop in one by one along the curve
+  const dots = document.querySelectorAll('.trend-dot');
+  tl.to(dots, {
+    opacity: 1,
+    scale: 1,
+    duration: 0.3,
+    stagger: 0.12,
+    ease: 'back.out(2)',
+    transformOrigin: '50% 50%'
+  }, '-=0.6');
+
+  // USD label fades in and slides up
+  tl.to('.trend-label', {
+    opacity: 1,
+    y: 0,
+    duration: 0.5,
+    ease: 'power2.out'
+  }, '-=0.2');
+}
+
 // ═══════════════════ ANIMATED COUNTERS ═══════════════════
-</script>

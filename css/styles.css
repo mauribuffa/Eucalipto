@@ -513,14 +513,17 @@ tbody tr:nth-child(even) {
 .portada-title {
   font-family: 'Cormorant Garamond', serif;
   font-weight: 700;
-  font-size: clamp(2.5rem, 4.5vw, 4.2rem);
-  line-height: 1.12;
-  max-width: 950px;
-  margin: 0 auto 12px;
-  background: linear-gradient(135deg, #fff 30%, var(--green-pale) 100%);
+  font-size: clamp(2.8rem, 5vw, 4.8rem);
+  line-height: 1.1;
+  max-width: 1000px;
+  margin: 0 auto 16px;
+  background: linear-gradient(135deg, #fff 20%, var(--gold-light) 60%, var(--green-pale) 100%);
+  background-size: 200% 200%;
+  animation: shimmerGold 5s ease-in-out infinite;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  filter: drop-shadow(0 2px 20px rgba(196,163,90,0.15));
 }
 
 .portada-sub {
@@ -857,6 +860,12 @@ tbody tr:nth-child(even) {
 }
 
 /* ─── Animations ─── */
+@keyframes shimmerGold {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
