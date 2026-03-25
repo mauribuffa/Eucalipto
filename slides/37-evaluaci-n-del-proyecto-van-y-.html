@@ -1,0 +1,48 @@
+<div class="slide slide--cream" data-slide="43">
+  <div class="accent-bar"></div>
+  <div class="section-tag">Evaluación</div>
+  <div class="slide-title">Evaluación del Proyecto — VAN y TIR</div>
+  <div class="table-wrapper mb-20">
+    <table>
+      <thead><tr><th>Escenario</th><th>TMAR</th><th>VAN (miles $)</th><th>TIR</th></tr></thead>
+      <tbody>
+        <tr><td>Sin inflación, sin financiamiento</td><td>15%</td><td>5.604.157</td><td>190,28%</td></tr>
+        <tr><td>Con inflación, sin financiamiento</td><td>55%</td><td>5.604.157</td><td>291,88%</td></tr>
+        <tr class="highlight-row"><td><strong>Con inflación, con financiamiento</strong></td><td><strong>52,39%</strong></td><td><strong>6.162.669</strong></td><td><strong>381,98%</strong></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="two-col" style="margin-top:16px">
+    <div>
+      <!-- TIR comparison chart -->
+      <svg id="chart-tir" viewBox="0 0 420 160" style="width:100%;border-radius:10px;background:white;box-shadow:0 2px 12px rgba(0,0,0,0.06)">
+        <text x="210" y="20" fill="#3a4a3e" font-size="11" text-anchor="middle" font-family="Outfit" font-weight="600">TIR por escenario</text>
+        <!-- Bars -->
+        <rect class="tir-bar" data-width="125" x="45" y="38" width="0" height="28" rx="5" fill="#a8d5b0"/>
+        <text x="40" y="57" fill="#3a4a3e" font-size="10" text-anchor="end" font-family="Outfit">Esc. 1</text>
+        <text class="tir-label" x="178" y="57" fill="#2C5F2D" font-size="12" font-family="Outfit" font-weight="700" opacity="0">190,28%</text>
+
+        <rect class="tir-bar" data-width="192" x="45" y="74" width="0" height="28" rx="5" fill="#5fa86b"/>
+        <text x="40" y="93" fill="#3a4a3e" font-size="10" text-anchor="end" font-family="Outfit">Esc. 2</text>
+        <text class="tir-label" x="245" y="93" fill="#2C5F2D" font-size="12" font-family="Outfit" font-weight="700" opacity="0">291,88%</text>
+
+        <rect class="tir-bar" data-width="251" x="45" y="110" width="0" height="28" rx="5" fill="#2C5F2D"/>
+        <text x="40" y="129" fill="#3a4a3e" font-size="10" text-anchor="end" font-family="Outfit">Esc. 3</text>
+        <text class="tir-label" x="304" y="129" fill="#2C5F2D" font-size="12" font-family="Outfit" font-weight="700" opacity="0">381,98%</text>
+        <text class="tir-label" x="100" y="152" fill="rgba(0,0,0,0.3)" font-size="9" font-family="Outfit" opacity="0">✓ Escenario elegido</text>
+      </svg>
+    </div>
+    <div>
+      <div class="cards-grid" style="grid-template-columns:1fr;gap:12px">
+        <div class="stat-card" style="background:var(--green-dark);color:white">
+          <div class="stat-number" style="color:white;font-size:2.2rem">$6.163 M</div>
+          <div class="stat-label" style="color:rgba(255,255,255,0.7)">VAN — Valor Actual Neto</div>
+        </div>
+        <div class="stat-card" style="background:var(--green-dark);color:white">
+          <div class="stat-number" style="color:var(--gold-light);font-size:2.2rem">381,98%</div>
+          <div class="stat-label" style="color:rgba(255,255,255,0.7)">TIR — Tasa Interna de Retorno</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

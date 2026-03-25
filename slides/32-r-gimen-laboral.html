@@ -1,0 +1,115 @@
+<div class="slide slide--dark" data-slide="36">
+  <div class="accent-bar"></div>
+  <div class="section-tag">Organización</div>
+  <div class="slide-title">Régimen Laboral</div>
+  <style>
+    .rl-layout{display:flex;align-items:center;gap:5vw;width:100%;margin-top:1vh}
+    .rl-left{flex:0 0 35%;display:flex;flex-direction:column;align-items:center;gap:28px}
+    .rl-right{flex:1;display:flex;flex-direction:column;gap:5vh}
+    .rl-org-icon{position:relative;width:380px;height:290px}
+    .rl-org-icon .rl-node{position:absolute;width:50px;height:40px;border:3px solid var(--green-pale);border-radius:8px;background:rgba(255,255,255,.08)}
+    .rl-org-icon .rl-line{position:absolute;background:var(--green-pale)}
+    .rl-pill{background:var(--green-mid);color:white;border-radius:30px;padding:1.6vh 2.5vw;font-size:clamp(1.1rem,1.5vw,1.4rem);font-weight:600;text-align:center;white-space:nowrap}
+    .rl-arrow{display:flex;align-items:center;gap:0}
+    .rl-arrow-line{width:4vw;height:2px;border-top:3px dotted var(--green-pale)}
+    .rl-arrow-head{width:0;height:0;border-top:8px solid transparent;border-bottom:8px solid transparent;border-left:12px solid var(--green-pale)}
+    .rl-circle{width:150px;height:150px;border-radius:50%;background:var(--green-dark);border:3px solid var(--green-pale);display:flex;align-items:center;justify-content:center;text-align:center;color:white;font-weight:700;font-size:clamp(1rem,1.2vw,1.2rem);padding:16px;line-height:1.3}
+    .rl-bracket{display:flex;flex-direction:column;align-items:center;gap:12px}
+    .rl-bracket-top{width:340px;height:24px;border:2.5px solid var(--green-pale);border-bottom:none;border-radius:14px 14px 0 0}
+    .rl-sub-label{background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.25);border-radius:24px;padding:10px 28px;font-size:clamp(0.95rem,1.1vw,1.1rem);color:var(--green-pale);text-align:center;margin-top:4px}
+    .rl-struct-label{background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.25);border-radius:24px;padding:14px 32px;font-size:clamp(1rem,1.2vw,1.15rem);color:var(--green-pale);text-align:center;max-width:380px}
+    .rl-total{text-align:center;color:var(--green-pale);font-size:clamp(1.1rem,1.3vw,1.3rem);font-weight:700;margin-top:1vh}
+  </style>
+  <div class="rl-layout">
+    <!-- Izquierda: Icono organigrama -->
+    <div class="rl-left">
+      <div class="rl-org-icon">
+        <!-- Top node (director) -->
+        <div class="rl-node" style="left:158px;top:0;width:60px;height:44px"></div>
+        <!-- Vertical line from top -->
+        <div class="rl-line" style="left:188px;top:44px;width:3px;height:30px"></div>
+        <!-- Horizontal bar -->
+        <div class="rl-line" style="left:50px;top:74px;width:280px;height:3px"></div>
+        <!-- 3 vertical lines down -->
+        <div class="rl-line" style="left:50px;top:74px;width:3px;height:34px"></div>
+        <div class="rl-line" style="left:188px;top:74px;width:3px;height:34px"></div>
+        <div class="rl-line" style="left:327px;top:74px;width:3px;height:34px"></div>
+        <!-- 3 mid nodes -->
+        <div class="rl-node" style="left:25px;top:108px"></div>
+        <div class="rl-node" style="left:163px;top:108px"></div>
+        <div class="rl-node" style="left:302px;top:108px"></div>
+        <!-- Lines from mid nodes -->
+        <div class="rl-line" style="left:50px;top:148px;width:3px;height:28px"></div>
+        <div class="rl-line" style="left:188px;top:148px;width:3px;height:28px"></div>
+        <div class="rl-line" style="left:327px;top:148px;width:3px;height:28px"></div>
+        <!-- Horizontal bars for bottom level -->
+        <div class="rl-line" style="left:12px;top:176px;width:80px;height:3px"></div>
+        <div class="rl-line" style="left:150px;top:176px;width:80px;height:3px"></div>
+        <div class="rl-line" style="left:290px;top:176px;width:80px;height:3px"></div>
+        <!-- Bottom nodes (2 per group) -->
+        <div class="rl-node" style="left:0px;top:180px;width:40px;height:32px"></div>
+        <div class="rl-node" style="left:64px;top:180px;width:40px;height:32px"></div>
+        <div class="rl-node" style="left:138px;top:180px;width:40px;height:32px"></div>
+        <div class="rl-node" style="left:202px;top:180px;width:40px;height:32px"></div>
+        <div class="rl-node" style="left:278px;top:180px;width:40px;height:32px"></div>
+        <div class="rl-node" style="left:342px;top:180px;width:40px;height:32px"></div>
+        <!-- Lines down from bottom nodes -->
+        <div class="rl-line" style="left:19px;top:212px;width:3px;height:22px"></div>
+        <div class="rl-line" style="left:83px;top:212px;width:3px;height:22px"></div>
+        <div class="rl-line" style="left:157px;top:212px;width:3px;height:22px"></div>
+        <div class="rl-line" style="left:221px;top:212px;width:3px;height:22px"></div>
+        <div class="rl-line" style="left:297px;top:212px;width:3px;height:22px"></div>
+        <div class="rl-line" style="left:361px;top:212px;width:3px;height:22px"></div>
+        <!-- Tiny bottom nodes -->
+        <div class="rl-node" style="left:4px;top:234px;width:34px;height:28px"></div>
+        <div class="rl-node" style="left:68px;top:234px;width:34px;height:28px"></div>
+        <div class="rl-node" style="left:142px;top:234px;width:34px;height:28px"></div>
+        <div class="rl-node" style="left:206px;top:234px;width:34px;height:28px"></div>
+        <div class="rl-node" style="left:282px;top:234px;width:34px;height:28px"></div>
+        <div class="rl-node" style="left:346px;top:234px;width:34px;height:28px"></div>
+      </div>
+      <div class="rl-struct-label">ESTRUCTURA LÍNEO–ASESORA–FUNCIONAL</div>
+    </div>
+    <!-- Derecha: Turnos -->
+    <div class="rl-right">
+      <!-- Producción y Calidad -->
+      <div class="rl-bracket">
+        <div class="rl-bracket-top"></div>
+        <div style="display:flex;align-items:center;gap:20px">
+          <div class="rl-pill">0:00 A 8:00</div>
+          <div class="rl-pill">8:00 A 16:00</div>
+          <div class="rl-arrow">
+            <div class="rl-arrow-line"></div>
+            <div class="rl-arrow-head"></div>
+          </div>
+          <div class="rl-circle">PRODUCCIÓN Y CALIDAD</div>
+        </div>
+        <div class="rl-sub-label">DOBLE JORNADA · ROTACIÓN SEMANAL · L A V</div>
+        <div style="font-size:clamp(0.85rem,1vw,1rem);color:var(--green-pale);opacity:.7;text-align:center;margin-top:4px">Horas extras los sábados si es necesario</div>
+      </div>
+      <!-- Administración -->
+      <div class="rl-bracket" style="gap:10px">
+        <div style="display:flex;align-items:center;gap:20px;justify-content:center">
+          <div style="display:flex;flex-direction:column;gap:10px;align-items:center">
+            <div style="display:flex;gap:14px;align-items:center">
+              <div class="rl-pill">8:00 A 17:00</div>
+              <span style="color:var(--green-pale);font-size:clamp(0.95rem,1.1vw,1.1rem);align-self:center">L a J</span>
+            </div>
+            <div style="display:flex;gap:14px;align-items:center">
+              <div class="rl-pill">8:00 A 16:00</div>
+              <span style="color:var(--green-pale);font-size:clamp(0.95rem,1.1vw,1.1rem);align-self:center">Viernes</span>
+            </div>
+          </div>
+          <div class="rl-arrow">
+            <div class="rl-arrow-line"></div>
+            <div class="rl-arrow-head"></div>
+          </div>
+          <div class="rl-circle">ADMINISTRACIÓN</div>
+        </div>
+        <div class="rl-sub-label">HORARIO CORRIDO · RESPONSABLES Y ADMINISTRATIVOS</div>
+      </div>
+      <!-- Total -->
+      <div class="rl-total">20 empleados en total</div>
+    </div>
+  </div>
+</div>

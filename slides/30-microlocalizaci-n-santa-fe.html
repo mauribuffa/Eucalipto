@@ -1,0 +1,63 @@
+<div class="slide slide--dark" data-slide="21">
+  <div class="accent-bar"></div>
+  <div class="section-tag">Localización</div>
+  <div class="slide-title">Microlocalización: Santa Fe</div>
+  <div class="two-col">
+    <div>
+      <!-- SVG Local Map -->
+      <svg viewBox="0 0 400 300" style="width:100%;border-radius:12px;background:rgba(255,255,255,0.03);overflow:hidden">
+        <!-- River Paraná -->
+        <path d="M320,0 Q310,50 315,100 Q320,150 310,200 Q305,250 310,300" fill="none" stroke="rgba(90,138,196,0.3)" stroke-width="30"/>
+        <path d="M320,0 Q310,50 315,100 Q320,150 310,200 Q305,250 310,300" fill="none" stroke="rgba(90,138,196,0.15)" stroke-width="50"/>
+        <text x="330" y="150" fill="rgba(90,138,196,0.5)" font-size="10" font-family="Outfit" transform="rotate(-85,330,150)">Río Paraná</text>
+        <!-- RN 11 route -->
+        <line x1="200" y1="0" x2="200" y2="300" stroke="rgba(196,163,90,0.4)" stroke-width="4"/>
+        <line x1="200" y1="0" x2="200" y2="300" stroke="rgba(196,163,90,0.6)" stroke-width="2" stroke-dasharray="12,6"/>
+        <rect x="185" y="10" width="30" height="16" rx="3" fill="rgba(196,163,90,0.8)"/>
+        <text x="200" y="22" fill="white" font-size="9" text-anchor="middle" font-family="Outfit" font-weight="700">RN 11</text>
+        <!-- Santa Fe city -->
+        <circle cx="200" cy="100" r="35" fill="rgba(168,213,176,0.1)" stroke="rgba(168,213,176,0.2)" stroke-width="1"/>
+        <circle cx="200" cy="100" r="6" fill="#a8d5b0"/>
+        <text x="240" y="95" fill="rgba(255,255,255,0.7)" font-size="14" font-family="Outfit" font-weight="600">Santa Fe</text>
+        <text x="240" y="110" fill="rgba(255,255,255,0.4)" font-size="10" font-family="Outfit">Capital provincial</text>
+        <!-- PTLC within Santa Fe -->
+        <rect x="100" y="140" width="200" height="75" rx="10" fill="rgba(44,95,45,0.3)" stroke="rgba(95,168,107,0.5)" stroke-width="2">
+          <animate attributeName="stroke-opacity" values="0.3;0.7;0.3" dur="3s" repeatCount="indefinite"/>
+        </rect>
+        <text x="200" y="165" fill="white" font-size="13" text-anchor="middle" font-family="Outfit" font-weight="700">PARQUE TECNOLÓGICO</text>
+        <text x="200" y="180" fill="white" font-size="13" text-anchor="middle" font-family="Outfit" font-weight="700">LITORAL CENTRO</text>
+        <text x="200" y="200" fill="rgba(196,163,90,0.8)" font-size="11" text-anchor="middle" font-family="Outfit" font-weight="600">vert · Lotes 30 y 31</text>
+        <!-- Connection line city → PTLC -->
+        <line x1="200" y1="108" x2="200" y2="138" stroke="rgba(255,255,255,0.25)" stroke-width="1" stroke-dasharray="4,4"/>
+        <!-- Zoovet nearby -->
+        <circle cx="140" cy="250" r="4" fill="#5fa86b"/>
+        <text x="152" y="254" fill="rgba(255,255,255,0.5)" font-size="10" font-family="Outfit">Zoovet S.A.</text>
+        <line x1="145" y1="245" x2="165" y2="218" stroke="rgba(95,168,107,0.3)" stroke-width="1" stroke-dasharray="3,3"/>
+      </svg>
+    </div>
+    <div>
+      <div class="cards-grid" style="grid-template-columns:1fr 1fr; gap:12px">
+        <div class="stat-card">
+          <div class="stat-number">530.000</div>
+          <div class="stat-label">Habitantes</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">280 MW</div>
+          <div class="stat-label">Central eléctrica</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">RN 11</div>
+          <div class="stat-label">Ruta Nacional</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">PTLC</div>
+          <div class="stat-label">Parque Tecnológico</div>
+        </div>
+      </div>
+      <div class="highlight-box mt-16">
+        <strong>✓ Santa Fe seleccionada</strong><br>
+        <span class="text-sm opacity-70">Parque Tecnológico Litoral Centro (PTLC). Lotes 30 y 31. Redes eléctricas, agua potable, planta de tratamiento de efluentes.</span>
+      </div>
+    </div>
+  </div>
+</div>
